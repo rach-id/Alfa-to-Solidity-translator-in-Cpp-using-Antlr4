@@ -1,0 +1,35 @@
+make[3]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+/usr/bin/cmake -H/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp -B/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/CMakeFiles /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[4]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+make -f runtime/CMakeFiles/make_lib_output_dir.dir/build.make runtime/CMakeFiles/make_lib_output_dir.dir/depend
+make[5]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime/CMakeFiles/make_lib_output_dir.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+make -f runtime/CMakeFiles/make_lib_output_dir.dir/build.make runtime/CMakeFiles/make_lib_output_dir.dir/build
+make[5]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime && /usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist
+make[5]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+[  0%] Built target make_lib_output_dir
+make -f runtime/CMakeFiles/antlr4_static.dir/build.make runtime/CMakeFiles/antlr4_static.dir/depend
+make[5]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime/CMakeFiles/antlr4_static.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+make -f runtime/CMakeFiles/antlr4_static.dir/build.make runtime/CMakeFiles/antlr4_static.dir/build
+make[5]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+make[5]: Nothing to be done for 'runtime/CMakeFiles/antlr4_static.dir/build'.
+make[5]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+[ 50%] Built target antlr4_static
+make -f runtime/CMakeFiles/antlr4_shared.dir/build.make runtime/CMakeFiles/antlr4_shared.dir/depend
+make[5]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/runtime/CMakeFiles/antlr4_shared.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+make -f runtime/CMakeFiles/antlr4_shared.dir/build.make runtime/CMakeFiles/antlr4_shared.dir/build
+make[5]: Entering directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+make[5]: Nothing to be done for 'runtime/CMakeFiles/antlr4_shared.dir/build'.
+make[5]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+[100%] Built target antlr4_shared
+make[4]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'
+/usr/bin/cmake -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build/CMakeFiles 0
+make[3]: Leaving directory '/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build'

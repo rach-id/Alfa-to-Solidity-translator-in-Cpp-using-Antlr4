@@ -1,0 +1,5 @@
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/rebuild_cache.dir
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/test_antlr.dir
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp.dir
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/edit_cache.dir
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp_generation_antlrcpptest.dir

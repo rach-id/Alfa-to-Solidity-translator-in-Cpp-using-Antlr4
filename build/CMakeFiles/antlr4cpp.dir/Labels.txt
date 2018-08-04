@@ -1,0 +1,13 @@
+# Target labels
+ antlr4cpp
+# Source files and their labels
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp-complete.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-install.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-mkdir.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-update.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-patch.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure.rule
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build.rule

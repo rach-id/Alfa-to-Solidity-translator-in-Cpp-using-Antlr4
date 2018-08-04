@@ -1,0 +1,6 @@
+Re-run cmake no build system arguments
+-- Building without demo. To enable demo build use: -DWITH_DEMO=True
+-- Output libraries to /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build

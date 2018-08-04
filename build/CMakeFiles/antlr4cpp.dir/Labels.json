@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp-complete.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-install.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-mkdir.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-update.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-patch.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure.rule"
+		},
+		{
+			"file" : "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"antlr4cpp"
+		],
+		"name" : "antlr4cpp"
+	}
+}
