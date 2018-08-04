@@ -20,7 +20,10 @@ To use this :
 - The "ExternalAntlr4Cpp" and "CMakeLists" files might contain some absolute pathes to the antlr package or... that need to be changed according to your machine.
 
 
-The main directory contains an already compiled antlr grammar file "ALFA.g4" using both the listener and visitor approach.
+The main directory contains an already compiled antlr grammar file "ALFA.g4" using both the listener and visitor approach. To recompile it :
+
+          $ antlr4 -Dlanguage=Cpp ALFA.g4 // for the listener 
+          $ antlr4 -Dlanguage=Cpp ALFA.g4 -visitor // for the visitor
 
 The "main.cpp" is the one that's been compiled when using cmake. the "main1.cpp" contains a code that doesnt work so far.
 
