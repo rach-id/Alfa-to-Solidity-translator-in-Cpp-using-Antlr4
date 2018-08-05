@@ -30,6 +30,7 @@ The "main.cpp" is the one that's been compiled when using cmake. the "main1.cpp"
 To build this project :
 
       $ mkdir build  // can be skipped since I already put a pre-compiled C++ target on the build directory so the "make" command won't have to download/build the runtime everytime
+      // if doenst work, create another build folder, with another name, build2 for exemple, and build the project inside of it
       $ cd build
       $ cmake -G "Unix Makefiles" ..
       $ make -j2 VERBOSE=1
