@@ -12,7 +12,7 @@ int main () {
 	string line;
 	
 	
-	ifstream modelicaFile ("/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/toBeParsed.alfa");
+	ifstream modelicaFile ("/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Antlr_Cpp_RandomCoding/toBeParsed.alfa");
 	if (modelicaFile.is_open()) {
 		
 		ANTLRInputStream input(modelicaFile);
