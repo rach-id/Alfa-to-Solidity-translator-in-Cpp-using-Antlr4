@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test
+CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build
+CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build
 
 # Utility rule file for antlr4cpp.
 
@@ -64,53 +64,53 @@ CMakeFiles/antlr4cpp-complete: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp
 CMakeFiles/antlr4cpp-complete: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure
 CMakeFiles/antlr4cpp-complete: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build
 CMakeFiles/antlr4cpp-complete: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'antlr4cpp'"
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles
-	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp-complete
-	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'antlr4cpp'"
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles
+	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles/antlr4cpp-complete
+	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-done
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-install: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing install step for 'antlr4cpp'"
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && $(MAKE) install
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing install step for 'antlr4cpp'"
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build && $(MAKE) install
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-install
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'antlr4cpp'"
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/tmp
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src
-	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'antlr4cpp'"
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/tmp
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src
+	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-mkdir
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-gitinfo.txt
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'antlr4cpp'"
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src && /usr/bin/cmake -P /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download-.cmake
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'antlr4cpp'"
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src && /usr/bin/cmake -P /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download-.cmake
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-update: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing update step for 'antlr4cpp'"
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp && /usr/bin/git pull
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-update
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing update step for 'antlr4cpp'"
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp && /usr/bin/git pull
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-update
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-patch: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'antlr4cpp'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'antlr4cpp'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-patch
+	/usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-patch
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure: externals/antlr4cpp/tmp/antlr4cpp-cfgcmd.txt
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-update
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'antlr4cpp'"
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -P /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure-.cmake
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'antlr4cpp'"
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -P /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure-.cmake
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure
 
 externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build: externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing build step for 'antlr4cpp'"
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -Dmake=$(MAKE) -P /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build-.cmake
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing build step for 'antlr4cpp'"
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -Dmake=$(MAKE) -P /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build-.cmake
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-build && /usr/bin/cmake -E touch /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp-stamp/antlr4cpp-build
 
 antlr4cpp: CMakeFiles/antlr4cpp
 antlr4cpp: CMakeFiles/antlr4cpp-complete
@@ -135,6 +135,6 @@ CMakeFiles/antlr4cpp.dir/clean:
 .PHONY : CMakeFiles/antlr4cpp.dir/clean
 
 CMakeFiles/antlr4cpp.dir/depend:
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles/antlr4cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/antlr4cpp.dir/depend
 

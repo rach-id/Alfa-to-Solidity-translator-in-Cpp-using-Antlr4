@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test
+CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build
+CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build
 
 # Utility rule file for antlr4cpp_generation_antlrcpptest.
 
@@ -55,8 +55,8 @@ include CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/progress.make
 
 CMakeFiles/antlr4cpp_generation_antlrcpptest: ../ALFA.g4
 CMakeFiles/antlr4cpp_generation_antlrcpptest: ../ALFA.g4
-	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src
-	/usr/lib/jvm/java-8-oracle/bin/java -jar /home/sweexordious/Desktop/taaatata/Internship2018/antlr/antlr-4.7-complete.jar -Werror -Dlanguage=Cpp -listener -visitor -o /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest -package antlrcpptest /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/ALFA.g4 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/ALFA.g4
+	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src
+	/usr/lib/jvm/java-8-oracle/bin/java -jar /home/sweexordious/Desktop/taaatata/Internship2018/antlr/antlr-4.7-complete.jar -Werror -Dlanguage=Cpp -listener -visitor -o /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest -package antlrcpptest /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFA.g4 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFA.g4
 
 antlr4cpp_generation_antlrcpptest: CMakeFiles/antlr4cpp_generation_antlrcpptest
 antlr4cpp_generation_antlrcpptest: CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/build.make
@@ -73,6 +73,6 @@ CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/clean:
 .PHONY : CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/clean
 
 CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/depend:
-	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/depend
 

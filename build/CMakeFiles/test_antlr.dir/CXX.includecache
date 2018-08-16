@@ -6,75 +6,113 @@
 
 #IncludeRegexTransform: 
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/ALFALexer.h
+../grammar/include/ALFABaseListener.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
+ALFAListener.h
+../grammar/include/ALFAListener.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/ALFAParser.h
+../grammar/include/ALFALexer.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
+../grammar/include/ALFAListener.h
+antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
+ALFAParser.h
+../grammar/include/ALFAParser.h
+
+../grammar/include/ALFAParser.h
+antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFALexer.h
+antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAParser.h
+antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
 ALFABaseListener.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
 ALFAListener.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp
 ALFABaseVisitor.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
 ALFAVisitor.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp
 ALFALexer.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp
 ALFAListener.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
 ALFAParser.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp
 ALFAListener.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.h
 ALFAVisitor.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
 ALFAParser.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp
 ALFAVisitor.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
 ALFAParser.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
 
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/main.cpp
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFABaseListener.cpp
+ALFABaseListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFABaseListener.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFALexer.cpp
+ALFALexer.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFALexer.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.cpp
+ALFAListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.cpp
+ALFAListener.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.h
+ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/main.cpp
 iostream
 -
 fstream
@@ -82,11 +120,11 @@ fstream
 string
 -
 antlr4-runtime.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
 ALFALexer.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/ALFALexer.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFALexer.h
 ALFAParser.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAParser.h
 
 externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorListener.h
 RecognitionException.h

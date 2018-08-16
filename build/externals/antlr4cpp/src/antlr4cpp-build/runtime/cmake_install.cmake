@@ -1,8 +1,8 @@
-# Install script for directory: /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime
+# Install script for directory: /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp")
+  set(CMAKE_INSTALL_PREFIX "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,8 +45,8 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist/libantlr4-runtime.so.4.7.1"
-    "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist/libantlr4-runtime.so"
+    "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist/libantlr4-runtime.so.4.7.1"
+    "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist/libantlr4-runtime.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libantlr4-runtime.so.4.7.1"
@@ -62,10 +62,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist/libantlr4-runtime.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/dist/libantlr4-runtime.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/antlr4-runtime" TYPE DIRECTORY FILES "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/antlr4-runtime" TYPE DIRECTORY FILES "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

@@ -12,12 +12,13 @@ int main () {
 	string line;
 	
 	
-	ifstream modelicaFile ("/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/toBeParsed.alfa");
+	ifstream modelicaFile ("/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Antlr_Cpp_RandomCoding/toBeParsed.alfa");
 	if (modelicaFile.is_open()) {
 		
 		ANTLRInputStream input(modelicaFile);
-		/*
+		
 		ALFALexer lexer(&input);
+		
 		CommonTokenStream tokens(&lexer);
 
 		tokens.fill();
@@ -25,12 +26,12 @@ int main () {
 		for (auto token : tokens.getTokens()) {
 			std::cout << token->toString() << std::endl;
 		}
-		//ALFAParser parser(&tokens);
-		//tree::ParseTree *tree = parser.TranslationunitContext();
+		ALFAParser parser(&tokens);
+		tree::ParseTree *tree = parser.TranslationunitContext();
 
-		//std::cout << tree->toStringTree(&parser) << std::endl;
+		std::cout << tree->toStringTree(&parser) << std::endl;
 		modelicaFile.close();
-*/	
+
 	} else cout << "Could not open file" << endl;
 	
 	return 0;

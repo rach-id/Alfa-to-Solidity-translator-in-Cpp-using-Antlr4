@@ -9,32 +9,16 @@ using namespace antlr4;
 using namespace std;
 
 int main () {
-	string line;
-	
-	
-	ifstream modelicaFile ("/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Antlr_Cpp_RandomCoding/toBeParsed.alfa");
-	if (modelicaFile.is_open()) {
-		
-		ANTLRInputStream input(modelicaFile);
-		
-		ALFALexer lexer(&input);
-		/*
-		CommonTokenStream tokens(&lexer);
+		string line = "attribute { } ";
 
-		tokens.fill();
+		ANTLRInputStream *input = new ANTLRInputStream(line);
 		
-		for (auto token : tokens.getTokens()) {
-			std::cout << token->toString() << std::endl;
-		}
-		//ALFAParser parser(&tokens);
-		//tree::ParseTree *tree = parser.TranslationunitContext();
+		
+		cout << input->toString() << endl;
 
-		//std::cout << tree->toStringTree(&parser) << std::endl;
-		modelicaFile.close();
-*/	
-	} else cout << "Could not open file" << endl;
-	
-	return 0;
+		
+		delete input;
+		return 0;
 
 
 }

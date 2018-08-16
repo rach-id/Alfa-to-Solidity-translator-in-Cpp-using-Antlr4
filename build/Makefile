@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test
+CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build
+CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -311,6 +311,114 @@ antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s:
 	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
 .PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
 
+grammar/src/ALFABaseListener.o: grammar/src/ALFABaseListener.cpp.o
+
+.PHONY : grammar/src/ALFABaseListener.o
+
+# target to build an object file
+grammar/src/ALFABaseListener.cpp.o:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFABaseListener.cpp.o
+.PHONY : grammar/src/ALFABaseListener.cpp.o
+
+grammar/src/ALFABaseListener.i: grammar/src/ALFABaseListener.cpp.i
+
+.PHONY : grammar/src/ALFABaseListener.i
+
+# target to preprocess a source file
+grammar/src/ALFABaseListener.cpp.i:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFABaseListener.cpp.i
+.PHONY : grammar/src/ALFABaseListener.cpp.i
+
+grammar/src/ALFABaseListener.s: grammar/src/ALFABaseListener.cpp.s
+
+.PHONY : grammar/src/ALFABaseListener.s
+
+# target to generate assembly for a file
+grammar/src/ALFABaseListener.cpp.s:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFABaseListener.cpp.s
+.PHONY : grammar/src/ALFABaseListener.cpp.s
+
+grammar/src/ALFALexer.o: grammar/src/ALFALexer.cpp.o
+
+.PHONY : grammar/src/ALFALexer.o
+
+# target to build an object file
+grammar/src/ALFALexer.cpp.o:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFALexer.cpp.o
+.PHONY : grammar/src/ALFALexer.cpp.o
+
+grammar/src/ALFALexer.i: grammar/src/ALFALexer.cpp.i
+
+.PHONY : grammar/src/ALFALexer.i
+
+# target to preprocess a source file
+grammar/src/ALFALexer.cpp.i:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFALexer.cpp.i
+.PHONY : grammar/src/ALFALexer.cpp.i
+
+grammar/src/ALFALexer.s: grammar/src/ALFALexer.cpp.s
+
+.PHONY : grammar/src/ALFALexer.s
+
+# target to generate assembly for a file
+grammar/src/ALFALexer.cpp.s:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFALexer.cpp.s
+.PHONY : grammar/src/ALFALexer.cpp.s
+
+grammar/src/ALFAListener.o: grammar/src/ALFAListener.cpp.o
+
+.PHONY : grammar/src/ALFAListener.o
+
+# target to build an object file
+grammar/src/ALFAListener.cpp.o:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFAListener.cpp.o
+.PHONY : grammar/src/ALFAListener.cpp.o
+
+grammar/src/ALFAListener.i: grammar/src/ALFAListener.cpp.i
+
+.PHONY : grammar/src/ALFAListener.i
+
+# target to preprocess a source file
+grammar/src/ALFAListener.cpp.i:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFAListener.cpp.i
+.PHONY : grammar/src/ALFAListener.cpp.i
+
+grammar/src/ALFAListener.s: grammar/src/ALFAListener.cpp.s
+
+.PHONY : grammar/src/ALFAListener.s
+
+# target to generate assembly for a file
+grammar/src/ALFAListener.cpp.s:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFAListener.cpp.s
+.PHONY : grammar/src/ALFAListener.cpp.s
+
+grammar/src/ALFAParser.o: grammar/src/ALFAParser.cpp.o
+
+.PHONY : grammar/src/ALFAParser.o
+
+# target to build an object file
+grammar/src/ALFAParser.cpp.o:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.o
+.PHONY : grammar/src/ALFAParser.cpp.o
+
+grammar/src/ALFAParser.i: grammar/src/ALFAParser.cpp.i
+
+.PHONY : grammar/src/ALFAParser.i
+
+# target to preprocess a source file
+grammar/src/ALFAParser.cpp.i:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.i
+.PHONY : grammar/src/ALFAParser.cpp.i
+
+grammar/src/ALFAParser.s: grammar/src/ALFAParser.cpp.s
+
+.PHONY : grammar/src/ALFAParser.s
+
+# target to generate assembly for a file
+grammar/src/ALFAParser.cpp.s:
+	$(MAKE) -f CMakeFiles/test_antlr.dir/build.make CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.s
+.PHONY : grammar/src/ALFAParser.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -367,6 +475,18 @@ help:
 	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o"
 	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i"
 	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s"
+	@echo "... grammar/src/ALFABaseListener.o"
+	@echo "... grammar/src/ALFABaseListener.i"
+	@echo "... grammar/src/ALFABaseListener.s"
+	@echo "... grammar/src/ALFALexer.o"
+	@echo "... grammar/src/ALFALexer.i"
+	@echo "... grammar/src/ALFALexer.s"
+	@echo "... grammar/src/ALFAListener.o"
+	@echo "... grammar/src/ALFAListener.i"
+	@echo "... grammar/src/ALFAListener.s"
+	@echo "... grammar/src/ALFAParser.o"
+	@echo "... grammar/src/ALFAParser.i"
+	@echo "... grammar/src/ALFAParser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

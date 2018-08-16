@@ -6,6 +6,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_antlr.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o"
   "CMakeFiles/test_antlr.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o"
   "CMakeFiles/test_antlr.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o"
+  "CMakeFiles/test_antlr.dir/grammar/src/ALFALexer.cpp.o"
+  "CMakeFiles/test_antlr.dir/grammar/src/ALFABaseListener.cpp.o"
+  "CMakeFiles/test_antlr.dir/grammar/src/ALFAListener.cpp.o"
+  "CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.o"
   "test_antlr.pdb"
   "test_antlr"
 )
