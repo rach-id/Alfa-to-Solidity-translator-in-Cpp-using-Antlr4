@@ -51,14 +51,14 @@ int main() {
 	/* ----------------------------------------------------------------------------------------------------------*/
 		
 		ALFAParser::TranslationunitContext* tree = parser.translationunit();
-		tree::ParseTree *tr =  parser.namespaceDefinition();
-	
+		
+		// tree::ParseTree *tr =  parser.translationunit();
 		// std::cout << tree->toStringTree(&parser) << std::endl;
 	
 		Listener listen;
 	
 		tree::ParseTreeWalker walker ;
-		walker.walk(&listen, tr);
+		walker.walk(&listen, tree);
 	
 		File.close();
 		

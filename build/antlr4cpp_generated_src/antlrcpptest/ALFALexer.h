@@ -27,7 +27,7 @@ public:
     LEFTPAREN = 63, ASSIGN = 64, MOD = 65, AND = 66, OR = 67, NOT = 68, 
     LESS = 69, GREATER = 70, CARET = 71, EQUAL = 72, NOTEQUAL = 73, LESSEQUAL = 74, 
     GREATEREQUAL = 75, ANDAND = 76, OROR = 77, TARGETRESSOURCE = 78, WORD = 79, 
-    STRING = 80, ANY = 81
+    STRING = 80
   };
 
   ALFALexer(antlr4::CharStream *input);
