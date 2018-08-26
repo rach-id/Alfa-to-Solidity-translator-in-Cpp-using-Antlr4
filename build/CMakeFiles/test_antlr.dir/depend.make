@@ -1603,8 +1603,10 @@ CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/incl
 CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/include/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h
 CMakeFiles/test_antlr.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h
 
+CMakeFiles/test_antlr.dir/main.cpp.o: ../ALFABaseVisitor.h
 CMakeFiles/test_antlr.dir/main.cpp.o: ../ALFALexer.h
 CMakeFiles/test_antlr.dir/main.cpp.o: ../ALFAParser.h
+CMakeFiles/test_antlr.dir/main.cpp.o: ../ALFAVisitor.h
 CMakeFiles/test_antlr.dir/main.cpp.o: ../main.cpp
 CMakeFiles/test_antlr.dir/main.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorListener.h
 CMakeFiles/test_antlr.dir/main.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorStrategy.h

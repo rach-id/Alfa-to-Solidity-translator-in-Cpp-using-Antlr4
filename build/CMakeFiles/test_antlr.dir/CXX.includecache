@@ -26,6 +26,12 @@ ALFAParser.h
 antlr4-runtime.h
 ../grammar/include/antlr4-runtime.h
 
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFABaseVisitor.h
+antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
+ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAVisitor.h
+
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFALexer.h
 antlr4-runtime.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
@@ -33,6 +39,12 @@ antlr4-runtime.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAParser.h
 antlr4-runtime.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
+
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAVisitor.h
+antlr4-runtime.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/antlr4-runtime.h
+ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAParser.h
 
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
 ALFABaseListener.h
@@ -113,6 +125,20 @@ ALFAParser.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.h
 
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/main.cpp
+antlr4-runtime.h
+-
+ALFAParser.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAParser.h
+ALFALexer.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFALexer.h
+ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAVisitor.h
+ALFABaseVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFABaseVisitor.h
+fstream
+-
+string
+-
 iostream
 -
 fstream

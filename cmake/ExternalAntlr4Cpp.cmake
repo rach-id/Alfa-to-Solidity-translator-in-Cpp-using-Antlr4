@@ -30,7 +30,7 @@
 # SET (CMAKE_CXX_STANDARD 11)
 #
 # # set variable pointing to the antlr tool that supports C++
- set(ANTLR4CPP_JAR_LOCATION /home/sweexordious/Desktop/taaatata/Internship2018/antlr/antlr-4.7-complete.jar)
+ set(ANTLR4CPP_JAR_LOCATION ${PROJECT_SOURCE_DIR}/thirdparty/antlr/antlr-4.7-complete.jar)
 # # add external build for antlrcpp
 # include( ExternalAntlr4Cpp )
 # # add antrl4cpp artifacts to project environment

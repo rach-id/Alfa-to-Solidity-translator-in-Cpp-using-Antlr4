@@ -1,29 +1,25 @@
 
-// Generated from ALFA.g4 by ANTLR 4.7.1
-
-#pragma once
-
-
+#include <antlr4-runtime.h>
 #include "antlr4-runtime.h"
 #include "ALFAVisitor.h"
+#include "ALFABaseVisitor.h"
 
 
-/**
- * This class provides an empty implementation of ALFAVisitor, which can be
- * extended to create a visitor which only needs to handle a subset of the available methods.
- */
-class  ALFABaseVisitor : public ALFAVisitor {
+class  Visitor : public ALFABaseVisitor {
 public:
 
   virtual antlrcpp::Any visitTranslationunit(ALFAParser::TranslationunitContext *ctx) override {
+  	cout << "in Something" << endl;
     return visitChildren(ctx);
   }
 
   virtual antlrcpp::Any visitDeclarationseq(ALFAParser::DeclarationseqContext *ctx) override {
+  	cout << "in Something" << endl;
     return visitChildren(ctx);
   }
 
   virtual antlrcpp::Any visitNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) override {
+  	cout << "in Something" << endl;
     return visitChildren(ctx);
   }
 

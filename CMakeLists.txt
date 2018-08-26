@@ -10,6 +10,7 @@ SET (CMAKE_CXX_STANDARD 14)
 set(ANTLR4CPP_JAR_LOCATION ${PROJECT_SOURCE_DIR}/thirdparty/antlr/antlr-4.7-complete.jar)
 # add external build for antlrcpp
 include( ExternalAntlr4Cpp )
+
 # add antrl4cpp artifacts to project environment
 include_directories( ${ANTLR4CPP_INCLUDE_DIRS} )
 include_directories( grammar/include )
@@ -22,13 +23,13 @@ message(STATUS "Found antlr4cpp libs: ${ANTLR4CPP_LIBS} and includes: ${ANTLR4CP
 
 # Call macro to add lexer and grammar to your build dependencies.
  antlr4cpp_process_grammar(demo antlrcpptest
-  ${CMAKE_CURRENT_SOURCE_DIR}/ALFA.g4
-  ${CMAKE_CURRENT_SOURCE_DIR}/ALFA.g4)
+  ${CMAKE_CURRENT_SOURCE_DIR}/grammar/ALFA.g4
+  ${CMAKE_CURRENT_SOURCE_DIR}/grammar/ALFA.g4)
 # include generated files in project environment
 include_directories(${antlr4cpp_include_dirs_antlrcpptest})
 
 file(GLOB SOURCES ${SOURCES} "grammar/src/*")
 # add generated grammar to demo binary target
-add_executable(test_antlr main.cpp ${antlr4cpp_src_files_antlrcpptest} ${SOURCES})
-add_dependencies(test_antlr antlr4cpp antlr4cpp_generation_antlrcpptest)
-target_link_libraries(test_antlr antlr4-runtime)
+add_executable(output main.cpp ${antlr4cpp_src_files_antlrcpptest} ${SOURCES})
+add_dependencies(output antlr4cpp antlr4cpp_generation_antlrcpptest)
+target_link_libraries(output antlr4-runtime)

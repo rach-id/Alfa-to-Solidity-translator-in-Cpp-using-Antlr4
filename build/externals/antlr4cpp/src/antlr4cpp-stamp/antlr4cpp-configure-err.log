@@ -2,6 +2,5 @@ CMake Warning:
   Manually-specified variables were not used by the project:
 
     ANTLR4CPP_JAR_LOCATION
-    CMAKE_SOURCE_DIR
 
 

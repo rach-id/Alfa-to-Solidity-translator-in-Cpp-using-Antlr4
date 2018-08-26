@@ -15,7 +15,7 @@
 ########################
 
 //No help, variable specified on the command line.
-ANTLR4CPP_JAR_LOCATION:UNINITIALIZED=/home/sweexordious/Desktop/taaatata/Internship2018/antlr/antlr-4.7-complete.jar
+ANTLR4CPP_JAR_LOCATION:UNINITIALIZED=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/thirdparty/antlr/antlr-4.7-complete.jar
 
 //No help, variable specified on the command line.
 BUILD_SHARED_LIBS:UNINITIALIZED=ON
