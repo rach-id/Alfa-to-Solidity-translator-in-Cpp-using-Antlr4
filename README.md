@@ -36,4 +36,7 @@ To build this project :
       $ make -j2 VERBOSE=1
       $ ./output		
       
+      
+      
 The project C++ files are in the 'grammar' directory.
+Some problems with the grammar are in the 'GrammarProblems.txt' file in the 'grammar' directory.
