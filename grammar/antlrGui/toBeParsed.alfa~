@@ -11,13 +11,10 @@ namespace policies {
 	    namespace resourceId {
 	    	attribute owner {
 	    		id = "urn:resouce:resource:owner"
-	    		type = "string"
-	    		category = "resourceCat"
+	    		type = string
+	    		category = resourceCat
 	    	}
 	    }
 	    
 	}
 }
-
-
-
