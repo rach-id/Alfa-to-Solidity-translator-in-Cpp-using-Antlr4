@@ -18,9 +18,8 @@ int main() {
 	
 	cout << "-----------> Start <-----------" << endl;
 	
-	string file = "/home/sweexordious//Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
+	string file = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
 
-	
 	ifstream File (file);
 	
 	if (File.is_open()) {
@@ -38,7 +37,7 @@ int main() {
 	
 	/* ----------------------------------------------------------------------------------------------------------*/
 		
-		/* To show the tokens of the lexer in a string format, uncomment the following code */
+		/* To print the tokens of the lexer in a text format, uncomment the following code */
 		
 		/* tokens.fill();
 		

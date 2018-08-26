@@ -1,0 +1,31 @@
+########## 
+attribute actionType {
+	        id = "urn:oasis:names:tc:xacml:1.0:action:action-type"
+	        type = "string"
+	        category = "actionCat"
+	    }	
+
+All the fields should be delimited by double quotes " .
+
+
+##########
+Target ressource definition still bugs when using simples target like "ressource", it only works with complex ones like "ressource.id".
+
+
+##########
+All the "value == value" should be either numerical or strings.
+
+
+##########
+on deny {
+   advice ObligationAdvice.reasonForDeny { 
+   Attributes.message = "There is no care relation"
+} 
+
+Doesnt recognize the "There is no care relation" as a string... 
+
+
+##########
+
+
+
