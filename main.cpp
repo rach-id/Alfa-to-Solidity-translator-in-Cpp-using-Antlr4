@@ -9,6 +9,7 @@
 #include <string>
 #include "Listener.h"
 #include "ParseTreeWalker.h"
+#include "Visitor.h"
 
 
 using namespace std;
@@ -24,8 +25,11 @@ int main() {
 	
 	if (File.is_open()) {
 	
-	/* The foundation of every ANTLR program. You create the stream of chars from the input
-		   You give it to the lexer and it transforms them into tokens, that are then interpreted by the parser */
+	/* ----------------------------------------------------------------------------------------------------------*/
+	
+		/* The foundation of every ANTLR program. You create the stream of chars from the input
+		* You give it to the lexer and it transforms them into tokens, that are then interpreted by the parser 
+		*/
 		   
 		ANTLRInputStream chars(File);
 	
@@ -51,13 +55,36 @@ int main() {
 		
 		ALFAParser::TranslationunitContext* tree = parser.translationunit();
 		
-		// tree::ParseTree *tr =  parser.translationunit();
-		// std::cout << tree->toStringTree(&parser) << std::endl;
+
+	/* ----------------------------------------------------------------------------------------------------------*/
+		
+		/* to print the parse tree in a text format, uncomment the following code */
+		
+		/*
+		* std::cout << tree->toStringTree(&parser) << std::endl;
+		*/
+		
+		
+	/* ----------------------------------------------------------------------------------------------------------*/
 	
-		Listener listen;
+		/* to use the listener walking pattern, uncomment the following section */
+		
+		/*
+		* Listener listen;
 	
-		tree::ParseTreeWalker walker ;
-		walker.walk(&listen, tree);
+		* tree::ParseTreeWalker walker ;
+		* walker.walk(&listen, tree);
+		*/
+	
+	/* ----------------------------------------------------------------------------------------------------------*/
+	
+		/* to use the visitor walking pattern, uncomment the following section */
+		
+		Visitor visitor;
+		visitor.visitTranslationunit(tree);
+		
+		
+	/* ----------------------------------------------------------------------------------------------------------*/
 	
 		File.close();
 		

@@ -1443,8 +1443,8 @@ CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o: externals/antlr4cpp/includ
 CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o: externals/antlr4cpp/include/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h
 CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o: externals/antlr4cpp/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h
 
-CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: ../grammar/include/ALFAListener.h
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: ../grammar/include/ALFAParser.h
+CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: ../grammar/include/ALFAVisitor.h
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: ../grammar/src/ALFAParser.cpp
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorListener.h
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorStrategy.h
@@ -1604,13 +1604,14 @@ CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/include/
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: externals/antlr4cpp/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h
 
 CMakeFiles/output.dir/main.cpp.o: ../grammar/include/ALFABaseListener.h
+CMakeFiles/output.dir/main.cpp.o: ../grammar/include/ALFABaseVisitor.h
 CMakeFiles/output.dir/main.cpp.o: ../grammar/include/ALFALexer.h
 CMakeFiles/output.dir/main.cpp.o: ../grammar/include/ALFAListener.h
 CMakeFiles/output.dir/main.cpp.o: ../grammar/include/ALFAParser.h
+CMakeFiles/output.dir/main.cpp.o: ../grammar/include/ALFAVisitor.h
 CMakeFiles/output.dir/main.cpp.o: ../grammar/include/Listener.h
+CMakeFiles/output.dir/main.cpp.o: ../grammar/include/Visitor.h
 CMakeFiles/output.dir/main.cpp.o: ../main.cpp
-CMakeFiles/output.dir/main.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.h
-CMakeFiles/output.dir/main.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
 CMakeFiles/output.dir/main.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorListener.h
 CMakeFiles/output.dir/main.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorStrategy.h
 CMakeFiles/output.dir/main.cpp.o: externals/antlr4cpp/include/antlr4-runtime/ANTLRFileStream.h

@@ -12,6 +12,12 @@ antlr4-runtime.h
 ALFAListener.h
 ../grammar/include/ALFAListener.h
 
+../grammar/include/ALFABaseVisitor.h
+antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
+ALFAVisitor.h
+../grammar/include/ALFAVisitor.h
+
 ../grammar/include/ALFALexer.h
 antlr4-runtime.h
 ../grammar/include/antlr4-runtime.h
@@ -26,6 +32,12 @@ ALFAParser.h
 antlr4-runtime.h
 ../grammar/include/antlr4-runtime.h
 
+../grammar/include/ALFAVisitor.h
+antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
+ALFAParser.h
+../grammar/include/ALFAParser.h
+
 ../grammar/include/Listener.h
 antlr4-runtime.h
 -
@@ -37,6 +49,16 @@ ALFAParser.h
 ../grammar/include/ALFAParser.h
 iostream
 -
+
+../grammar/include/Visitor.h
+antlr4-runtime.h
+-
+antlr4-runtime.h
+../grammar/include/antlr4-runtime.h
+ALFAVisitor.h
+../grammar/include/ALFAVisitor.h
+ALFABaseVisitor.h
+../grammar/include/ALFABaseVisitor.h
 
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
 ALFABaseListener.h
@@ -111,8 +133,8 @@ ALFAListener.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.h
 
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.cpp
-ALFAListener.h
-/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.h
+ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAVisitor.h
 ALFAParser.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.h
 
@@ -137,6 +159,8 @@ Listener.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/Listener.h
 ParseTreeWalker.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ParseTreeWalker.h
+Visitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/Visitor.h
 iostream
 -
 antlr4-runtime.h
@@ -165,18 +189,6 @@ ALFALexer.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFALexer.h
 ALFAParser.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/ALFAParser.h
-
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.h
-antlr4-runtime.h
-antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
-ALFAVisitor.h
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
-
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.h
-antlr4-runtime.h
-antlr4cpp_generated_src/antlrcpptest/antlr4-runtime.h
-ALFAParser.h
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.h
 
 externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorListener.h
 RecognitionException.h
