@@ -19,7 +19,9 @@ int main() {
 	
 	cout << "-----------> Start <-----------" << endl;
 	
+	// The file path needs to be changed according to the path of the file to be parsed on your machine
 	string file = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
+
 
 	ifstream File (file);
 	
