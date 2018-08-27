@@ -51,14 +51,20 @@ iostream
 -
 
 ../grammar/include/Visitor.h
+ALFAParser.h
+../grammar/include/ALFAParser.h
 antlr4-runtime.h
 -
-antlr4-runtime.h
-../grammar/include/antlr4-runtime.h
 ALFAVisitor.h
 ../grammar/include/ALFAVisitor.h
 ALFABaseVisitor.h
 ../grammar/include/ALFABaseVisitor.h
+string
+-
+TokenStream.h
+../grammar/include/TokenStream.h
+vector
+-
 
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
 ALFABaseListener.h

@@ -82,7 +82,7 @@ int main() {
 	
 		/* to use the visitor walking pattern, uncomment the following section */
 		
-		Visitor visitor;
+		Visitor visitor(&parser);
 		visitor.visitTranslationunit(tree);
 		
 		

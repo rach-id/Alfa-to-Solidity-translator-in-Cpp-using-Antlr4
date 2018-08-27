@@ -9,7 +9,7 @@ using namespace std;
 
 class Listener : public ALFABaseListener {
 	public:
-
+	
   virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   	cout << " enterTranslationUnit " << endl;
   	

@@ -7,7 +7,13 @@ namespace policies {
 	        id = "urn:oasis:names:tc:xacml:1.0:action:action-type"
 	        type = "string"
 	        category = "actionCat"
-	    }	
+	}	
+}
+
+
+
+
+/*
 	    namespace resourceId {
 	    	attribute owner {
 	    		id = "urn:resouce:resource:owner"
@@ -58,7 +64,7 @@ namespace policies {
          condition not(booleanOneAndOnly(Attributes.careRelationExists)) 
          on deny {
             advice ObligationAdvice.reasonForDeny { 
-               Attributes.message = hehe.hoho
+               Attributes.message = "There is no care relation"
             } 
          }
       } 
@@ -73,5 +79,4 @@ namespace policies {
       }
 	   
 	}
-	
-}
+*/

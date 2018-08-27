@@ -1,25 +1,85 @@
 
+#include "ALFAParser.h"
 #include <antlr4-runtime.h>
-#include "antlr4-runtime.h"
 #include "ALFAVisitor.h"
 #include "ALFABaseVisitor.h"
+#include <string>
+#include "TokenStream.h"
+#include <vector>
 
 using namespace std;
 
 class Visitor : public ALFABaseVisitor {
 public:
+	
+	Visitor(ALFAParser* p) {
+		parser = new ALFAParser(p->getTokenStream());
+	}
+	
+	~Visitor() {
+		delete parser;
+	}
+	
+  virtual antlrcpp::Any visitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) override {
+  	cout << "in AttributeDefinition" << endl;
+  	
+  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  	/* Collecting the identifiers and their values 
+  	*
+  	* For example 
+  	* 	attribute actionType {
+	*        id = "urn:oasis:names:tc:xacml:1.0:action:action-type"
+	*        type = "string"
+	*        category = "actionCat"
+	* 	}	
+	* the identifiers vector will contain ["id", "type", "category"], 
+	* while the values vector will contain [""urn:oasis:names:tc:xacml:1.0:action:action-type", "string", "actionCat"].
+	*
+	*/
+	
+  	vector<string> identifiers;
+  	vector<string> values;
+  	
+  	if (ctx->getRuleIndex() != 0) {
+  		for (auto id : ctx->IDENTIFIERS()) {
+  			identifiers.push_back(id->toString());
+  		} 
+  		
+  		for (auto id : ctx->VALUE()) {
+  			values.push_back(id->toString());
+  		} 
+  	}
+  	
+  /* ---------------------------------------------------------------------------------------------------------------------------*/
+    return visitChildren(ctx);
+  }
+
 
   virtual antlrcpp::Any visitTranslationunit(ALFAParser::TranslationunitContext *ctx) override {
+  	
   	cout << "in Translationunit" << endl;
+  	
+  	/* 
+  	antlr4::TokenStream* tokens = parser->getTokenStream();
+  	if (ctx->getRuleIndex() != 0) {
+  		string type = tokens->getText();
+  		cout << type << endl;
+  	}
+  	// string args = tokens->getText(ctx->formalParameters()) ;
+  	
+  	*/
     return visitChildren(ctx);
   }
 
   virtual antlrcpp::Any visitDeclarationseq(ALFAParser::DeclarationseqContext *ctx) override {
+  
   	cout << "in Declarationseq" << endl;
     return visitChildren(ctx);
   }
 
   virtual antlrcpp::Any visitNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) override {
+  
   	cout << "in NamespaceDefinition" << endl;
     return visitChildren(ctx);
   }
@@ -113,12 +173,7 @@ public:
   cout << "in ObligationDefinition" << endl;
     return visitChildren(ctx);
   }
-
-  virtual antlrcpp::Any visitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) override {
-  cout << "in AttributeDefinition" << endl;
-    return visitChildren(ctx);
-  }
-
-
+	
+	ALFAParser* parser;
 };
 
