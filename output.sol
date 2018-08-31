@@ -20,11 +20,11 @@ contract test {
 
 	contract  {
 
-		function rule() returns (bool) {
+		function studentAccess() returns (bool) {
 
 			return true;
 		}
-		function rule() returns (bool) {
+		function teacherAccess() returns (bool) {
 
 			return false;
 		}

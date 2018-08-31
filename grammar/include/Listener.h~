@@ -163,8 +163,9 @@ class Listener : public ALFABaseListener {
 		* the ruleName string will contain "test".
 		*
 		*/
-	
-  		string ruleName = (ctx->RULE())->toString();
+		
+  		string ruleName = "";
+  		if(ctx->WORD()) ruleName = (ctx->RULE())->toString();
   		
   	  /* ---------------------------------------------------------------------------------------------------------------------------*/
   	  /* translating the code */
@@ -274,7 +275,9 @@ class Listener : public ALFABaseListener {
   	virtual void enterPermitdeny(ALFAParser::PermitdenyContext *ctx) {
   		cout << " enterPermitdeny " << endl;
   		
-  		output += Output.indent() + "return  " ;
+  		output += Output.indent() + "return ";
+  		if (ctx->PERMIT()) output += "true;";
+  		else output += "false;";
 		
   		
   	}

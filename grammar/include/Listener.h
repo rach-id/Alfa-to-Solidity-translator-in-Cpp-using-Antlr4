@@ -163,8 +163,9 @@ class Listener : public ALFABaseListener {
 		* the ruleName string will contain "test".
 		*
 		*/
-	
-  		string ruleName = (ctx->RULE())->toString();
+		
+  		string ruleName = "";
+  		if(ctx->WORD()) ruleName = (ctx->WORD())->toString();
   		
   	  /* ---------------------------------------------------------------------------------------------------------------------------*/
   	  /* translating the code */
