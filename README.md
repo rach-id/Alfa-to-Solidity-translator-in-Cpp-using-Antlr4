@@ -35,3 +35,10 @@ To build this project :
       $ cmake -G "Unix Makefiles" ..
       $ make -j2 VERBOSE=1
       $ ./test_antlr
+
+
+The project C++ files are in the 'grammar' directory.
+
+Some problems with the grammar are in the 'GrammarProblems.txt' file in the 'grammar' directory.
+
+Most of the work, so far, is concentrated on the 'Listener.h' and 'Visitor.h' classes in the 'grammar/include' directories.
