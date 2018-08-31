@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
 	else {
 		inputFile = argv[1];
 		outputFile = argv[2];
-		cout << "# Input file : " << inputFile << endl << "# Output file : " << outputFile << "\n" << endl;
+		cout << "# Input file path : " << inputFile << endl << "# Output file path : " << outputFile << "\n" << endl;
 	}
 	
 	

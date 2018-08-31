@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) {
 	
 	if(argc == 1) {
 		cout << "#! No file pathes were given to the program, \n#! Please introduce the to be parsed file first and then the output file second."<< endl;
+		cout << "\n-----------> Exiting <-----------\n" << endl;
 		return 0;
 	}
 	else if(argc == 2) {
@@ -37,7 +38,7 @@ int main(int argc, char* argv[]) {
 	else {
 		inputFile = argv[1];
 		outputFile = argv[2];
-		cout << "# Input file : " << inputFile << endl << "# Output file : " << outputFile << "\n" << endl;
+		cout << "# Input file path : " << inputFile << endl << "# Output file path : " << outputFile << "\n" << endl;
 	}
 	
 	
@@ -70,13 +71,13 @@ int main(int argc, char* argv[]) {
 		
 		/* To print the tokens of the lexer in a text format, uncomment the following code */
 		
-		/* tokens.fill();
+		 tokens.fill();
 		
-		* for (auto token : tokens.getTokens()) {
-			* std::cout << token->toString() <<  std::endl;
-		* }
+		 for (auto token : tokens.getTokens()) {
+			 std::cout << token->toString() <<  std::endl;
+		 }
 		
-		*/
+		
 		
 	/* ----------------------------------------------------------------------------------------------------------*/
 		

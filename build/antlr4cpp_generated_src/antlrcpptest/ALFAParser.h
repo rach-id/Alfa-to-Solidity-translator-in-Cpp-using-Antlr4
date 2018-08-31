@@ -174,6 +174,8 @@ public:
     antlr4::tree::TerminalNode* NEWLINE(size_t i);
     antlr4::tree::TerminalNode *ASSIGN();
     antlr4::tree::TerminalNode *STRING();
+    std::vector<NamespaceDefinitionContext *> namespaceDefinition();
+    NamespaceDefinitionContext* namespaceDefinition(size_t i);
     std::vector<PolicysetDefinitionContext *> policysetDefinition();
     PolicysetDefinitionContext* policysetDefinition(size_t i);
     std::vector<PolicyDefinitionContext *> policyDefinition();
@@ -210,6 +212,8 @@ public:
     antlr4::tree::TerminalNode* NEWLINE(size_t i);
     antlr4::tree::TerminalNode *ASSIGN();
     antlr4::tree::TerminalNode *STRING();
+    std::vector<NamespaceDefinitionContext *> namespaceDefinition();
+    NamespaceDefinitionContext* namespaceDefinition(size_t i);
     std::vector<PolicyDefinitionContext *> policyDefinition();
     PolicyDefinitionContext* policyDefinition(size_t i);
     std::vector<RuleDefinitionContext *> ruleDefinition();

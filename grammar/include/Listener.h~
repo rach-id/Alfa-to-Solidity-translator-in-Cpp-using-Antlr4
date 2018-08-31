@@ -17,6 +17,7 @@ class Listener : public ALFABaseListener {
 	
 	/* Constructor/Destructor */
 	Listener(ALFAParser* p, string f) : outputFile(f, ios::out) {
+	
 		parser = new ALFAParser(p->getTokenStream());
 		
 		if (outputFile.is_open()) cout << "# output file loaded successfuly" << endl;
@@ -29,22 +30,24 @@ class Listener : public ALFABaseListener {
 		delete parser;
 	}
 	
+	
 	/* Public Members */
 	ALFAParser* parser;
 	ofstream outputFile;
 	string output;
+	OutputClasses Output;
 	
 	
 	/* BaseListener inherited functions */ 
   	virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   		cout << " enterTranslationUnit " << endl;
-  		output += "pragma solidity ^0.4.0; // What compiler to use\n\n" ;
+  		output += Output.indent() + "pragma solidity ^0.4.0; // What compiler to use\n\n" ;
   	}
   	
   	virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   		cout << " exitTranslationUnit " << endl;
   	
-  			output += "\n\n\n // End of translation";
+  		output += "\n\n\n // End of translation";
   	
   		outputFile << output ;
   	
@@ -69,26 +72,117 @@ class Listener : public ALFABaseListener {
 
   	virtual void enterPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
   		cout << " enterPolicysetDefinition " << endl;
+  		
+  		  		  	
+  	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  		/* Collecting the policys name :
+	  	*
+	  	* For example 
+	  	* 	policyset test {
+	  	*		...
+	  	*		...
+	  	*	}
+		* 
+		* the policysetName string will contain "test".
+		*
+		*/
+		
+  		string policysetName = "";
+  		if(ctx->WORD()) policysetName = (ctx->WORD())->toString() ;
+  		
+  	  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  /* translating the code */
+  	  	
+  	  	output += "contract " + policysetName + " {\n" ;
+  	  	Output.indentCount++;
+  	  	
+  	  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  
   	}
   	
   	virtual void exitPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
   		cout << " exitPolicysetDefinition " << endl;
+
+		output += Output.indent() + "\n}\n";
+  		Output.indentCount -= 1;
   	}
 
   	virtual void enterPolicyDefinition(ALFAParser::PolicyDefinitionContext *ctx) {
   		cout << " enterPolicyDefinition " << endl;
+  		  	
+  	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  		/* Collecting the policys name :
+	  	*
+	  	* For example 
+	  	* 	policy test {
+	  	*		...
+	  	*		...
+	  	*	}
+		* 
+		* the policyName string will contain "test".
+		*
+		*/
+		string policyName = "";
+		if (ctx->WORD()) policyName = (ctx->WORD())->toString();
+  		
+  		
+  	  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  /* translating the code */
+  	  	
+  	  	output += Output.indent() + "contract " + policyName + " {\n" ;
+  	  	Output.indentCount++;
+  	  	output += "\n";
+  	  	
+  	  /* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	
   	virtual void exitPolicyDefinition(ALFAParser::PolicyDefinitionContext *ctx) {
   		cout << " exitPolicyDefinition " << endl;
+ 
+ 
+ 		Output.indentCount -= 1;
+  		output += "\n" + Output.indent() + "}\n";
+  		
   	}
 
   	virtual void enterRuleDefinition(ALFAParser::RuleDefinitionContext *ctx) {
   		cout << " enterRuleDefinition " << endl;
+  		
+  		  	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  		/* Collecting the policys name :
+	  	*
+	  	* For example 
+	  	* 	rule test {
+	  	*		...
+	  	*		...
+	  	*	}
+		* 
+		* the ruleName string will contain "test".
+		*
+		*/
+	
+  		string ruleName = (ctx->RULE())->toString();
+  		
+  	  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  /* translating the code */
+  	  	
+  	  	output += Output.indent() + "function " + ruleName + "() returns (bool)" + " {\n" ;
+  	  	Output.indentCount += 1;
+  	  	output += "\n";
+  	  	
+  	  /* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	
   	virtual void exitRuleDefinition(ALFAParser::RuleDefinitionContext *ctx) {
   		cout << " exitRuleDefinition " << endl;
+  		
+  		Output.indentCount = Output.indentCount - 1 ;
+  		output += "\n" + Output.indent() + "}\n";
+  		
+  		
   	}
 
   	virtual void enterOnBlock(ALFAParser::OnBlockContext *ctx) {
@@ -179,6 +273,10 @@ class Listener : public ALFABaseListener {
 
   	virtual void enterPermitdeny(ALFAParser::PermitdenyContext *ctx) {
   		cout << " enterPermitdeny " << endl;
+  		
+  		output += Output.indent() + "return  " ;
+		
+  		
   	}
   	
   	virtual void exitPermitdeny(ALFAParser::PermitdenyContext *ctx) {
@@ -248,24 +346,31 @@ class Listener : public ALFABaseListener {
 	  	
 	  /* ---------------------------------------------------------------------------------------------------------------------------*/
 		/* Attribute Definition translation */
-		OutputClasses Output;
 	
-		output += Output.getStruct();
+		output += Output.indent() + Output.getStruct() + "\n";
 	
-		output += "\nattribute " + attributeName + " ;\n" ;
+		output += Output.indent() + "attribute " + attributeName + " ;\n" ;
 		cout << "\n\n\n\n" << endl;
 	
 		for (int i=0; i< 3; i++) {
-			output += attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
+			output += Output.indent() + attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
 		}
-	
+		
+		/* Cleaning the vectors for further use */
+		identifiers.clear();
+		values.clear();
+		
+	  	output += "\n";
 	  	
+		  /* ---------------------------------------------------------------------------------------------------------------------------*/
 	  }
+	  
 	  virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
 	  	cout << " exitAttributeDefinition " << endl;
 	  }
 
 
 };
+
 
 

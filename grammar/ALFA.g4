@@ -72,7 +72,7 @@ policysetDefinition
                 WORD ASSIGN STRING NEWLINE*
             )
             
-            RIGHTCBRACKET ( policysetDefinition | policyDefinition | ruleDefinition
+            RIGHTCBRACKET ( namespaceDefinition | policysetDefinition | policyDefinition | ruleDefinition
                         | conditionDefinition | targetDefinition | combiningAlgorithm
                         | onBlock )*
             LEFTCBRACKET
@@ -100,7 +100,7 @@ policyDefinition
                 WORD ASSIGN STRING NEWLINE*
             )
             
-            RIGHTCBRACKET ( policyDefinition | ruleDefinition
+            RIGHTCBRACKET ( namespaceDefinition | policyDefinition | ruleDefinition
                         | conditionDefinition | targetDefinition | combiningAlgorithm
                         | onBlock )*
             LEFTCBRACKET
