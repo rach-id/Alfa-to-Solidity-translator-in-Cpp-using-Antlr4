@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <antlr4-runtime.h>
 #include "ALFAParser.h"
@@ -9,19 +8,48 @@
 #include <string>
 #include "Listener.h"
 #include "ParseTreeWalker.h"
+#include "EnvironmentFunctions.h" 
 
 using namespace std;
 using namespace antlr4;
 
-int main() {
+int main(int argc, char* argv[]) {
 	
-	cout << "-----------> Start <-----------" << endl;
+	cout << "\n-----------> Start <-----------\n" << endl;
 	
-	// The file path needs to be changed according to the path of the file to be parsed on your machine
-	string file = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
+	
+/* ----------------------------------------------------------------------------------------------------------*/
 
-
-	ifstream File (file);
+	/* Preparing the files to be used in the parsing process */
+	
+	string inputFile = "";
+	string outputFile = "";
+	
+	if(argc == 1) {
+		cout << "#! No file pathes were given to the program, \n#! Please introduce the to be parsed file first and then the output file second."<< endl;
+		cout << "\n-----------> Exiting <-----------\n" << endl;
+		return 0;
+	}
+	else if(argc == 2) {
+		inputFile = argv[1];
+		outputFile = GetCurrentWorkingDir() + "/output.sol";
+		cout << "# Only the input file was introduced : " << inputFile << "\n# Default output path : " << outputFile << "\n" << endl;
+	}
+	else {
+		inputFile = argv[1];
+		outputFile = argv[2];
+		cout << "# Input file : " << inputFile << endl << "# Output file : " << outputFile << "\n" << endl;
+	}
+	
+	
+	/// These strings contains the default pathes in my machines if no other files were introducted while calling the program. For testing purposes only.
+	
+	inputFile = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
+	outputFile = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/output.sol";
+	
+	
+	
+	ifstream File (inputFile);
 	
 	if (File.is_open()) {
 	
@@ -69,8 +97,8 @@ int main() {
 	
 		/* to use the listener walking pattern, uncomment the following section */
 		
-		string output = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/output.sol";
-		Listener listen(&parser, output);
+		
+		Listener listen(&parser, outputFile);
 		tree::ParseTreeWalker::DEFAULT.walk(&listen, tree);
 
 
@@ -102,111 +130,3 @@ int main() {
 }
 
 
-
-
-
-
-
-
-
-
-
-/*
-
-
- #include <iostream>
-#include <antlr4-runtime.h>
-#include "ALFAParser.h"
-#include "ALFALexer.h"
-#include "ALFAVisitor.h"
-#include "ALFABaseVisitor.h"
-#include <fstream>
-#include <string>
-
-
-
-using namespace std;
-using namespace antlr4;
-
-int main() {
-  std::cout << "Hello World" << std::endl;
-  
-  std::ifstream stream;
-  stream.open("input.alfa");
-  ANTLRInputStream input(stream);
-  ALFALexer lexer(&input);
-  
-  std::cout << "Hello World" << std::endl;
-  
-  CommonTokenStream tokens(&lexer);
-  ALFAParser parser(&tokens); 
-  
-  std::cout << "Hello World" << std::endl;
-  
-  ALFAParser::NamespaceDefinitionContext* tree = parser.namespace();
-  ALFABaseVisitor visitor;
-
-  std::cout << "Hello World" << std::endl;
-  
-  //(visitor.visitTranslationunit(tree)).draw();
-  antlrcpp::Any alfa = visitor.visitTranslationunit(tree);
-  
-  std::cout << tree->toStringTree(&parser) << std::endl;
-  
-  //alfa.draw();
-  
-  std::cout << "Hello World" << std::endl;
-  
-  return 0;
-}
-
-
-
-
-#include <iostream>
-#include <fstream>
-#include <string>
-#include "antlr4-runtime.h"
-#include "ALFALexer.h"
-#include "ALFAParser.h"
-
-using namespace antlr4;
-using namespace std;
-
-int main () {
-	string file = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/Tomasseti_test/toBeParsed.alfa";
-
-	
-	ifstream File (file);
-	if (File.is_open()) {
-		
-		ANTLRFileStream input(file);
-		
-		// CharStream input("attribute rachid { \n } "); 
-		
-		ALFALexer lexer(&input);
-		
-		CommonTokenStream tokens(&lexer);
-
-		tokens.fill();
-		
-		for (auto token : tokens.getTokens()) {
-			std::cout << token->toString() << std::endl;
-		}
-		ALFAParser parser(&tokens);
-		
-		// ParserRuleContext root ;
-		
-		// tree::ParseTree *tree = parser.TranslationunitContext(&root, 0);
-
-		// std::cout << tree->toStringTree(&parser) << std::endl;
-		
-		File.close();
-	
-	} else cout << "Could not open file" << endl;
-	
-	return 0;
-
-
-}
-*/
