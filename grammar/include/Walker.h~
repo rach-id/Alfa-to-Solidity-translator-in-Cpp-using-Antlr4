@@ -1,0 +1,25 @@
+#include "ParseTreeWalker.h"
+#include "ParseTreeListener.h"
+#include "antlr4-common.h"
+
+#include <iostream>
+
+using namespace std;
+using namespace antlr4;
+using namespace tree;
+
+class Walker : public ParseTreeWalker {
+	public :
+		
+		virtual void walk(ParseTreeListener *listener, ParseTree *t) const {
+			cout << "In heeere" << endl;
+			  enterRule(listener, t);
+			  for (auto &child : t->children) {
+				walk(listener, child);
+			  }
+			  exitRule(listener, t);
+		
+		}
+
+
+};

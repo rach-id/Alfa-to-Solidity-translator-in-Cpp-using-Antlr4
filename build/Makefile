@@ -149,168 +149,6 @@ antlr4cpp_generation_antlrcpptest/fast:
 	$(MAKE) -f CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/build.make CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/build
 .PHONY : antlr4cpp_generation_antlrcpptest/fast
 
-antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.o
-
-# target to build an object file
-antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
-
-antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.i: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.i
-
-# target to preprocess a source file
-antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
-
-antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.s: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.s
-
-# target to generate assembly for a file
-antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
-
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.o
-
-# target to build an object file
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
-
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.i: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.i
-
-# target to preprocess a source file
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
-
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.s: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.s
-
-# target to generate assembly for a file
-antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
-
-antlr4cpp_generated_src/antlrcpptest/ALFALexer.o: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.o
-
-# target to build an object file
-antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
-
-antlr4cpp_generated_src/antlrcpptest/ALFALexer.i: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.i
-
-# target to preprocess a source file
-antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
-
-antlr4cpp_generated_src/antlrcpptest/ALFALexer.s: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.s
-
-# target to generate assembly for a file
-antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
-
-antlr4cpp_generated_src/antlrcpptest/ALFAListener.o: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.o
-
-# target to build an object file
-antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
-
-antlr4cpp_generated_src/antlrcpptest/ALFAListener.i: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.i
-
-# target to preprocess a source file
-antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
-
-antlr4cpp_generated_src/antlrcpptest/ALFAListener.s: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.s
-
-# target to generate assembly for a file
-antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
-
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.o: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.o
-
-# target to build an object file
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
-
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.i: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.i
-
-# target to preprocess a source file
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
-
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.s: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.s
-
-# target to generate assembly for a file
-antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
-
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o
-
-# target to build an object file
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
-
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i
-
-# target to preprocess a source file
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
-
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
-
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s
-
-# target to generate assembly for a file
-antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
-.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
-
 grammar/src/ALFABaseListener.o: grammar/src/ALFABaseListener.cpp.o
 
 .PHONY : grammar/src/ALFABaseListener.o
@@ -337,6 +175,33 @@ grammar/src/ALFABaseListener.s: grammar/src/ALFABaseListener.cpp.s
 grammar/src/ALFABaseListener.cpp.s:
 	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.s
 .PHONY : grammar/src/ALFABaseListener.cpp.s
+
+grammar/src/ALFABaseVisitor.o: grammar/src/ALFABaseVisitor.cpp.o
+
+.PHONY : grammar/src/ALFABaseVisitor.o
+
+# target to build an object file
+grammar/src/ALFABaseVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o
+.PHONY : grammar/src/ALFABaseVisitor.cpp.o
+
+grammar/src/ALFABaseVisitor.i: grammar/src/ALFABaseVisitor.cpp.i
+
+.PHONY : grammar/src/ALFABaseVisitor.i
+
+# target to preprocess a source file
+grammar/src/ALFABaseVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.i
+.PHONY : grammar/src/ALFABaseVisitor.cpp.i
+
+grammar/src/ALFABaseVisitor.s: grammar/src/ALFABaseVisitor.cpp.s
+
+.PHONY : grammar/src/ALFABaseVisitor.s
+
+# target to generate assembly for a file
+grammar/src/ALFABaseVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.s
+.PHONY : grammar/src/ALFABaseVisitor.cpp.s
 
 grammar/src/ALFALexer.o: grammar/src/ALFALexer.cpp.o
 
@@ -419,6 +284,33 @@ grammar/src/ALFAParser.cpp.s:
 	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.s
 .PHONY : grammar/src/ALFAParser.cpp.s
 
+grammar/src/ALFAVisitor.o: grammar/src/ALFAVisitor.cpp.o
+
+.PHONY : grammar/src/ALFAVisitor.o
+
+# target to build an object file
+grammar/src/ALFAVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o
+.PHONY : grammar/src/ALFAVisitor.cpp.o
+
+grammar/src/ALFAVisitor.i: grammar/src/ALFAVisitor.cpp.i
+
+.PHONY : grammar/src/ALFAVisitor.i
+
+# target to preprocess a source file
+grammar/src/ALFAVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.i
+.PHONY : grammar/src/ALFAVisitor.cpp.i
+
+grammar/src/ALFAVisitor.s: grammar/src/ALFAVisitor.cpp.s
+
+.PHONY : grammar/src/ALFAVisitor.s
+
+# target to generate assembly for a file
+grammar/src/ALFAVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.s
+.PHONY : grammar/src/ALFAVisitor.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -457,27 +349,12 @@ help:
 	@echo "... antlr4cpp"
 	@echo "... edit_cache"
 	@echo "... antlr4cpp_generation_antlrcpptest"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.o"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.i"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.s"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.o"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.i"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.s"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFALexer.o"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFALexer.i"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFALexer.s"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAListener.o"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAListener.i"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAListener.s"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAParser.o"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAParser.i"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAParser.s"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i"
-	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s"
 	@echo "... grammar/src/ALFABaseListener.o"
 	@echo "... grammar/src/ALFABaseListener.i"
 	@echo "... grammar/src/ALFABaseListener.s"
+	@echo "... grammar/src/ALFABaseVisitor.o"
+	@echo "... grammar/src/ALFABaseVisitor.i"
+	@echo "... grammar/src/ALFABaseVisitor.s"
 	@echo "... grammar/src/ALFALexer.o"
 	@echo "... grammar/src/ALFALexer.i"
 	@echo "... grammar/src/ALFALexer.s"
@@ -487,6 +364,9 @@ help:
 	@echo "... grammar/src/ALFAParser.o"
 	@echo "... grammar/src/ALFAParser.i"
 	@echo "... grammar/src/ALFAParser.s"
+	@echo "... grammar/src/ALFAVisitor.o"
+	@echo "... grammar/src/ALFAVisitor.i"
+	@echo "... grammar/src/ALFAVisitor.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

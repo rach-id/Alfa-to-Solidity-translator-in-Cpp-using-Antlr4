@@ -1,0 +1,22 @@
+In file included from /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.cpp:35:0:
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h: In constructor ‘antlr4::atn::ParserATNSimulator::ParserATNSimulator(antlr4::Parser*, const antlr4::atn::ATN&, std::vector<antlr4::dfa::DFA>&, antlr4::atn::PredictionContextCache&)’:
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h:371:19: warning: ‘antlr4::atn::ParserATNSimulator::parser’ will be initialized after [-Wreorder]
+     Parser *const parser;
+                   ^
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h:260:28: warning:   ‘std::vector<antlr4::dfa::DFA>& antlr4::atn::ParserATNSimulator::decisionToDFA’ [-Wreorder]
+     std::vector<dfa::DFA> &decisionToDFA;
+                            ^
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.cpp:54:1: warning:   when initialized here [-Wreorder]
+ ParserATNSimulator::ParserATNSimulator(Parser *parser, const ATN &atn, std::vector<dfa::DFA> &decisionToDFA,
+ ^
+In file included from /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.cpp:35:0:
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h: In constructor ‘antlr4::atn::ParserATNSimulator::ParserATNSimulator(antlr4::Parser*, const antlr4::atn::ATN&, std::vector<antlr4::dfa::DFA>&, antlr4::atn::PredictionContextCache&)’:
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h:371:19: warning: ‘antlr4::atn::ParserATNSimulator::parser’ will be initialized after [-Wreorder]
+     Parser *const parser;
+                   ^
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h:260:28: warning:   ‘std::vector<antlr4::dfa::DFA>& antlr4::atn::ParserATNSimulator::decisionToDFA’ [-Wreorder]
+     std::vector<dfa::DFA> &decisionToDFA;
+                            ^
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/externals/antlr4cpp/src/antlr4cpp/runtime/Cpp/runtime/src/atn/ParserATNSimulator.cpp:54:1: warning:   when initialized here [-Wreorder]
+ ParserATNSimulator::ParserATNSimulator(Parser *parser, const ATN &atn, std::vector<dfa::DFA> &decisionToDFA,
+ ^

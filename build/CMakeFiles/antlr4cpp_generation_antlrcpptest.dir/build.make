@@ -56,7 +56,7 @@ include CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/progress.make
 CMakeFiles/antlr4cpp_generation_antlrcpptest: ../grammar/ALFA.g4
 CMakeFiles/antlr4cpp_generation_antlrcpptest: ../grammar/ALFA.g4
 	/usr/bin/cmake -E make_directory /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src
-	/usr/lib/jvm/java-8-oracle/bin/java -jar /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/thirdparty/antlr/antlr-4.7-complete.jar -Werror -Dlanguage=Cpp -listener -visitor -o /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest -package antlrcpptest /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/ALFA.g4 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/ALFA.g4
+	/usr/lib/jvm/java-8-oracle/bin/java -jar /home/sweexordious/Desktop/taaatata/Internship2018/antlr/antlr-4.7-complete.jar -Werror -Dlanguage=Cpp -listener -visitor -o /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest -package antlrcpptest /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/ALFA.g4 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/ALFA.g4
 
 antlr4cpp_generation_antlrcpptest: CMakeFiles/antlr4cpp_generation_antlrcpptest
 antlr4cpp_generation_antlrcpptest: CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/build.make

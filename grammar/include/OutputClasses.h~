@@ -1,0 +1,18 @@
+#include <string>
+
+using namespace std;
+
+class OutputClasses {
+
+public :
+	static string getStruct() {
+		string str = "struct attribute {
+			string id;
+			string type;
+			string category;
+		}";
+		return str;
+	}
+
+
+};

@@ -81,6 +81,22 @@ public:
   virtual antlrcpp::Any visitNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) override {
   
   	cout << "in NamespaceDefinition" << endl;
+  	
+  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  
+  	/* retrieving the namespace's name
+  	*
+  	* for example :
+  	* 	namespace test {
+  	*		...
+  	*	}
+  	* The namespaceName string will contain the value : "test".
+  	*
+  	*/
+  	
+  	string namespaceName = (ctx->WORD())->toString();
+  	
+  /* ---------------------------------------------------------------------------------------------------------------------------*/
     return visitChildren(ctx);
   }
 

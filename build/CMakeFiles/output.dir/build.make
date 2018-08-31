@@ -81,153 +81,9 @@ CMakeFiles/output.dir/main.cpp.o.provides: CMakeFiles/output.dir/main.cpp.o.requ
 CMakeFiles/output.dir/main.cpp.o.provides.build: CMakeFiles/output.dir/main.cpp.o
 
 
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp > CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.requires:
-
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.requires
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.provides: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.provides.build
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.provides
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.provides.build: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
-
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp > CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.requires:
-
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.requires
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.provides: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.requires
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.provides.build
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.provides
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.provides.build: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
-
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp > CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.requires:
-
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.requires
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.provides: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.requires
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.provides.build
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.provides
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.provides.build: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
-
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp > CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.requires:
-
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.requires
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.provides: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.requires
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.provides.build
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.provides
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.provides.build: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
-
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp > CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.requires:
-
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.requires
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.provides: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.requires
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.provides.build
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.provides
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.provides.build: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
-
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp > CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-overloaded-virtual -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp -o CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.requires:
-
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.requires
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.provides: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.requires
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.provides.build
-.PHONY : CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.provides
-
-CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.provides.build: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
-
-
 CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o: CMakeFiles/output.dir/flags.make
 CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o: ../grammar/src/ALFALexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFALexer.cpp
 
 CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.i: cmake_force
@@ -251,7 +107,7 @@ CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o.provides.build: CMakeFiles/out
 
 CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o: CMakeFiles/output.dir/flags.make
 CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o: ../grammar/src/ALFABaseListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFABaseListener.cpp
 
 CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.i: cmake_force
@@ -275,7 +131,7 @@ CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o: CMakeFiles/output.dir/flags.make
 CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o: ../grammar/src/ALFAListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.cpp
 
 CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.i: cmake_force
@@ -297,9 +153,57 @@ CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o.provides: CMakeFiles/output
 CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o.provides.build: CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o
 
 
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o: CMakeFiles/output.dir/flags.make
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o: ../grammar/src/ALFABaseVisitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFABaseVisitor.cpp
+
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFABaseVisitor.cpp > CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.i
+
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFABaseVisitor.cpp -o CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.s
+
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.requires:
+
+.PHONY : CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.requires
+
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.provides: CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.provides.build
+.PHONY : CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.provides
+
+CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.provides.build: CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o
+
+
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o: CMakeFiles/output.dir/flags.make
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o: ../grammar/src/ALFAVisitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAVisitor.cpp
+
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAVisitor.cpp > CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.i
+
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAVisitor.cpp -o CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.s
+
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.requires:
+
+.PHONY : CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.requires
+
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.provides: CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.provides.build
+.PHONY : CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.provides
+
+CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.provides.build: CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o
+
+
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: CMakeFiles/output.dir/flags.make
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o: ../grammar/src/ALFAParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o -c /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.cpp
 
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.i: cmake_force
@@ -324,34 +228,26 @@ CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o.provides.build: CMakeFiles/ou
 # Object files for target output
 output_OBJECTS = \
 "CMakeFiles/output.dir/main.cpp.o" \
-"CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o" \
-"CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o" \
-"CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o" \
-"CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o" \
-"CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o" \
-"CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o" \
 "CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o" \
 "CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o" \
 "CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o" \
+"CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o" \
+"CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o" \
 "CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o"
 
 # External object files for target output
 output_EXTERNAL_OBJECTS =
 
 output: CMakeFiles/output.dir/main.cpp.o
-output: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
-output: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
-output: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
-output: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
-output: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
-output: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
 output: CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o
 output: CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o
 output: CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o
+output: CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o
+output: CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o
 output: CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o
 output: CMakeFiles/output.dir/build.make
 output: CMakeFiles/output.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable output"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable output"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/output.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -360,15 +256,11 @@ CMakeFiles/output.dir/build: output
 .PHONY : CMakeFiles/output.dir/build
 
 CMakeFiles/output.dir/requires: CMakeFiles/output.dir/main.cpp.o.requires
-CMakeFiles/output.dir/requires: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o.requires
-CMakeFiles/output.dir/requires: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o.requires
-CMakeFiles/output.dir/requires: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o.requires
-CMakeFiles/output.dir/requires: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o.requires
-CMakeFiles/output.dir/requires: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o.requires
-CMakeFiles/output.dir/requires: CMakeFiles/output.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o.requires
 CMakeFiles/output.dir/requires: CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o.requires
 CMakeFiles/output.dir/requires: CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o.requires
 CMakeFiles/output.dir/requires: CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o.requires
+CMakeFiles/output.dir/requires: CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o.requires
+CMakeFiles/output.dir/requires: CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o.requires
 CMakeFiles/output.dir/requires: CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o.requires
 
 .PHONY : CMakeFiles/output.dir/requires

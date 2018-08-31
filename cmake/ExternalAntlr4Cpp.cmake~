@@ -68,6 +68,10 @@ set(ANTLR4CPP_EXTERNAL_ROOT ${CMAKE_BINARY_DIR}/externals/antlr4cpp)
 set(ANTLR4CPP_EXTERNAL_REPO "https://github.com/antlr/antlr4.git")
 set(ANTLR4CPP_EXTERNAL_TAG  "4.7.1")
 
+# Add definitions for the local repository
+set(ANTLR4CPP_LOCAL_ROOT ${CMAKE_BINARY_DIR}/locals/antlr4cpp)
+SET(ANTLR4CPP_LOCAL_REPO /home/sweexordious/Desktop/taaatata/Internship2018/antlr/antlr4-master.zip)
+
 if(NOT EXISTS "${ANTLR4CPP_JAR_LOCATION}")
   message(FATAL_ERROR "Unable to find antlr tool. ANTLR4CPP_JAR_LOCATION:${ANTLR4CPP_JAR_LOCATION}")
 endif()
@@ -130,9 +134,10 @@ ExternalProject_ADD(
   #--Depend-on-antrl-tool-----------
   # DEPENDS antlrtool
   #--Core-directories-----------
-  PREFIX             ${ANTLR4CPP_EXTERNAL_ROOT}
+  PREFIX             ${ANTLR4CPP_LOCAL_ROOT}
   #--Download step--------------
-  GIT_REPOSITORY     ${ANTLR4CPP_EXTERNAL_REPO}
+  URL                 ${ANTLR4CPP_LOCAL_REPO}
+  # GIT_REPOSITORY     ${ANTLR4CPP_LOCAL_REPO}
   # GIT_TAG          ${ANTLR4CPP_EXTERNAL_TAG}
   TIMEOUT            10
   LOG_DOWNLOAD       ON

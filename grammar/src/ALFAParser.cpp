@@ -2,7 +2,7 @@
 // Generated from ALFA.g4 by ANTLR 4.7.1
 
 
-#include "ALFAVisitor.h"
+#include "ALFAListener.h"
 
 #include "ALFAParser.h"
 
@@ -54,11 +54,16 @@ size_t ALFAParser::TranslationunitContext::getRuleIndex() const {
   return ALFAParser::RuleTranslationunit;
 }
 
-antlrcpp::Any ALFAParser::TranslationunitContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitTranslationunit(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::TranslationunitContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterTranslationunit(this);
+}
+
+void ALFAParser::TranslationunitContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitTranslationunit(this);
 }
 
 ALFAParser::TranslationunitContext* ALFAParser::translationunit() {
@@ -179,11 +184,16 @@ size_t ALFAParser::DeclarationseqContext::getRuleIndex() const {
   return ALFAParser::RuleDeclarationseq;
 }
 
-antlrcpp::Any ALFAParser::DeclarationseqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitDeclarationseq(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::DeclarationseqContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterDeclarationseq(this);
+}
+
+void ALFAParser::DeclarationseqContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitDeclarationseq(this);
 }
 
 ALFAParser::DeclarationseqContext* ALFAParser::declarationseq() {
@@ -444,11 +454,16 @@ size_t ALFAParser::NamespaceDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleNamespaceDefinition;
 }
 
-antlrcpp::Any ALFAParser::NamespaceDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitNamespaceDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::NamespaceDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterNamespaceDefinition(this);
+}
+
+void ALFAParser::NamespaceDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitNamespaceDefinition(this);
 }
 
 ALFAParser::NamespaceDefinitionContext* ALFAParser::namespaceDefinition() {
@@ -741,11 +756,16 @@ size_t ALFAParser::PolicysetDefinitionContext::getRuleIndex() const {
   return ALFAParser::RulePolicysetDefinition;
 }
 
-antlrcpp::Any ALFAParser::PolicysetDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitPolicysetDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::PolicysetDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterPolicysetDefinition(this);
+}
+
+void ALFAParser::PolicysetDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitPolicysetDefinition(this);
 }
 
 ALFAParser::PolicysetDefinitionContext* ALFAParser::policysetDefinition() {
@@ -1032,11 +1052,16 @@ size_t ALFAParser::PolicyDefinitionContext::getRuleIndex() const {
   return ALFAParser::RulePolicyDefinition;
 }
 
-antlrcpp::Any ALFAParser::PolicyDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitPolicyDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::PolicyDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterPolicyDefinition(this);
+}
+
+void ALFAParser::PolicyDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitPolicyDefinition(this);
 }
 
 ALFAParser::PolicyDefinitionContext* ALFAParser::policyDefinition() {
@@ -1308,11 +1333,16 @@ size_t ALFAParser::RuleDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleRuleDefinition;
 }
 
-antlrcpp::Any ALFAParser::RuleDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitRuleDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::RuleDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterRuleDefinition(this);
+}
+
+void ALFAParser::RuleDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitRuleDefinition(this);
 }
 
 ALFAParser::RuleDefinitionContext* ALFAParser::ruleDefinition() {
@@ -1522,11 +1552,16 @@ size_t ALFAParser::OnBlockContext::getRuleIndex() const {
   return ALFAParser::RuleOnBlock;
 }
 
-antlrcpp::Any ALFAParser::OnBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitOnBlock(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::OnBlockContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterOnBlock(this);
+}
+
+void ALFAParser::OnBlockContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitOnBlock(this);
 }
 
 ALFAParser::OnBlockContext* ALFAParser::onBlock() {
@@ -1629,11 +1664,16 @@ size_t ALFAParser::OnPermitBlockContext::getRuleIndex() const {
   return ALFAParser::RuleOnPermitBlock;
 }
 
-antlrcpp::Any ALFAParser::OnPermitBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitOnPermitBlock(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::OnPermitBlockContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterOnPermitBlock(this);
+}
+
+void ALFAParser::OnPermitBlockContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitOnPermitBlock(this);
 }
 
 ALFAParser::OnPermitBlockContext* ALFAParser::onPermitBlock() {
@@ -1769,11 +1809,16 @@ size_t ALFAParser::OnDenyBlockContext::getRuleIndex() const {
   return ALFAParser::RuleOnDenyBlock;
 }
 
-antlrcpp::Any ALFAParser::OnDenyBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitOnDenyBlock(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::OnDenyBlockContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterOnDenyBlock(this);
+}
+
+void ALFAParser::OnDenyBlockContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitOnDenyBlock(this);
 }
 
 ALFAParser::OnDenyBlockContext* ALFAParser::onDenyBlock() {
@@ -1897,11 +1942,16 @@ size_t ALFAParser::TargetDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleTargetDefinition;
 }
 
-antlrcpp::Any ALFAParser::TargetDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitTargetDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::TargetDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterTargetDefinition(this);
+}
+
+void ALFAParser::TargetDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitTargetDefinition(this);
 }
 
 ALFAParser::TargetDefinitionContext* ALFAParser::targetDefinition() {
@@ -1983,11 +2033,16 @@ size_t ALFAParser::ClauseDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleClauseDefinition;
 }
 
-antlrcpp::Any ALFAParser::ClauseDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitClauseDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::ClauseDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterClauseDefinition(this);
+}
+
+void ALFAParser::ClauseDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitClauseDefinition(this);
 }
 
 ALFAParser::ClauseDefinitionContext* ALFAParser::clauseDefinition() {
@@ -2094,11 +2149,16 @@ size_t ALFAParser::BooleenExpressionContext::getRuleIndex() const {
   return ALFAParser::RuleBooleenExpression;
 }
 
-antlrcpp::Any ALFAParser::BooleenExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitBooleenExpression(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::BooleenExpressionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterBooleenExpression(this);
+}
+
+void ALFAParser::BooleenExpressionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitBooleenExpression(this);
 }
 
 ALFAParser::BooleenExpressionContext* ALFAParser::booleenExpression() {
@@ -2337,11 +2397,16 @@ size_t ALFAParser::ConditionDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleConditionDefinition;
 }
 
-antlrcpp::Any ALFAParser::ConditionDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitConditionDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::ConditionDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterConditionDefinition(this);
+}
+
+void ALFAParser::ConditionDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitConditionDefinition(this);
 }
 
 ALFAParser::ConditionDefinitionContext* ALFAParser::conditionDefinition() {
@@ -2485,11 +2550,16 @@ size_t ALFAParser::ConditionContext::getRuleIndex() const {
   return ALFAParser::RuleCondition;
 }
 
-antlrcpp::Any ALFAParser::ConditionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitCondition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::ConditionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterCondition(this);
+}
+
+void ALFAParser::ConditionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitCondition(this);
 }
 
 ALFAParser::ConditionContext* ALFAParser::condition() {
@@ -2803,11 +2873,16 @@ size_t ALFAParser::FunctionTypeContext::getRuleIndex() const {
   return ALFAParser::RuleFunctionType;
 }
 
-antlrcpp::Any ALFAParser::FunctionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitFunctionType(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::FunctionTypeContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterFunctionType(this);
+}
+
+void ALFAParser::FunctionTypeContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitFunctionType(this);
 }
 
 ALFAParser::FunctionTypeContext* ALFAParser::functionType() {
@@ -2857,11 +2932,16 @@ size_t ALFAParser::FunctionNameContext::getRuleIndex() const {
   return ALFAParser::RuleFunctionName;
 }
 
-antlrcpp::Any ALFAParser::FunctionNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitFunctionName(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::FunctionNameContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterFunctionName(this);
+}
+
+void ALFAParser::FunctionNameContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitFunctionName(this);
 }
 
 ALFAParser::FunctionNameContext* ALFAParser::functionName() {
@@ -2921,11 +3001,16 @@ size_t ALFAParser::ImportDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleImportDefinition;
 }
 
-antlrcpp::Any ALFAParser::ImportDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitImportDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::ImportDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterImportDefinition(this);
+}
+
+void ALFAParser::ImportDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitImportDefinition(this);
 }
 
 ALFAParser::ImportDefinitionContext* ALFAParser::importDefinition() {
@@ -3003,11 +3088,16 @@ size_t ALFAParser::PermitdenyContext::getRuleIndex() const {
   return ALFAParser::RulePermitdeny;
 }
 
-antlrcpp::Any ALFAParser::PermitdenyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitPermitdeny(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::PermitdenyContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterPermitdeny(this);
+}
+
+void ALFAParser::PermitdenyContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitPermitdeny(this);
 }
 
 ALFAParser::PermitdenyContext* ALFAParser::permitdeny() {
@@ -3084,11 +3174,16 @@ size_t ALFAParser::CombiningAlgorithmContext::getRuleIndex() const {
   return ALFAParser::RuleCombiningAlgorithm;
 }
 
-antlrcpp::Any ALFAParser::CombiningAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitCombiningAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::CombiningAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterCombiningAlgorithm(this);
+}
+
+void ALFAParser::CombiningAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitCombiningAlgorithm(this);
 }
 
 ALFAParser::CombiningAlgorithmContext* ALFAParser::combiningAlgorithm() {
@@ -3218,11 +3313,16 @@ size_t ALFAParser::AdviceDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleAdviceDefinition;
 }
 
-antlrcpp::Any ALFAParser::AdviceDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitAdviceDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::AdviceDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterAdviceDefinition(this);
+}
+
+void ALFAParser::AdviceDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitAdviceDefinition(this);
 }
 
 ALFAParser::AdviceDefinitionContext* ALFAParser::adviceDefinition() {
@@ -3433,11 +3533,16 @@ size_t ALFAParser::ObligationDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleObligationDefinition;
 }
 
-antlrcpp::Any ALFAParser::ObligationDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitObligationDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::ObligationDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterObligationDefinition(this);
+}
+
+void ALFAParser::ObligationDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitObligationDefinition(this);
 }
 
 ALFAParser::ObligationDefinitionContext* ALFAParser::obligationDefinition() {
@@ -3644,11 +3749,16 @@ size_t ALFAParser::AttributeDefinitionContext::getRuleIndex() const {
   return ALFAParser::RuleAttributeDefinition;
 }
 
-antlrcpp::Any ALFAParser::AttributeDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<ALFAVisitor*>(visitor))
-    return parserVisitor->visitAttributeDefinition(this);
-  else
-    return visitor->visitChildren(this);
+void ALFAParser::AttributeDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterAttributeDefinition(this);
+}
+
+void ALFAParser::AttributeDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<ALFAListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitAttributeDefinition(this);
 }
 
 ALFAParser::AttributeDefinitionContext* ALFAParser::attributeDefinition() {

@@ -25,7 +25,7 @@ The main directory contains an already compiled antlr grammar file "ALFA.g4" usi
           $ antlr4 -Dlanguage=Cpp ALFA.g4 // for the listener 
           $ antlr4 -Dlanguage=Cpp ALFA.g4 -visitor // for the visitor
 
-The "main.cpp" is the one that's been compiled when using cmake.
+The "main.cpp" is the one that's been compiled when using cmake. the "main1.cpp" contains a code that doesnt work so far.
 
 To build this project :
 
@@ -34,13 +34,4 @@ To build this project :
       $ cd build
       $ cmake -G "Unix Makefiles" ..
       $ make -j2 VERBOSE=1
-      $ ./output		
-      
-      
-      
-The project C++ files are in the 'grammar' directory.
-
-
-Some problems with the grammar are in the 'GrammarProblems.txt' file in the 'grammar' directory.
-
-Most of the work, so far, is concentrated on the 'Listener.h' and 'Visitor.h' classes in the 'grammar/include' directories.
+      $ ./test_antlr

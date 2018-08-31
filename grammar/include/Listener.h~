@@ -3,19 +3,53 @@
 #include "ALFABaseListener.h"
 #include "ALFAParser.h"
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+// #include "OutputClasses.h"
+// #include "ParseTreeWalker.h"
+
+
 
 using namespace std;
 
 
 class Listener : public ALFABaseListener {
 	public:
-
+	
+	Listener(ALFAParser* p, string f) {
+		parser = new ALFAParser(p->getTokenStream());
+		outputFile = new ifstream(f);
+		
+		if (outputFile->is_open()) cout << "output file loaded successfuly" << endl;
+		else cout << "Could not load output file" << endl;
+		
+		output = "";
+	}
+	
+	~Listener() {
+		delete parser;
+		delete outputFile;
+	}
+	ALFAParser* parser;
+	ifstream *outputFile;
+	string output;
+	
+	
+	
   virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   	cout << " enterTranslationUnit " << endl;
+  	string output = "" ;
+  	output += "pragma solidity ^0.4.0; // What compiler to use" ;
   	
   }
   virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   	cout << " exitTranslationUnit " << endl;
+  	string output = "" ;
+  	output += " // End of translation";
+  	
+  	outputFile->close();
+  	cout << output << endl;
   }
 
   virtual void enterDeclarationseq(ALFAParser::DeclarationseqContext *ctx) {
@@ -159,12 +193,64 @@ class Listener : public ALFABaseListener {
   }
 
   virtual void enterAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
-  	cout << " enterAttributeDefinition " << endl;
+	cout << " enterAttributeDefinition " << endl;
+	
+  	
+  /* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  	/* Collecting the identifiers and their values 
+  	*
+  	* For example 
+  	* 	attribute actionType {
+	*        id = "urn:oasis:names:tc:xacml:1.0:action:action-type"
+	*        type = "string"
+	*        category = "actionCat"
+	* 	}	
+	* the attributeName string will contain "actionType",
+	* the identifiers vector will contain ["id", "type", "category"], 
+	* while the values vector will contain [""urn:oasis:names:tc:xacml:1.0:action:action-type", "string", "actionCat"].
+	*
+	*/
+	
+  	vector<string> identifiers;
+  	vector<string> values;
+  	string attributeName;
+  	
+  	
+  	attributeName = (ctx->WORD())->toString();
+  	
+  	if (ctx->getRuleIndex() != 0) {
+  		for (auto id : ctx->IDENTIFIERS()) {
+  			identifiers.push_back(id->toString());
+  		} 
+  		
+  		for (auto id : ctx->VALUE()) {
+  			values.push_back(id->toString());
+  		} 
+  	}
+  	
+  /* ---------------------------------------------------------------------------------------------------------------------------*/
+	string output = "" ;
+	/* Attribute Definition translation */
+	// OutputClasses Output;
+	// output += Output.getStruct();
+	output += "\nattribute " + attributeName + " ;\n" ;
+	for (int i=0; i< 3; i++) {
+		output += attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
+	}
+	cout << output << endl;
+	
+  	
   }
   virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
   	cout << " exitAttributeDefinition " << endl;
   }
 
+	virtual void enterEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { 
+
+	}
 
 
 };
+
+

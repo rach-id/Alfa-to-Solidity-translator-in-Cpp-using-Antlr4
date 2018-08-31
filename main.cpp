@@ -9,8 +9,6 @@
 #include <string>
 #include "Listener.h"
 #include "ParseTreeWalker.h"
-#include "Visitor.h"
-
 
 using namespace std;
 using namespace antlr4;
@@ -71,21 +69,25 @@ int main() {
 	
 		/* to use the listener walking pattern, uncomment the following section */
 		
-		/*
-		* Listener listen;
-	
-		* tree::ParseTreeWalker walker ;
-		* walker.walk(&listen, tree);
-		*/
-	
+		string output = "/home/sweexordious/aa";
+		Listener listen(&parser, output);
+		tree::ParseTreeWalker::DEFAULT.walk(&listen, tree);
+
+
+
 	/* ----------------------------------------------------------------------------------------------------------*/
 	
 		/* to use the visitor walking pattern, uncomment the following section */
 		
-		Visitor visitor(&parser);
-		visitor.visitTranslationunit(tree);
+		/*
+		* Visitor visitor(&parser);
+		* visitor.visitTranslationunit(tree);
+		*/
 		
 		
+	/* Ps : The visitor is not implemented to offer a translation from alfa to solidity, its just for testing matters. Its the listener implementation that contains the actual transpiler. 
+	*/
+	
 	/* ----------------------------------------------------------------------------------------------------------*/
 	
 		File.close();
@@ -98,6 +100,14 @@ int main() {
 	
 	return 0;	
 }
+
+
+
+
+
+
+
+
 
 
 
