@@ -42,3 +42,5 @@ The project C++ files are in the 'grammar' directory.
 Some problems with the grammar are in the 'GrammarProblems.txt' file in the 'grammar' directory.
 
 Most of the work, so far, is concentrated on the 'Listener.h' and 'Visitor.h' classes in the 'grammar/include' directories.
+
+The input file used during tests is "input.alfa" and the output solidity code is on "output.sol".
