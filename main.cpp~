@@ -9,7 +9,6 @@
 #include <string>
 #include "Listener.h"
 #include "ParseTreeWalker.h"
-#include "Visitor.h"
 
 using namespace std;
 using namespace antlr4;
@@ -22,7 +21,7 @@ int main() {
 	string file = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
 
 
-	ifstream File (file);
+	ofstream File (file);
 	
 	if (File.is_open()) {
 	
@@ -70,14 +69,11 @@ int main() {
 	
 		/* to use the listener walking pattern, uncomment the following section */
 		
-		string output = "/home/sweexordious/aa";
+		string output = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/output.sol";
 		Listener listen(&parser, output);
 		tree::ParseTreeWalker::DEFAULT.walk(&listen, tree);
 
-		for (auto &child : tree->children) {
-  			std::cout << "hehehe" << std::endl;
-    		tree::ParseTreeWalker::DEFAULT.walk(&listen, child);
-  		}
+
 
 	/* ----------------------------------------------------------------------------------------------------------*/
 	

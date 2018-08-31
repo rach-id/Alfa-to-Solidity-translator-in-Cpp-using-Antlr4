@@ -69,7 +69,7 @@ int main() {
 	
 		/* to use the listener walking pattern, uncomment the following section */
 		
-		string output = "/home/sweexordious/aa";
+		string output = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/output.sol";
 		Listener listen(&parser, output);
 		tree::ParseTreeWalker::DEFAULT.walk(&listen, tree);
 

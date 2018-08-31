@@ -6,7 +6,7 @@ class OutputClasses {
 
 public :
 	static string getStruct() {
-		string str = "struct attribute {/r/tstring id;/r/tstring type;/r/tstring category;/r}/r";
+		string str = "struct attribute {\n\tstring id;\n\tstring type;\n\tstring category;\n}\n";
 		return str;
 	}
 

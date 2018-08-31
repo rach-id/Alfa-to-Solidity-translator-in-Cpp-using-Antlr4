@@ -1,83 +1,10 @@
 namespace policies {
-	
-	// Adding some useful attributes to the default namespace
-	
+
 	namespace Attributes {
-	    attribute actionTypeAAAAAA {
+	    attribute actionType {
 	        id = "urn:oasis:names:tc:xacml:1.0:action:action-type"
 	        type = "string"
 	        category = "actionCat"
-	}	
-}
-
-
-
-
-/*
-	    namespace resourceId {
-	    	attribute owner {
-	    		id = "urn:resouce:resource:owner"
-	    		type = "string"
-	    		category = "resourceCat"
-	    	}
 	    }
-
-	 
-	policyset {
-		apply firstApplicable
-		
-		// Policies for accessing the results
-		
-		policyset resultsAccess {
-			target clause resource.type == "results"
-			apply denyOverrides
-			
-			policy {
-				apply permitOverrides
-				
-				// A student can only access to his result
-				
-				rule studentAccess {
-					target clause action.type == "read"
-					condition resourceId.owner == "requestorId"
-					permit
-				}
-				
-				// A teacher can access to his classe's results
-				
-				rule teacherAccess {
-					condition resourceId.owner == "requestorId"
-					permit
-				}
-			}
-		}
-		
-		policy medicalPolicy {
-      target clause Attributes.resourceType == "medical-record"
-      apply denyOverrides
-      rule {
-         permit
-         target clause Attributes.role == "doctor"
-      }
-      rule { 
-         deny
-         condition not(booleanOneAndOnly(Attributes.careRelationExists)) 
-         on deny {
-            advice ObligationAdvice.reasonForDeny { 
-               Attributes.message = "There is no care relation"
-            } 
-         }
-      } 
-      rule {
-         deny
-         condition booleanOneAndOnly(Attributes.recordIsBlocked) 
-         on deny {
-            advice ObligationAdvice.reasonForDeny { 
-               Attributes.message = "The record is blocked"
-            } 
-         }
-      }
-	   
 	}
-	*/
-	
+}

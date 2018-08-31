@@ -1,13 +1,11 @@
 #include <antlr4-runtime.h>
-#include "ALFAListener.h"
 #include "ALFABaseListener.h"
 #include "ALFAParser.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-// #include "OutputClasses.h"
-// #include "ParseTreeWalker.h"
+#include "OutputClasses.h"
 
 
 
@@ -17,11 +15,10 @@ using namespace std;
 class Listener : public ALFABaseListener {
 	public:
 	
-	Listener(ALFAParser* p, string f) {
+	Listener(ALFAParser* p, string f) : outputFile(f) {
 		parser = new ALFAParser(p->getTokenStream());
-		outputFile = new ifstream(f);
 		
-		if (outputFile->is_open()) cout << "output file loaded successfuly" << endl;
+		if (outputFile.is_open()) cout << "output file loaded successfuly" << endl;
 		else cout << "Could not load output file" << endl;
 		
 		output = "";
@@ -29,27 +26,26 @@ class Listener : public ALFABaseListener {
 	
 	~Listener() {
 		delete parser;
-		delete outputFile;
 	}
 	ALFAParser* parser;
-	ifstream *outputFile;
+	ofstream outputFile;
 	string output;
 	
 	
 	
   virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   	cout << " enterTranslationUnit " << endl;
-  	string output = "" ;
   	output += "pragma solidity ^0.4.0; // What compiler to use" ;
   	
   }
   virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   	cout << " exitTranslationUnit " << endl;
-  	string output = "" ;
-  	output += " // End of translation";
   	
-  	outputFile->close();
-  	cout << output << endl;
+  	output += "\n\n\n // End of translation";
+  	
+  	outputFile << output ;
+  	
+  	outputFile.close();
   }
 
   virtual void enterDeclarationseq(ALFAParser::DeclarationseqContext *ctx) {
@@ -230,15 +226,17 @@ class Listener : public ALFABaseListener {
   	}
   	
   /* ---------------------------------------------------------------------------------------------------------------------------*/
-	string output = "" ;
 	/* Attribute Definition translation */
-	// OutputClasses Output;
-	// output += Output.getStruct();
+	OutputClasses Output;
+	
+	output += Output.getStruct();
+	
 	output += "\nattribute " + attributeName + " ;\n" ;
+	cout << "\n\n\n\n" << endl;
+	
 	for (int i=0; i< 3; i++) {
 		output += attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
 	}
-	cout << output << endl;
 	
   	
   }
@@ -246,9 +244,6 @@ class Listener : public ALFABaseListener {
   	cout << " exitAttributeDefinition " << endl;
   }
 
-	virtual void enterEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { 
-
-	}
 
 
 };
