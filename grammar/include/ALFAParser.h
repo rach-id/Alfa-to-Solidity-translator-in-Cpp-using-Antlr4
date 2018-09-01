@@ -36,7 +36,8 @@ public:
     RuleClauseDefinition = 10, RuleBooleenExpression = 11, RuleConditionDefinition = 12, 
     RuleCondition = 13, RuleFunctionType = 14, RuleFunctionName = 15, RuleImportDefinition = 16, 
     RulePermitdeny = 17, RuleCombiningAlgorithm = 18, RuleAdviceDefinition = 19, 
-    RuleObligationDefinition = 20, RuleAttributeDefinition = 21
+    RuleObligationDefinition = 20, RuleAttributeDefinition = 21, RuleLAND = 22, 
+    RuleLOR = 23
   };
 
   ALFAParser(antlr4::TokenStream *input);
@@ -70,7 +71,9 @@ public:
   class CombiningAlgorithmContext;
   class AdviceDefinitionContext;
   class ObligationDefinitionContext;
-  class AttributeDefinitionContext; 
+  class AttributeDefinitionContext;
+  class LANDContext;
+  class LORContext; 
 
   class  TranslationunitContext : public antlr4::ParserRuleContext {
   public:
@@ -353,8 +356,12 @@ public:
     antlr4::tree::TerminalNode* NOT(size_t i);
     std::vector<antlr4::tree::TerminalNode *> NEWLINE();
     antlr4::tree::TerminalNode* NEWLINE(size_t i);
+    std::vector<LANDContext *> lAND();
+    LANDContext* lAND(size_t i);
     std::vector<BooleenExpressionContext *> booleenExpression();
     BooleenExpressionContext* booleenExpression(size_t i);
+    std::vector<LORContext *> lOR();
+    LORContext* lOR(size_t i);
     antlr4::tree::TerminalNode *BAGFUNCTION();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -553,6 +560,30 @@ public:
   };
 
   AttributeDefinitionContext* attributeDefinition();
+
+  class  LANDContext : public antlr4::ParserRuleContext {
+  public:
+    LANDContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+   
+  };
+
+  LANDContext* lAND();
+
+  class  LORContext : public antlr4::ParserRuleContext {
+  public:
+    LORContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+   
+  };
+
+  LORContext* lOR();
 
 
 private:

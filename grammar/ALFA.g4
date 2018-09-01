@@ -164,11 +164,11 @@ clauseDefinition :
     ;
 
 booleenExpression :
-        NOT* '('* TARGETRESSOURCE COMPARE VALUE ')'* NEWLINE*
-        ( 'and' booleenExpression | 'or' booleenExpression )*
+        NOT* RIGHTPAREN* TARGETRESSOURCE COMPARE VALUE LEFTPAREN* NEWLINE*
+        ( lAND booleenExpression | lOR booleenExpression )*
     |
-        NOT* '('* BAGFUNCTION '(' TARGETRESSOURCE ')' COMPARE VALUE ')'* NEWLINE*
-        ( 'and' booleenExpression | 'or' booleenExpression )*
+        NOT* RIGHTPAREN* BAGFUNCTION RIGHTPAREN TARGETRESSOURCE LEFTPAREN COMPARE VALUE LEFTPAREN* NEWLINE*
+        ( lAND booleenExpression | lOR booleenExpression )*
     ;
 
 conditionDefinition :
@@ -176,12 +176,12 @@ conditionDefinition :
     ;
 
 condition :
-        NEWLINE* NOT* '('* functionType* '('* FUNCTION '[' functionName ']' ',' VALUE ','
-        TARGETRESSOURCE ')'* ( ( AND | OR ) ( booleenExpression | condition ) )* ')'*
+        NEWLINE* NOT* RIGHTPAREN* functionType* RIGHTPAREN* FUNCTION '[' functionName ']' ',' VALUE ','
+        TARGETRESSOURCE LEFTPAREN* ( ( AND | OR ) ( booleenExpression | condition ) )* LEFTPAREN*
         |
-        NOT* '('* booleenExpression ( ( AND | OR ) ( booleenExpression | condition )* )* ')'*
+        NOT* RIGHTPAREN'* booleenExpression ( ( AND | OR ) ( booleenExpression | condition )* )* LEFTPAREN*
         |
-        NOT* '('* functionName '(' TARGETRESSOURCE ')' ')'*
+        NOT* RIGHTPAREN* functionName RIGHTPAREN TARGETRESSOURCE LEFTPAREN LEFTPAREN*
     ;
 
 functionType :
@@ -485,7 +485,8 @@ LESSEQUAL : '<=';
 GREATEREQUAL : '>=';
 ANDAND : '&&';
 OROR : '||' ;
-
+lAND : 'and'; 
+lOR : 'or' ;
 
 
 

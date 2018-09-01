@@ -1,0 +1,45 @@
+
+// Another testing alfa input
+
+
+namespace policies{
+    attribute actionId{
+        category = "actionCat"
+        id = "actionId"
+        type = "string"
+    }
+
+    attribute resourceType{
+        category = "resourceCat"
+        id = "resourceType"
+        type = "string"
+    }
+
+    attribute amount{
+        category = "resourceCat"
+        id = "amount"
+        type = "double"
+    }
+    /**
+     * The limit could be a subject attribute in the case it's user-specific
+     */
+    attribute limit{
+        category = "subjectCat"
+        id = "limit"
+        type = "double"
+    }
+
+     policy transfer{
+        target clause actionId. == "transfer" and resourceType. =="bank account"
+        apply firstApplicable
+        rule allow{
+            condition amount <= limit
+            permit
+        }
+        rule denyTransfer{
+            deny
+        }
+     }
+}
+
+

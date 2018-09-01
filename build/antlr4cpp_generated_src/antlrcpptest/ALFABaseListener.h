@@ -84,6 +84,12 @@ public:
   virtual void enterAttributeDefinition(ALFAParser::AttributeDefinitionContext * /*ctx*/) override { }
   virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext * /*ctx*/) override { }
 
+  virtual void enterLAND(ALFAParser::LANDContext * /*ctx*/) override { }
+  virtual void exitLAND(ALFAParser::LANDContext * /*ctx*/) override { }
+
+  virtual void enterLOR(ALFAParser::LORContext * /*ctx*/) override { }
+  virtual void exitLOR(ALFAParser::LORContext * /*ctx*/) override { }
+
 
   virtual void enterEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }
   virtual void exitEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }

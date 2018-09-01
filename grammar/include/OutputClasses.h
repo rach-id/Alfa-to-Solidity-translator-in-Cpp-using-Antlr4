@@ -18,7 +18,7 @@ public :
 	
 	
 	string getTargetStruct(string ressource, string value) {
-		string str = "struct Target {\n" + indent() +"\tstring " + ressource + " = " + value + "\n" + indent() + "}\n";
+		string str = "struct Target {\n" + indent() +"\tstring " + ressource + " = " + value + " ;" + "\n" + indent() + "}\n";
 		++attributeStructCount;
 		return str;
 	}

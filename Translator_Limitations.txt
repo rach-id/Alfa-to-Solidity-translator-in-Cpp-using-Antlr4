@@ -38,7 +38,7 @@ Target clause Problems :
 		* 3- a target clause like :  target clause qt > 13 , or anything of a kind wont be translated. Specified clauses should be made in a condition ...
 		*	
 		* 4 - incomplete target clause definitions like : target clause , 
-		*	will result in crushing the translator.
+		*	will result in an empty 'require()' solidity block.
 
 
 ##########

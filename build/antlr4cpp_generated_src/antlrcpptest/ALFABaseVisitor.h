@@ -105,6 +105,14 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitLAND(ALFAParser::LANDContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLOR(ALFAParser::LORContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
 
 };
 

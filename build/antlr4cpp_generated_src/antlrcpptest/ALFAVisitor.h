@@ -64,6 +64,10 @@ public:
 
     virtual antlrcpp::Any visitAttributeDefinition(ALFAParser::AttributeDefinitionContext *context) = 0;
 
+    virtual antlrcpp::Any visitLAND(ALFAParser::LANDContext *context) = 0;
+
+    virtual antlrcpp::Any visitLOR(ALFAParser::LORContext *context) = 0;
+
 
 };
 

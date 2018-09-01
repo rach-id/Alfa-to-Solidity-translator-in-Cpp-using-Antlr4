@@ -16,7 +16,7 @@ class Listener : public ALFABaseListener {
 	public:
 	
 	/* Constructor/Destructor */
-	Listener(ALFAParser* p, string f) : outputFile(f, ios::out) {
+	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0) {
 	
 		parser = new ALFAParser(p->getTokenStream());
 		
@@ -172,7 +172,7 @@ class Listener : public ALFABaseListener {
   	  
   	  	/* translating the code */
   	  	
-  	  	output += Output.indent() + "function " + ruleName + "() returns (bool)" + " {\n" ;
+  	  	output += Output.indent() + "function " + ruleName + " () returns (bool)" + " {\n" ;
   	  	Output.indentCount += 1;
   	  	output += "\n";
   	  	
@@ -242,18 +242,24 @@ class Listener : public ALFABaseListener {
 		*	in a condition ...
 		*	
 		* 4 - incomplete target clause definitions like : target clause , 
-		*	will result in crushing the translator.
+		*	will result in an empty 'require()' solidity block.
 		*
 		*/
 		
-  		string targetRessource;
-  		string targetValue;
+  		string targetRessource = "";
+  		string targetValue = "";
 
-		targetRessource = (((ctx->clauseDefinition())->booleenExpression())[0]->TARGETRESSOURCE())->toString();
-		targetRessource.pop_back();
+		if(!((ctx->clauseDefinition())->booleenExpression()).empty()) {
 		
-  		targetValue = (((ctx->clauseDefinition())->booleenExpression())[0]->VALUE())->toString();
+			targetRessource = (((ctx->clauseDefinition())->booleenExpression())[0]->TARGETRESSOURCE())->toString();
+		
+		//remove the '.' added for targets to be parsed by antlr
+			targetRessource.pop_back(); 
+		
+		
+  			targetValue = (((ctx->clauseDefinition())->booleenExpression())[0]->VALUE())->toString();
   		
+  		} else ctx->exitRule(this);
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
   	  	/* translating the code */
@@ -261,9 +267,9 @@ class Listener : public ALFABaseListener {
   	  	output += Output.indent() + Output.getTargetStruct(targetRessource, targetValue) + "\n";
 	
   	  	output += "\n";
+
   	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
-  		
   	}
   	
   	virtual void exitTargetDefinition(ALFAParser::TargetDefinitionContext *ctx) {
@@ -271,25 +277,74 @@ class Listener : public ALFABaseListener {
   	}
 
   	virtual void enterClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
+  	
+  		output += Output.indent() + "require (" ;
   		cout << " enterClauseDefinition " << endl;
   	}
  	virtual void exitClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
   		cout << " exitClauseDefinition " << endl;
+  		output += " );\n"; 
   	}
 
   	virtual void enterBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
   		cout << " enterBooleenExpression " << endl;
+  		
+	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  		/* Collecting the booleen expression definition :
+	  	*
+	  	* For example 
+	  	*
+	  	* 	condition resourceId.owner == "requestorId"
+	  	*	target clause actionType. == "read"
+		*	...
+		* 
+		*
+		* the expressions that contain a booleen expression, will be translated
+		* into a require solidity block
+		*
+		*
+		*
+		*/
+		
+		string targetRessource;
+		string compare;
+		string value;
+		
+		targetRessource = (ctx->TARGETRESSOURCE())->toString();
+		targetRessource.pop_back();
+		
+		compare = (ctx->COMPARE())->toString();
+		value = (ctx->VALUE())->toString();
+		
+	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  
+  	  	/* translating the code */
+  	  	
+  	  	output += targetRessource + " " + compare + " " + value ;
+  	  	boolCount++;
+	  	if(!((ctx->lAND()).empty()) && boolCount > 1) output += " && " ;
+		if(!((ctx->lOR()).empty()) && boolCount > 1) output += " || " ;
+  		
+		
+  	  	
+	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	virtual void exitBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
   		cout << " exitBooleenExpression " << endl;
+  		boolCount = 0 ;
   	}
 
   	virtual void enterConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
   		cout << " enterConditionDefinition " << endl;
+  		
+  		output += Output.indent() + "require (" ;
   	}
   	
   	virtual void exitConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
   		cout << " exitConditionDefinition " << endl;
+  		
+  		output += " );\n"; 
   	}
 
   	virtual void enterCondition(ALFAParser::ConditionContext *ctx) {
@@ -424,7 +479,8 @@ class Listener : public ALFABaseListener {
 	  	cout << " exitAttributeDefinition " << endl;
 	  }
 
-
+private :
+	int boolCount;
 };
 
 
