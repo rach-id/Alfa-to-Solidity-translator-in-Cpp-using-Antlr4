@@ -1,41 +1,50 @@
 pragma solidity ^0.4.0; // What compiler to use
 
-contract test {
-	struct attribute {
-		string id;
-		string type;
-		string category;
+struct attribute {
+	string id;
+	string type;
+	string category;
+}
+
+attribute actionId ;
+actionId.category = "actionCat" ;
+actionId.id = "actionId" ;
+actionId.type = "string" ;
+
+
+attribute resourceType ;
+resourceType.category = "resourceCat" ;
+resourceType.id = "resourceType" ;
+resourceType.type = "string" ;
+
+
+attribute amount ;
+amount.category = "resourceCat" ;
+amount.id = "amount" ;
+amount.type = "double" ;
+
+
+attribute limit ;
+limit.category = "subjectCat" ;
+limit.id = "limit" ;
+limit.type = "double" ;
+
+contract transfer {
+
+	struct Target {
+		string actionId = "transfer
 	}
 
-	attribute actionType ;
-	actionType.id = "urn:oasis:names:tc:xacml:1.0:action:action-type" ;
-	actionType.type = "string" ;
-	actionType.category = "actionCat" ;
 
-	
-	attribute owner ;
-	owner.id = "urn:resouce:resource:owner" ;
-	owner.type = "string" ;
-	owner.category = "resourceCat" ;
+	function allow() returns (bool) {
 
-	contract  {
-
-		function studentAccess() returns (bool) {
-
-			struct Target {
-				string actionType. = "read"
-			}
-
-
-			return true;
-		}
-		function teacherAccess() returns (bool) {
-
-			return false;
-		}
-
+		return true;
 	}
-	
+	function denyTransfer() returns (bool) {
+
+		return false;
+	}
+
 }
 
 

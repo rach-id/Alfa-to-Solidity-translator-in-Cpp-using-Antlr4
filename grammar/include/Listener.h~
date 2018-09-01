@@ -241,7 +241,8 @@ class Listener : public ALFABaseListener {
 		*	of a kind wont be translated. Specified clauses should be made
 		*	in a condition ...
 		*	
-		* 
+		* 4 - incomplete target clause definitions like : target clause , 
+		*	will result in crushing the translator.
 		*
 		*/
 		
@@ -249,7 +250,7 @@ class Listener : public ALFABaseListener {
   		string targetValue;
 
 		targetRessource = (((ctx->clauseDefinition())->booleenExpression())[0]->TARGETRESSOURCE())->toString();
-		
+		targetRessource.pop_back();
 		
   		targetValue = (((ctx->clauseDefinition())->booleenExpression())[0]->VALUE())->toString();
   		

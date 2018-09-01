@@ -251,6 +251,9 @@ class Listener : public ALFABaseListener {
 
 		targetRessource = (((ctx->clauseDefinition())->booleenExpression())[0]->TARGETRESSOURCE())->toString();
 		
+		//remove the '.' added for targets to be parsed by antlr
+		targetRessource.pop_back(); 
+		
 		
   		targetValue = (((ctx->clauseDefinition())->booleenExpression())[0]->VALUE())->toString();
   		

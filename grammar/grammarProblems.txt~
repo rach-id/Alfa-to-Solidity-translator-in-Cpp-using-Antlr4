@@ -23,10 +23,24 @@ on deny {
    Attributes.message = "There is no care relation"
 } 
 
-Doesnt recognize the "There is no care relation" as a string... 
+Doesnt recognize the "There is no care relation" as a string... God knows why.
 
 
 ##########
+Target clause Problems :
+
+		* 1- This translator doesnt make the difference between 'and' and 'or' blocks, it gathers them in a struct regardless of their type.
+		*
+		* 2- a target clause definition with multiple clause definitions will not be interpreted
+		* 	for example : target clause test. == "read" and rest. != "write"
+		* 	only the first clause will be translated.
+		* 
+		* 3- a target clause like :  target clause qt > 13 , or anything 
+		*	of a kind wont be translated. Specified clauses should be made
+		*	in a condition ...
+		*	
+		* 4 - incomplete target clause definitions like : target clause , 
+		*	will result in crushing the translator.
 
 
 
