@@ -39,7 +39,7 @@ To build this project :
 
 The project C++ files are in the 'grammar' directory.
 
-Some problems with the grammar are in the 'GrammarProblems.txt' file in the 'grammar' directory.
+Project limitations are added to the 'Translator_Limitations.txt' file as soon as they occur.
 
 Most of the work, so far, is concentrated on the 'Listener.h' and 'Visitor.h' classes in the 'grammar/include' directories.
 
