@@ -1,6 +1,6 @@
 pragma solidity ^0.4.0; // What compiler to use
 
-contract policyset {
+contract test {
 	struct attribute {
 		string id;
 		string type;
@@ -18,15 +18,20 @@ contract policyset {
 	owner.type = "string" ;
 	owner.category = "resourceCat" ;
 
-	contract policy {
+	contract  {
 
-		function rule() returns (bool) {
+		function studentAccess() returns (bool) {
 
-			 nothing works 
+			struct Target {
+				string actionType. = "read"
+			}
+
+
+			return true;
 		}
-		function rule() returns (bool) {
+		function teacherAccess() returns (bool) {
 
-			 nothing works 
+			return false;
 		}
 
 	}

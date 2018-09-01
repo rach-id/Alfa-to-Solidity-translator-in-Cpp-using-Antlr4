@@ -214,6 +214,56 @@ class Listener : public ALFABaseListener {
 
   	virtual void enterTargetDefinition(ALFAParser::TargetDefinitionContext *ctx) {
   		cout << " enterTargetDefinition " << endl;
+  		
+	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  
+  		/* Collecting the target clause definition :
+	  	*
+	  	* For example 
+	  	*
+	  	* 	target clause test. == "read"
+		*
+		* 
+		* the targetRessource string will contain the value 'test',
+		* and the targetValue string will contain 'read'.
+		*
+		*
+		*
+		* !!! PS : !!!
+		* 1- This translator doesnt make the difference between 'and' and 'or'
+		* 	blocks, it gathers them in a struct regardless of their type.
+		*
+		* 2- a target clause definition with multiple clause definitions will not be interpreted
+		* 	for example : target clause test. == "read" and rest. != "write"
+		* 	only the first clause will be translated.
+		* 
+		* 3- a target clause like :  target clause qt > 13 , or anything 
+		*	of a kind wont be translated. Specified clauses should be made
+		*	in a condition ...
+		*	
+		* 4 - incomplete target clause definitions like : target clause , 
+		*	will result in crushing the translator.
+		*
+		*/
+		
+  		string targetRessource;
+  		string targetValue;
+
+		targetRessource = (((ctx->clauseDefinition())->booleenExpression())[0]->TARGETRESSOURCE())->toString();
+		
+		
+  		targetValue = (((ctx->clauseDefinition())->booleenExpression())[0]->VALUE())->toString();
+  		
+	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  	  
+  	  	/* translating the code */
+  	  	
+  	  	output += Output.indent() + Output.getTargetStruct(targetRessource, targetValue) + "\n";
+	
+  	  	output += "\n";
+  	  	
+	/* ---------------------------------------------------------------------------------------------------------------------------*/
+  		
   	}
   	
   	virtual void exitTargetDefinition(ALFAParser::TargetDefinitionContext *ctx) {
@@ -352,7 +402,7 @@ class Listener : public ALFABaseListener {
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
 		/* Attribute Definition translation */
 	
-		output += Output.indent() + Output.getStruct() + "\n";
+		output += Output.indent() + Output.getAttributeStruct() + "\n";
 	
 		output += Output.indent() + "attribute " + attributeName + " ;\n" ;
 		cout << "\n\n\n\n" << endl;

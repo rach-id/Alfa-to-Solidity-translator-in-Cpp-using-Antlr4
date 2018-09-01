@@ -11,6 +11,7 @@ All the fields should be delimited by double quotes " .
 ##########
 Target ressource definition still bugs when using simples target like "ressource", it only works with complex ones like "ressource.id".
 
+To avoid this problem, change 'ressource' to 'ressource.', and everything will be fine.
 
 ##########
 All the "value == value" should be either numerical or strings.
@@ -22,7 +23,7 @@ on deny {
    Attributes.message = "There is no care relation"
 } 
 
-Doesnt recognize the "There is no care relation" as a string... 
+Doesnt recognize the "There is no care relation" as a string... God knows why.
 
 
 ##########

@@ -22,6 +22,11 @@ contract test {
 
 		function studentAccess() returns (bool) {
 
+			struct Target {
+				string actionType. = "read"
+			}
+
+
 			return true;
 		}
 		function teacherAccess() returns (bool) {
