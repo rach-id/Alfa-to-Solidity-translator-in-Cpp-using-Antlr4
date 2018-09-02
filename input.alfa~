@@ -26,8 +26,8 @@ policyset test  {
 			// A student can only access to his result
 				
 			rule studentAccess {
-				target clause actionType. == "read" 
-				condition ( resourceId.owner == "requestorId" and actionType. == "read" and hh. == "hh")
+				target clause ( actionType. == "read" )
+				condition (((((  (not resourceId.owner == "requestorId" and actionType. == "read") or hh. == "hh")))))
 				permit
 			}
 				

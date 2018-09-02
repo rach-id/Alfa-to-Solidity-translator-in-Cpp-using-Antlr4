@@ -89,6 +89,8 @@ ALFAListener.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.cpp
 ALFAListener.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAListener.h
+ALFAVisitor.h
+/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAVisitor.h
 ALFAParser.h
 /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.h
 

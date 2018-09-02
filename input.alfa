@@ -27,7 +27,7 @@ policyset test  {
 				
 			rule studentAccess {
 				target clause actionType. == "read" 
-				condition ( resourceId.owner == "requestorId" and actionType. == "read" or hh. == "hh")
+				condition (((((  (not resourceId.owner == "requestorId" and actionType. == "read") or hh. == "hh")))))
 				permit
 			}
 				

@@ -28,7 +28,7 @@ contract test {
 
 
 			require (actionType == "read" );
-			require (resourceId.owne == "requestorId" && actionType == "read" || hh == "hh" );
+			require ((((((( !resourceId.owne == "requestorId" && actionType == "read" )  || hh == "hh" )  )  )  );
 			return true;
 		}
 		function teacherAccess () returns (bool) {

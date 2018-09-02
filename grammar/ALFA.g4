@@ -176,37 +176,12 @@ conditionDefinition :
     ;
 
 condition :
-        NEWLINE* NOT* RIGHTPAREN* functionType* RIGHTPAREN* FUNCTION '[' functionName ']' ',' VALUE ','
+        NEWLINE* NOT* RIGHTPAREN*? FUNCTIONTYPE* RIGHTPAREN* FUNCTION '[' FUNCTIONNAME ']' ',' VALUE ','
         TARGETRESSOURCE LEFTPAREN* ( ( AND | OR ) ( booleenExpression | condition ) )* LEFTPAREN*
         |
-        NOT* RIGHTPAREN'* booleenExpression ( ( AND | OR ) ( booleenExpression | condition )* )* LEFTPAREN*
+        NOT* RIGHTPAREN* booleenExpression ( ( AND | OR ) ( booleenExpression | condition )* )* LEFTPAREN*
         |
-        NOT* RIGHTPAREN* functionName RIGHTPAREN TARGETRESSOURCE LEFTPAREN LEFTPAREN*
-    ;
-
-functionType :
-        'AllOf'
-    |
-        'AnyOf'
-    |
-        'AnyOfAny'
-    |
-        'AllOfAny'
-    |
-        'AnyOfAll'
-    |
-        'AllOfAll'
-    ;
-        
-functionName :
-        'stringRegexpMatch'
-    |
-        'anyURIRegesMatch'
-    |
-        'NameRegexMatch'
-    |
-    	'booleanOneAndOnly'
-        
+        NOT* RIGHTPAREN* FUNCTIONNAME RIGHTPAREN TARGETRESSOURCE LEFTPAREN LEFTPAREN*
     ;
 
 importDefinition :
@@ -459,6 +434,31 @@ CATEGORY :
 	 'category'
 	 ;
 	 
+
+FUNCTIONTYPE :
+        'AllOf'
+    |
+        'AnyOf'
+    |
+        'AnyOfAny'
+    |
+        'AllOfAny'
+    |
+        'AnyOfAll'
+    |
+        'AllOfAll'
+    ;
+        
+FUNCTIONNAME :
+        'stringRegexpMatch'
+    |
+        'anyURIRegesMatch'
+    |
+        'NameRegexMatch'
+    |
+    	'booleanOneAndOnly'
+        
+    ;
 
 
 

@@ -73,14 +73,6 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitFunctionType(ALFAParser::FunctionTypeContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual antlrcpp::Any visitFunctionName(ALFAParser::FunctionNameContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
   virtual antlrcpp::Any visitImportDefinition(ALFAParser::ImportDefinitionContext *ctx) override {
     return visitChildren(ctx);
   }

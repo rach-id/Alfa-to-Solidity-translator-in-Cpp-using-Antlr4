@@ -60,12 +60,6 @@ public:
   virtual void enterCondition(ALFAParser::ConditionContext * /*ctx*/) override { }
   virtual void exitCondition(ALFAParser::ConditionContext * /*ctx*/) override { }
 
-  virtual void enterFunctionType(ALFAParser::FunctionTypeContext * /*ctx*/) override { }
-  virtual void exitFunctionType(ALFAParser::FunctionTypeContext * /*ctx*/) override { }
-
-  virtual void enterFunctionName(ALFAParser::FunctionNameContext * /*ctx*/) override { }
-  virtual void exitFunctionName(ALFAParser::FunctionNameContext * /*ctx*/) override { }
-
   virtual void enterImportDefinition(ALFAParser::ImportDefinitionContext * /*ctx*/) override { }
   virtual void exitImportDefinition(ALFAParser::ImportDefinitionContext * /*ctx*/) override { }
 

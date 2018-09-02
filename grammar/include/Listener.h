@@ -280,6 +280,8 @@ class Listener : public ALFABaseListener {
   	
   		output += Output.indent() + "require (" ;
   		cout << " enterClauseDefinition " << endl;
+  		
+  		
   	}
  	virtual void exitClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
   		cout << " exitClauseDefinition " << endl;
@@ -305,6 +307,11 @@ class Listener : public ALFABaseListener {
 		*
 		*
 		*
+		* PS :
+		*	the parenthesis opening and closing mechanism might not be
+		*	precise in some cases.
+		*
+		*
 		*/
 		
 		string targetRessource;
@@ -321,8 +328,14 @@ class Listener : public ALFABaseListener {
   	  
   	  	/* translating the code */
   	  	
+  	  	if(!((ctx->NOT()).empty())) output += " !" ;
+  	  	if(!((ctx->RIGHTPAREN()).empty())) output += " ( ";
+  	  	
   	  	output += targetRessource + " " + compare + " " + value ;
   	  	boolCount++;
+  	  	
+  	  	if(!((ctx->LEFTPAREN()).empty())) output += " ) ";
+  	  	
 	  	if(!((ctx->lAND()).empty()) && boolCount > 0) output += " && " ;
 		if(!((ctx->lOR()).empty()) && boolCount > 0) output += " || " ;
   		
@@ -332,6 +345,7 @@ class Listener : public ALFABaseListener {
   	}
   	virtual void exitBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
   		cout << " exitBooleenExpression " << endl;
+  		if(!((ctx->LEFTPAREN()).empty())) output += " ) ";
   		boolCount = 0 ;
   	}
 
@@ -339,6 +353,7 @@ class Listener : public ALFABaseListener {
   		cout << " enterConditionDefinition " << endl;
   		
   		output += Output.indent() + "require (" ;
+  		
   	}
   	
   	virtual void exitConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
@@ -349,27 +364,23 @@ class Listener : public ALFABaseListener {
 
   	virtual void enterCondition(ALFAParser::ConditionContext *ctx) {
   		cout << " enterCondition " << endl;
+  		
+  		/* the following loop is to balance the parenthesis */
+  		for (auto paren : ctx->RIGHTPAREN()) {
+  			output += paren->toString();
+  		}
   	}
   	
   	virtual void exitCondition(ALFAParser::ConditionContext *ctx) {
   		cout << " exitCondition " << endl;
+  		
+  		/* the following loop is to balance the parenthesis */
+  		for (auto paren : ctx->LEFTPAREN()) {
+  			output += ")";
+  		}
+  		
   	}
 
-  	virtual void enterFunctionType(ALFAParser::FunctionTypeContext *ctx) {
-  		cout << " enterFunctionType " << endl;
-  	}
-  	
-  	virtual void exitFunctionType(ALFAParser::FunctionTypeContext *ctx) {
-  		cout << " exitFunctionType " << endl;
-  	}
-
-  	virtual void enterFunctionName(ALFAParser::FunctionNameContext *ctx) {
-  		cout << " enterFunctionName " << endl;
-  	}
-  	
-  	virtual void exitFunctionName(ALFAParser::FunctionNameContext *ctx) {
-  		cout << " exitFunctionName " << endl;
-  	}
 
   	virtual void enterImportDefinition(ALFAParser::ImportDefinitionContext *ctx) {
   		cout << " enterImportDefinition " << endl;

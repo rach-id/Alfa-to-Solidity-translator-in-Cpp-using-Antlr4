@@ -58,12 +58,6 @@ public:
   virtual void enterCondition(ALFAParser::ConditionContext *ctx) = 0;
   virtual void exitCondition(ALFAParser::ConditionContext *ctx) = 0;
 
-  virtual void enterFunctionType(ALFAParser::FunctionTypeContext *ctx) = 0;
-  virtual void exitFunctionType(ALFAParser::FunctionTypeContext *ctx) = 0;
-
-  virtual void enterFunctionName(ALFAParser::FunctionNameContext *ctx) = 0;
-  virtual void exitFunctionName(ALFAParser::FunctionNameContext *ctx) = 0;
-
   virtual void enterImportDefinition(ALFAParser::ImportDefinitionContext *ctx) = 0;
   virtual void exitImportDefinition(ALFAParser::ImportDefinitionContext *ctx) = 0;
 

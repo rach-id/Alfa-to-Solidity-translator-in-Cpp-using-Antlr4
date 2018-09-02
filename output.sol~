@@ -20,19 +20,21 @@ contract test {
 
 	contract  {
 
-		function studentAccess(user u) returns (bool) {
+		function studentAccess () returns (bool) {
 
 			struct Target {
-				string actionType = "read"
+				string actionType = "read" ;
 			}
 
 
-			require (actionType. == "read")
-resourceId.owner == "requestorId"			return true;
+			require (actionType == "read" );
+			require ((( !resourceId.owne == "requestorId" &&  ( actionType == "read" || hh == "hh" )  )  );
+			return true;
 		}
-		function teacherAccess(user u) returns (bool) {
+		function teacherAccess () returns (bool) {
 
-resourceId.owner == "requestorId"			return false;
+			require (resourceId.owne == "requestorId" || hehe.ho == "hh" );
+			return false;
 		}
 
 	}

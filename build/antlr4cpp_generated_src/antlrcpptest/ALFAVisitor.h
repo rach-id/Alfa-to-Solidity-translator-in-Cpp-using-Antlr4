@@ -48,10 +48,6 @@ public:
 
     virtual antlrcpp::Any visitCondition(ALFAParser::ConditionContext *context) = 0;
 
-    virtual antlrcpp::Any visitFunctionType(ALFAParser::FunctionTypeContext *context) = 0;
-
-    virtual antlrcpp::Any visitFunctionName(ALFAParser::FunctionNameContext *context) = 0;
-
     virtual antlrcpp::Any visitImportDefinition(ALFAParser::ImportDefinitionContext *context) = 0;
 
     virtual antlrcpp::Any visitPermitdeny(ALFAParser::PermitdenyContext *context) = 0;

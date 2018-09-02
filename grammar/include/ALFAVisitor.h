@@ -47,10 +47,6 @@ public:
 
     virtual antlrcpp::Any visitCondition(ALFAParser::ConditionContext *context) = 0;
 
-    virtual antlrcpp::Any visitFunctionType(ALFAParser::FunctionTypeContext *context) = 0;
-
-    virtual antlrcpp::Any visitFunctionName(ALFAParser::FunctionNameContext *context) = 0;
-
     virtual antlrcpp::Any visitImportDefinition(ALFAParser::ImportDefinitionContext *context) = 0;
 
     virtual antlrcpp::Any visitPermitdeny(ALFAParser::PermitdenyContext *context) = 0;
@@ -62,6 +58,10 @@ public:
     virtual antlrcpp::Any visitObligationDefinition(ALFAParser::ObligationDefinitionContext *context) = 0;
 
     virtual antlrcpp::Any visitAttributeDefinition(ALFAParser::AttributeDefinitionContext *context) = 0;
+
+    virtual antlrcpp::Any visitLAND(ALFAParser::LANDContext *context) = 0;
+
+    virtual antlrcpp::Any visitLOR(ALFAParser::LORContext *context) = 0;
 
 
 };

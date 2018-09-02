@@ -71,14 +71,6 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitFunctionType(ALFAParser::FunctionTypeContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual antlrcpp::Any visitFunctionName(ALFAParser::FunctionNameContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
   virtual antlrcpp::Any visitImportDefinition(ALFAParser::ImportDefinitionContext *ctx) override {
     return visitChildren(ctx);
   }
@@ -100,6 +92,14 @@ public:
   }
 
   virtual antlrcpp::Any visitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLAND(ALFAParser::LANDContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLOR(ALFAParser::LORContext *ctx) override {
     return visitChildren(ctx);
   }
 
