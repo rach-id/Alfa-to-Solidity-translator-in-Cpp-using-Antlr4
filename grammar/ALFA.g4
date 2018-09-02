@@ -6,7 +6,6 @@ translationunit
 	declarationseq+ EOF
 ;
 
-
 /*
  * Parser Rules
  */

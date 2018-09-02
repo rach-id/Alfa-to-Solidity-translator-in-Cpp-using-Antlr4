@@ -176,7 +176,7 @@ conditionDefinition :
     ;
 
 condition :
-        NEWLINE* NOT* RIGHTPAREN* FUNCTIONTYPE* RIGHTPAREN* FUNCTION '[' FUNCTIONNAME ']' ',' VALUE ','
+        NEWLINE* NOT* RIGHTPAREN*? FUNCTIONTYPE* RIGHTPAREN* FUNCTION '[' FUNCTIONNAME ']' ',' VALUE ','
         TARGETRESSOURCE LEFTPAREN* ( ( AND | OR ) ( booleenExpression | condition ) )* LEFTPAREN*
         |
         NOT* RIGHTPAREN* booleenExpression ( ( AND | OR ) ( booleenExpression | condition )* )* LEFTPAREN*

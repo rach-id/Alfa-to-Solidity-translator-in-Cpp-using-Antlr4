@@ -1,3 +1,4 @@
+
 pragma solidity ^0.4.0; // What compiler to use
 
 contract test {
@@ -18,28 +19,36 @@ contract test {
 	owner.type = "string" ;
 	owner.category = "resourceCat" ;
 
-	contract  {
+	contract contract2 ;
+	function teacherAccess () returns (bool) {
 
-		function studentAccess () returns (bool) {
-
-			struct Target {
-				string actionType = "read" ;
-			}
-
-
-			require (actionType == "read" );
-			require ((((((( !resourceId.owne == "requestorId" && actionType == "read" )  || hh == "hh" )  )  )  );
-			return true;
-		}
-		function teacherAccess () returns (bool) {
-
-			require (resourceId.owne == "requestorId" || hehe.ho == "hh" );
-			return false;
-		}
-
+		require (resourceId.owne == "nested Contract" || hehe == "hh" );
+		return false;
 	}
+
 	
 }
+contract contract2 {
+	function studentAccess () returns (bool) {
+
+		struct Target {
+			string actionType = "read" ;
+		}
+
+
+		require (actionType == "read" );
+		require ((((((( !resourceId.owne == "requestorId" && actionType == "read" )  || hh == "hh" )  )  )  );
+		return true;
+	}
+
+	function teacherAccess () returns (bool) {
+
+		require (resourceId.owne == "requestorId" || hehe.ho == "hh" );
+		return false;
+	}
+
+
+	}
 
 
 

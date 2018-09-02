@@ -16,39 +16,48 @@ class Listener : public ALFABaseListener {
 	public:
 	
 	/* Constructor/Destructor */
-	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0) {
+	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0) {
 	
 		parser = new ALFAParser(p->getTokenStream());
 		
 		if (outputFile.is_open()) cout << "# output file loaded successfuly" << endl;
 		else cout << "# Could not load output file" << endl;
 		
-		output = "";
+		output = "" ;
+		contracts.push_back(output);
 	}
 	
 	~Listener() {
 		delete parser;
 	}
 	
-	
-	/* Public Members */
+
+private:	
+	/* Private Members */
 	ALFAParser* parser;
 	ofstream outputFile;
-	string output;
+	vector<string> contracts;
+	vector<string> contractsNames;
 	OutputClasses Output;
+	string output;
+	int oldContractsCount;
+	int newContractsCount;
 	
-	
+public:	
 	/* BaseListener inherited functions */ 
   	virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   		cout << " enterTranslationUnit " << endl;
-  		output += Output.indent() + "pragma solidity ^0.4.0; // What compiler to use\n\n" ;
+  		contracts[newContractsCount] += Output.indent() + "pragma solidity ^0.4.0; // What compiler to use\n\n" ;
   	}
   	
   	virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   		cout << " exitTranslationUnit " << endl;
   	
-  		output += "\n\n\n // End of translation";
-  	
+  		
+		for (string str : contracts) output += str;
+		
+		output += "\n\n\n // End of translation";	
+		
   		outputFile << output ;
   	
   		outputFile.close();
@@ -64,6 +73,7 @@ class Listener : public ALFABaseListener {
 
   	virtual void enterNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) {
   		cout << " enterNamespaceDefinition " << endl;
+  		
   	}
   	
   	virtual void exitNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) {
@@ -71,9 +81,14 @@ class Listener : public ALFABaseListener {
   	}
 
   	virtual void enterPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
+  	
   		cout << " enterPolicysetDefinition " << endl;
-  		
-  		  		  	
+  		oldContractsCount = newContractsCount;
+  		Output.indentCount = 0;
+  		output = "";
+  		contracts.push_back(output);
+  		newContractsCount = contracts.size() - 1;	
+  			  	
   	/* ---------------------------------------------------------------------------------------------------------------------------*/
   
   		/* Collecting the policyset name :
@@ -90,28 +105,38 @@ class Listener : public ALFABaseListener {
 		
   		string policysetName = "";
   		if(ctx->WORD()) policysetName = (ctx->WORD())->toString() ;
+  		else policysetName = "contract" + to_string(newContractsCount);
+  		
+  		if (newContractsCount > 1 ) contracts[oldContractsCount] += Output.indent() + "\tcontract " + policysetName + " ;\n\n" ;
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
   	  	/* translating the code */
   	  	
-  	  	output += "contract " + policysetName + " {\n" ;
+  	  	contracts[newContractsCount] += "contract " + policysetName + " {\n" ;
   	  	Output.indentCount++;
   	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
-  	  
+
   	}
   	
   	virtual void exitPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
   		cout << " exitPolicysetDefinition " << endl;
 
-		output += Output.indent() + "\n}\n";
-  		Output.indentCount -= 1;
+		
+		contracts[newContractsCount] += Output.indent() + "\n}\n";
+  		newContractsCount = oldContractsCount ;
   	}
 
   	virtual void enterPolicyDefinition(ALFAParser::PolicyDefinitionContext *ctx) {
   		cout << " enterPolicyDefinition " << endl;
   		  	
+  		Output.indentCount = 0;
+  		output = "";
+  		oldContractsCount = newContractsCount;
+  		output = "";
+  		contracts.push_back(output);
+  		newContractsCount = contracts.size() - 1;
   	/* ---------------------------------------------------------------------------------------------------------------------------*/
   
   		/* Collecting the policy name :
@@ -126,13 +151,16 @@ class Listener : public ALFABaseListener {
 		*
 		*/
 		string policyName = "";
+		
 		if (ctx->WORD()) policyName = (ctx->WORD())->toString();
+  		else policyName = "contract" + to_string(newContractsCount) ;
   		
+  		if (newContractsCount > 1 ) contracts[oldContractsCount] += "\tcontract " + policyName + " ;\n\n" ;
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	 	/* translating the code */
   	  	
-  	  	output += Output.indent() + "contract " + policyName + " {\n" ;
+  	  	contracts[newContractsCount] += Output.indent() + "contract " + policyName + " {\n" ;
   	  	Output.indentCount++;
   	  	output += "\n";
   	  	
@@ -143,9 +171,10 @@ class Listener : public ALFABaseListener {
   		cout << " exitPolicyDefinition " << endl;
  
  
- 		Output.indentCount -= 1;
-  		output += "\n" + Output.indent() + "}\n";
+ 		
+  		contracts[newContractsCount] += "\n" + Output.indent() + "}\n";
   		
+  		newContractsCount = oldContractsCount ;
   	}
 
   	virtual void enterRuleDefinition(ALFAParser::RuleDefinitionContext *ctx) {
@@ -172,9 +201,9 @@ class Listener : public ALFABaseListener {
   	  
   	  	/* translating the code */
   	  	
-  	  	output += Output.indent() + "function " + ruleName + " () returns (bool)" + " {\n" ;
+  	  	contracts[newContractsCount] += Output.indent() + "function " + ruleName + " () returns (bool)" + " {\n" ;
   	  	Output.indentCount += 1;
-  	  	output += "\n";
+  	  	contracts[newContractsCount] += "\n";
   	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
@@ -183,7 +212,7 @@ class Listener : public ALFABaseListener {
   		cout << " exitRuleDefinition " << endl;
   		
   		Output.indentCount = Output.indentCount - 1 ;
-  		output += "\n" + Output.indent() + "}\n";
+  		contracts[newContractsCount] += "\n" + Output.indent() + "}\n\n";
   		
   		
   	}
@@ -264,9 +293,9 @@ class Listener : public ALFABaseListener {
   	  
   	  	/* translating the code */
   	  	
-  	  	output += Output.indent() + Output.getTargetStruct(targetRessource, targetValue) + "\n";
+  	  	contracts[newContractsCount] += Output.indent() + Output.getTargetStruct(targetRessource, targetValue) + "\n";
 	
-  	  	output += "\n";
+  	  	contracts[newContractsCount] += "\n";
 
   	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
@@ -278,14 +307,14 @@ class Listener : public ALFABaseListener {
 
   	virtual void enterClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
   	
-  		output += Output.indent() + "require (" ;
+  		contracts[newContractsCount] += Output.indent() + "require (" ;
   		cout << " enterClauseDefinition " << endl;
   		
   		
   	}
  	virtual void exitClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
   		cout << " exitClauseDefinition " << endl;
-  		output += " );\n"; 
+  		contracts[newContractsCount] += " );\n"; 
   	}
 
   	virtual void enterBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
@@ -328,16 +357,16 @@ class Listener : public ALFABaseListener {
   	  
   	  	/* translating the code */
   	  	
-  	  	if(!((ctx->NOT()).empty())) output += " !" ;
-  	  	if(!((ctx->RIGHTPAREN()).empty())) output += " ( ";
+  	  	if(!((ctx->NOT()).empty())) contracts[newContractsCount] += " !" ;
+  	  	if(!((ctx->RIGHTPAREN()).empty())) contracts[newContractsCount] += " ( ";
   	  	
-  	  	output += targetRessource + " " + compare + " " + value ;
+  	  	contracts[newContractsCount] += targetRessource + " " + compare + " " + value ;
   	  	boolCount++;
   	  	
-  	  	if(!((ctx->LEFTPAREN()).empty())) output += " ) ";
+  	  	if(!((ctx->LEFTPAREN()).empty())) contracts[newContractsCount] += " ) ";
   	  	
-	  	if(!((ctx->lAND()).empty()) && boolCount > 0) output += " && " ;
-		if(!((ctx->lOR()).empty()) && boolCount > 0) output += " || " ;
+	  	if(!((ctx->lAND()).empty()) && boolCount > 0) contracts[newContractsCount] += " && " ;
+		if(!((ctx->lOR()).empty()) && boolCount > 0) contracts[newContractsCount] += " || " ;
   		
 		
   	  	
@@ -345,21 +374,21 @@ class Listener : public ALFABaseListener {
   	}
   	virtual void exitBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
   		cout << " exitBooleenExpression " << endl;
-  		if(!((ctx->LEFTPAREN()).empty())) output += " ) ";
+  		if(!((ctx->LEFTPAREN()).empty())) contracts[newContractsCount] += " ) ";
   		boolCount = 0 ;
   	}
 
   	virtual void enterConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
   		cout << " enterConditionDefinition " << endl;
   		
-  		output += Output.indent() + "require (" ;
+  		contracts[newContractsCount] += Output.indent() + "require (" ;
   		
   	}
   	
   	virtual void exitConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
   		cout << " exitConditionDefinition " << endl;
   		
-  		output += " );\n"; 
+  		contracts[newContractsCount] += " );\n"; 
   	}
 
   	virtual void enterCondition(ALFAParser::ConditionContext *ctx) {
@@ -367,7 +396,7 @@ class Listener : public ALFABaseListener {
   		
   		/* the following loop is to balance the parenthesis */
   		for (auto paren : ctx->RIGHTPAREN()) {
-  			output += paren->toString();
+  			contracts[newContractsCount] += paren->toString();
   		}
   	}
   	
@@ -376,7 +405,7 @@ class Listener : public ALFABaseListener {
   		
   		/* the following loop is to balance the parenthesis */
   		for (auto paren : ctx->LEFTPAREN()) {
-  			output += ")";
+  			contracts[newContractsCount] += ")";
   		}
   		
   	}
@@ -393,9 +422,9 @@ class Listener : public ALFABaseListener {
   	virtual void enterPermitdeny(ALFAParser::PermitdenyContext *ctx) {
   		cout << " enterPermitdeny " << endl;
   		
-  		output += Output.indent() + "return ";
-  		if (ctx->PERMIT()) output += "true;";
-  		else output += "false;";
+  		contracts[newContractsCount] += Output.indent() + "return ";
+  		if (ctx->PERMIT()) contracts[newContractsCount] += "true;";
+  		else contracts[newContractsCount] += "false;";
 		
   		
   	}
@@ -468,20 +497,20 @@ class Listener : public ALFABaseListener {
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
 		/* Attribute Definition translation */
 	
-		output += Output.indent() + Output.getAttributeStruct() + "\n";
+		contracts[newContractsCount] += Output.indent() + Output.getAttributeStruct() + "\n";
 	
-		output += Output.indent() + "attribute " + attributeName + " ;\n" ;
+		contracts[newContractsCount] += Output.indent() + "attribute " + attributeName + " ;\n" ;
 		cout << "\n\n\n\n" << endl;
 	
 		for (int i=0; i< 3; i++) {
-			output += Output.indent() + attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
+			contracts[newContractsCount] += Output.indent() + attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
 		}
 		
 		/* Cleaning the vectors for further use */
 		identifiers.clear();
 		values.clear();
 		
-	  	output += "\n";
+	  	contracts[newContractsCount] += "\n";
 	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
 	  }

@@ -39,7 +39,10 @@ policyset test  {
 			}
 		}
 	
-	
+		rule teacherAccess {
+			condition resourceId.owner == "nested Contract" or hehe. == "hh" 
+			deny
+		}
 }
 
 
