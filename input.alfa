@@ -1,51 +1,45 @@
-policyset test  {
 
-	namespace policies {
-	
-		// Adding some useful attributes to the default namespace
-	
-		namespace Attributes {
-			attribute actionType {
-			    id = "urn:oasis:names:tc:xacml:1.0:action:action-type"
-			    type = "string"
-			    category = "actionCat"
-			}	
-			namespace resourceId {
-				attribute owner {
-					id = "urn:resouce:resource:owner"
-					type = "string"
-					category = "resourceCat"
-				}
-			}
-			
-		}
+// Another testing alfa input
 
-		policy {
-			apply permitOverrides
-				
-			// A student can only access to his result
-				
-			rule studentAccess {
-				target clause actionType. == "read" 
-				condition (((((  (not resourceId.owner == "requestorId" and actionType. == "read") or hh. == "hh")))))
-				permit
-			}
-				
-			// A teacher can access to his classe's results
-				
-			rule teacherAccess {
-				condition resourceId.owner == "requestorId" or hehe.hoh == "hh" 
-				deny
-			}
-		}
-	
-		rule teacherAccess {
-			condition resourceId.owner == "nested Contract" or hehe. == "hh" 
-			deny
-		}
+
+namespace policies{
+    attribute actionId{
+        category = "actionCat"
+        id = "actionId"
+        type = "string"
+    }
+
+    attribute resourceType{
+        category = "resourceCat"
+        id = "resourceType"
+        type = "string"
+    }
+
+    attribute amount{
+        category = "resourceCat"
+        id = "amount"
+        type = "double"
+    }
+    /**
+     * The limit could be a subject attribute in the case it's user-specific
+     */
+    attribute limit{
+        category = "subjectCat"
+        id = "limit"
+        type = "double"
+    }
+
+     policy transfer{
+        target clause actionId. == "transfer" and resourceType. =="bank account"
+        apply firstApplicable
+        rule allow{
+            condition amount. <= "limit"
+            permit
+        }
+        rule denyTransfer{
+            deny
+        }
+     }
 }
-
-
-
 
 

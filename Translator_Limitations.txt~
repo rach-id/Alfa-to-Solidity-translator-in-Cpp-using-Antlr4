@@ -42,4 +42,9 @@ Target clause Problems :
 
 
 ##########
-the parenthesis opening and closing mechanism might not be precise in some cases
+the parenthesis opening and closing mechanism might not be precise in some cases.
+
+##########
+The attributes definition should be inside of the main namespace and not independent in the beginning/end of program.
+
+All the attributes definitions should be in the same namespace; if not they will result in multiple constructors of the contract.

@@ -16,15 +16,16 @@ class Listener : public ALFABaseListener {
 	public:
 	
 	/* Constructor/Destructor */
-	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0) {
+	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0), namespaceCount(0), translateAttribute(false) {
 	
 		parser = new ALFAParser(p->getTokenStream());
 		
 		if (outputFile.is_open()) cout << "# output file loaded successfuly" << endl;
-		else cout << "# Could not load output file" << endl;
+		else cout << "# Could not load output file\n# Creating a new one ..." << endl;
 		
 		output = "" ;
 		contracts.push_back(output);
+		generalDeclarations = "";
 	}
 	
 	~Listener() {
@@ -42,19 +43,25 @@ private:
 	string output;
 	int oldContractsCount;
 	int newContractsCount;
+	int namespaceCount;
+	string generalDeclarations;
+	bool translateAttribute;
 	
 public:	
 	/* BaseListener inherited functions */ 
   	virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   		cout << " enterTranslationUnit " << endl;
-  		contracts[newContractsCount] += Output.indent() + "pragma solidity ^0.4.0; // What compiler to use\n\n" ;
   	}
   	
   	virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) {
   		cout << " exitTranslationUnit " << endl;
   	
   		
-		for (string str : contracts) output += str;
+		for (string str : contracts) {
+			output += str;
+			cout << str << "\nend\n " <<  endl;}
+		
+		
 		
 		output += "\n\n\n // End of translation";	
 		
@@ -74,10 +81,55 @@ public:
   	virtual void enterNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) {
   		cout << " enterNamespaceDefinition " << endl;
   		
+  		if(namespaceCount == 0 ) Output.indentCount++;
+  		namespaceCount++;
+  		
+  		if (!(ctx->attributeDefinition()).empty()) {
+  			
+  			translateAttribute = true;
+  			contracts[newContractsCount] += Output.indent() + "constructor () public { \n"; 
+  			
+  			for (auto attribute : ctx->attributeDefinition()) 
+  				attribute->enterRule(this);
+  			
+  			contracts[newContractsCount] += "\n" + Output.indent() + "}\n\n";
+  			
+  			translateAttribute = false;
+  		}
+  		
   	}
   	
   	virtual void exitNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) {
   		cout << " exitNamespaceDefinition " << endl;
+  		
+  		namespaceCount -= 1;
+  		
+  		if (namespaceCount == 0) {
+  		
+  			string namespaceName = "";
+  			string currentOutput = contracts[0];
+  			Output.indentCount = 0;
+  			
+			contracts[0] = Output.indent() + "pragma solidity ^0.4.0; // What compiler to use\n\n";
+			
+  			if(ctx->WORD()) namespaceName = (ctx->WORD())->toString();
+  			else namespaceName = "main";
+  			
+  			contracts[0] += Output.indent() + "contract " + namespaceName + " {\n";
+  
+  			Output.indentCount++;
+  			
+  			contracts[0] += Output.indent() + generalDeclarations;
+  			
+  			for( string str : contractsNames) {
+  				contracts[0] += Output.indent() + "contract " + str + " ;\n\n";
+  			}
+  			
+  			Output.indentCount = 1;
+  			contracts[0] +=  currentOutput + "\n}\n\n" ;
+ 
+  		}
+  		
   	}
 
   	virtual void enterPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
@@ -107,6 +159,8 @@ public:
   		if(ctx->WORD()) policysetName = (ctx->WORD())->toString() ;
   		else policysetName = "contract" + to_string(newContractsCount);
   		
+  		contractsNames.push_back(policysetName);
+  		
   		if (newContractsCount > 1 ) contracts[oldContractsCount] += Output.indent() + "\tcontract " + policysetName + " ;\n\n" ;
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
@@ -124,7 +178,7 @@ public:
   		cout << " exitPolicysetDefinition " << endl;
 
 		
-		contracts[newContractsCount] += Output.indent() + "\n}\n";
+		contracts[newContractsCount] += "\n}\n";
   		newContractsCount = oldContractsCount ;
   	}
 
@@ -155,6 +209,8 @@ public:
 		if (ctx->WORD()) policyName = (ctx->WORD())->toString();
   		else policyName = "contract" + to_string(newContractsCount) ;
   		
+  		contractsNames.push_back(policyName);
+  		
   		if (newContractsCount > 1 ) contracts[oldContractsCount] += "\tcontract " + policyName + " ;\n\n" ;
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
@@ -172,7 +228,7 @@ public:
  
  
  		
-  		contracts[newContractsCount] += "\n" + Output.indent() + "}\n";
+  		contracts[newContractsCount] +=  "\n}\n";
   		
   		newContractsCount = oldContractsCount ;
   	}
@@ -293,9 +349,7 @@ public:
   	  
   	  	/* translating the code */
   	  	
-  	  	contracts[newContractsCount] += Output.indent() + Output.getTargetStruct(targetRessource, targetValue) + "\n";
-	
-  	  	contracts[newContractsCount] += "\n";
+  	  	generalDeclarations += "\n\n" + Output.getTargetStruct(targetRessource) + "\n\n";
 
   	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
@@ -460,7 +514,8 @@ public:
   	virtual void enterAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
 		cout << " enterAttributeDefinition " << endl;
 	
-  	
+  	if(translateAttribute) {	
+  		
   	/* ---------------------------------------------------------------------------------------------------------------------------*/
   
   		/* Collecting the identifiers and their values 
@@ -497,13 +552,13 @@ public:
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
 		/* Attribute Definition translation */
 	
-		contracts[newContractsCount] += Output.indent() + Output.getAttributeStruct() + "\n";
-	
-		contracts[newContractsCount] += Output.indent() + "attribute " + attributeName + " ;\n" ;
-		cout << "\n\n\n\n" << endl;
+		generalDeclarations += "\n" + Output.getAttributeStruct() + "\n";
+		
+		
+		contracts[newContractsCount] += Output.indent() + "\tattribute " + attributeName + " ;\n" ;
 	
 		for (int i=0; i< 3; i++) {
-			contracts[newContractsCount] += Output.indent() + attributeName + "." + identifiers[i] + " = " + values[i] + " ;\n";
+			contracts[newContractsCount] += Output.indent() + "\t" + attributeName + "." + identifiers[i]+ "_" + " = " + values[i] + " ;\n";
 		}
 		
 		/* Cleaning the vectors for further use */
@@ -513,7 +568,8 @@ public:
 	  	contracts[newContractsCount] += "\n";
 	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
-	  }
+	}
+	}
 	  
 	  virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
 	  	cout << " exitAttributeDefinition " << endl;

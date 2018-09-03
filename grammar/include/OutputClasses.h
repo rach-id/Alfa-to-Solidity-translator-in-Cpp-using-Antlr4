@@ -6,20 +6,23 @@ class OutputClasses {
 
 public :
 
-	OutputClasses() : attributeStructCount(0), indentCount(0) {}
+	OutputClasses() : attributeStructCount(0), indentCount(0), targetStructCount(0) {}
 	
 	
 	string getAttributeStruct() {
 		if (attributeStructCount != 0) return "";
-		string str = "struct attribute {\n" + indent() +"\tstring id;\n" +indent() +"\tstring type;\n" + indent() + "\tstring category;\n" + indent() + "}\n";
+		string str = "\tstruct attribute {\n" + indent() +"\tstring id_;\n" +indent() +"\tstring type_;\n" + indent() + "\tstring category_;\n" + indent() + "}\n";
 		++attributeStructCount;
 		return str;
 	}
 	
 	
-	string getTargetStruct(string ressource, string value) {
-		string str = "struct Target {\n" + indent() +"\tstring " + ressource + " = " + value + " ;" + "\n" + indent() + "}\n";
-		++attributeStructCount;
+	string getTargetStruct(string ressource) {
+		string str = "";
+		
+		if (targetStructCount == 0) str = "\tstruct Target {\n" + indent() +"\tstring " + ressource + " ;" + "\n" + indent() + "}\n";
+		
+		targetStructCount++;
 		return str;
 	}
 	
@@ -35,4 +38,5 @@ public :
 	int indentCount;
 private :
 	int attributeStructCount;
+	int targetStructCount;
 };
