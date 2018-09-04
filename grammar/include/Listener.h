@@ -1,3 +1,8 @@
+/* This is a specialized implementation of the listener based on
+ * ALFABaseListener class. It contains the translator's components and the
+ * translation process logic. 
+ */
+
 #include <antlr4-runtime.h>
 #include "ALFABaseListener.h"
 #include "ALFAParser.h"
@@ -351,7 +356,6 @@ public:
   	  	
   	  	generalDeclarations += "\n\n" + Output.getTargetStruct(targetRessource) + "\n\n";
 
-  	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	
