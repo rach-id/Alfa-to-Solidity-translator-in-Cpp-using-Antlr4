@@ -1,5 +1,5 @@
 
-pragma solidity ^0.4.0; // What compiler to use
+pragma solidity ^0.4.21; // What compiler to use
 
 contract policies {
 	
@@ -15,14 +15,7 @@ contract policies {
 
 
 
-
-
-	struct Target {
-		string actionId ;
-	}
-
-
-	contract transfer ;
+	Transfer transfer ;
 
 	constructor () public { 
 		attribute actionId ;
@@ -51,11 +44,16 @@ contract policies {
 
 }
 
-contract transfer {
-	require (actionId == "transfer" && resourceType == "bank account" );
-	function allow () returns (bool) {
+contract Transfer {
 
-		require (amount <= "limit" );
+	modifier f(string actionId ) {
+		require (sha3(actionId) == sha3("transfer") && sha3(resourceType) == sha3("bank account") );
+		_;
+	}
+
+	function rule1 () returns (bool) {
+
+		require (amount <= 31 );
 		return true;
 	}
 

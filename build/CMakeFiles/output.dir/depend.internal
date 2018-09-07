@@ -645,7 +645,6 @@ CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o
 CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o
  ../grammar/include/ALFAListener.h
  ../grammar/include/ALFAParser.h
- ../grammar/include/ALFAVisitor.h
  /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/grammar/src/ALFAParser.cpp
  externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorListener.h
  externals/antlr4cpp/include/antlr4-runtime/ANTLRErrorStrategy.h

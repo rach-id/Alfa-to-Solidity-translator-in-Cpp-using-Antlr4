@@ -1,7 +1,7 @@
 /* This is a specialized implementation of the listener based on
  * ALFABaseListener class. It contains the translator's components and the
  * translation process logic. 
-*/
+ */
 
 #include <antlr4-runtime.h>
 #include "ALFABaseListener.h"
@@ -21,7 +21,7 @@ class Listener : public ALFABaseListener {
 	public:
 	
 	/* Constructor/Destructor */
-	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0), namespaceCount(0), translateAttribute(false) {
+	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0), namespaceCount(0), translateAttribute(false), inModifier(false), ruleCount(0) {
 	
 		parser = new ALFAParser(p->getTokenStream());
 		
@@ -31,6 +31,7 @@ class Listener : public ALFABaseListener {
 		output = "" ;
 		contracts.push_back(output);
 		generalDeclarations = "";
+		
 	}
 	
 	~Listener() {
@@ -51,6 +52,8 @@ private:
 	int namespaceCount;
 	string generalDeclarations;
 	bool translateAttribute;
+	bool inModifier;
+	int ruleCount;
 	
 public:	
 	/* BaseListener inherited functions */ 
@@ -115,7 +118,7 @@ public:
   			string currentOutput = contracts[0];
   			Output.indentCount = 0;
   			
-			contracts[0] = Output.indent() + "pragma solidity ^0.4.0; // What compiler to use\n\n";
+			contracts[0] = Output.indent() + "pragma solidity ^0.4.21; // What compiler to use\n\n";
 			
   			if(ctx->WORD()) namespaceName = (ctx->WORD())->toString();
   			else namespaceName = "main";
@@ -127,7 +130,9 @@ public:
   			contracts[0] += Output.indent() + generalDeclarations;
   			
   			for( string str : contractsNames) {
-  				contracts[0] += Output.indent() + "contract " + str + " ;\n\n";
+  				contracts[0] += Output.indent() + str;
+  				str[0] = tolower(str[0]);
+  				contracts[0] += " " + str + " ;\n\n";
   			}
   			
   			Output.indentCount = 1;
@@ -164,9 +169,15 @@ public:
   		if(ctx->WORD()) policysetName = (ctx->WORD())->toString() ;
   		else policysetName = "contract" + to_string(newContractsCount);
   		
+  		policysetName[0] = toupper(policysetName[0]); // to make the first character upper case
+  		
   		contractsNames.push_back(policysetName);
   		
-  		if (newContractsCount > 1 ) contracts[oldContractsCount] += Output.indent() + "\tcontract " + policysetName + " ;\n\n" ;
+  		if (newContractsCount > 1 ) {
+  			contracts[oldContractsCount] += "\t" + policysetName + " ";
+  		 	policysetName[0] = tolower(policysetName[0]) ;
+  		 	contracts[oldContractsCount] += policysetName + ";\n\n" ;
+  		 }
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
@@ -214,9 +225,15 @@ public:
 		if (ctx->WORD()) policyName = (ctx->WORD())->toString();
   		else policyName = "contract" + to_string(newContractsCount) ;
   		
+  		policyName[0] = toupper(policyName[0]); // to make the first character upper case
+  		  		
   		contractsNames.push_back(policyName);
   		
-  		if (newContractsCount > 1 ) contracts[oldContractsCount] += "\tcontract " + policyName + " ;\n\n" ;
+  		if (newContractsCount > 1 ) {
+  			contracts[oldContractsCount] += "\t" + policyName + " ";
+  		 	policyName[0] = tolower(policyName[0]);
+  		 	contracts[oldContractsCount] += policyName + ";\n\n" ;
+  		 }
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	 	/* translating the code */
@@ -257,6 +274,11 @@ public:
 		
   		string ruleName = "";
   		if(ctx->WORD()) ruleName = (ctx->WORD())->toString();
+  		else {
+  			ruleCount++;
+  			ruleName = "rule" + to_string(ruleCount);
+  		}
+  			
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
@@ -336,35 +358,57 @@ public:
 		*
 		*/
 		
-  		string targetRessource = "";
-  		string targetValue = "";
+  		vector <string> targetRessource;
 
 		if(!((ctx->clauseDefinition())->booleenExpression()).empty()) {
-		
-			targetRessource = (((ctx->clauseDefinition())->booleenExpression())[0]->TARGETRESSOURCE())->toString();
-		
-		//remove the '.' added for targets to be parsed by antlr
-			targetRessource.pop_back(); 
-		
-		
-  			targetValue = (((ctx->clauseDefinition())->booleenExpression())[0]->VALUE())->toString();
+			for( auto booleen : (ctx->clauseDefinition())->booleenExpression() ) {
+				if (booleen->TARGETRESSOURCE()) {
+					string target = (booleen->TARGETRESSOURCE())->toString() ;
+					cout << "\n\n\n\n\n\n" << target << "\n\n\n\n\n" << endl;
+				//remove the '.' added for targets to be parsed by antlr
+					target.pop_back(); 
+				
+					targetRessource.push_back(target);
+				}
+  			}
   		
   		} else ctx->exitRule(this);
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
   	  	/* translating the code */
   	  	
-  	  	generalDeclarations += "\n\n" + Output.getTargetStruct(targetRessource) + "\n\n";
-
+		contracts[newContractsCount] += "\n" + Output.indent() + "modifier f(";
+		
+		for (auto str : targetRessource) {
+			contracts[newContractsCount] += "string " + str + " ,";
+		}
+		
+		contracts[newContractsCount].pop_back();
+		contracts[newContractsCount] += ") {\n";
+		Output.indentCount++;
+		
+		inModifier = true;
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	
   	virtual void exitTargetDefinition(ALFAParser::TargetDefinitionContext *ctx) {
   		cout << " exitTargetDefinition " << endl;
+  	
+  		contracts[newContractsCount] += Output.indent() + "_;\n";
+  		Output.indentCount -= 1;
+  		contracts[newContractsCount] += Output.indent() + "}\n\n";
+  		inModifier = false;
   	}
 
   	virtual void enterClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
-  	
+  		if(inModifier) {
+  			std::vector<ALFAParser::BooleenExpressionContext *> booleen = ctx->booleenExpression();
+			do {
+					cout << "1" << endl;
+					booleen = booleen[0]->booleenExpression();
+			}
+			while(!(booleen[0]->booleenExpression()).empty());
+  		}
   		contracts[newContractsCount] += Output.indent() + "require (" ;
   		cout << " enterClauseDefinition " << endl;
   		
@@ -409,7 +453,10 @@ public:
 		targetRessource.pop_back();
 		
 		compare = (ctx->COMPARE())->toString();
-		value = (ctx->VALUE())->toString();
+		if((ctx->value())->STRING())
+			value = ((ctx->value())->STRING())->toString();
+		else if((ctx->value())->NUMBER())
+			value = ((ctx->value())->NUMBER())->toString();
 		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
@@ -418,7 +465,13 @@ public:
   	  	if(!((ctx->NOT()).empty())) contracts[newContractsCount] += " !" ;
   	  	if(!((ctx->RIGHTPAREN()).empty())) contracts[newContractsCount] += " ( ";
   	  	
-  	  	contracts[newContractsCount] += targetRessource + " " + compare + " " + value ;
+  	  	// The following if-else statement is to add the "Sha3()" block for string comparison
+  	  	if((ctx->value())->STRING()) 
+  	  		contracts[newContractsCount] += "sha3(" + targetRessource + ") " + compare + " sha3(" + value + ")";
+  	  	else contracts[newContractsCount] += targetRessource + " " + compare + " " + value ;
+  	  	
+  	  	// end of sha3
+  	  	
   	  	boolCount++;
   	  	
   	  	if(!((ctx->LEFTPAREN()).empty())) contracts[newContractsCount] += " ) ";
@@ -548,8 +601,8 @@ public:
 	  			identifiers.push_back(id->toString());
 	  		} 
 	  		
-	  		for (auto id : ctx->VALUE()) {
-	  			values.push_back(id->toString());
+	  		for (auto id : ctx->value()) {
+	  			values.push_back((id->STRING())->toString());
 	  		} 
 	  	}
 	  	

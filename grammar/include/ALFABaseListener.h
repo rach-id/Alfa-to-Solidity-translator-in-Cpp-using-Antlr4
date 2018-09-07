@@ -76,6 +76,9 @@ public:
   virtual void enterAttributeDefinition(ALFAParser::AttributeDefinitionContext * /*ctx*/) override { }
   virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext * /*ctx*/) override { }
 
+  virtual void enterValue(ALFAParser::ValueContext * /*ctx*/) override { }
+  virtual void exitValue(ALFAParser::ValueContext * /*ctx*/) override { }
+
   virtual void enterLAND(ALFAParser::LANDContext * /*ctx*/) override { }
   virtual void exitLAND(ALFAParser::LANDContext * /*ctx*/) override { }
 

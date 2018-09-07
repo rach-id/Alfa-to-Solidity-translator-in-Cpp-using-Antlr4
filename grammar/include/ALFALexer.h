@@ -14,8 +14,8 @@ public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
     T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, T__12 = 13, T__13 = 14, 
-    T__14 = 15, T__15 = 16, BlockComment = 17, LineComment = 18, VALUE = 19, 
-    TYPES = 20, COMPARE = 21, NEWLINE = 22, WHITESPACE = 23, BOOL = 24, 
+    T__14 = 15, T__15 = 16, T__16 = 17, BlockComment = 18, LineComment = 19, 
+    COMPARE = 20, NEWLINE = 21, WHITESPACE = 22, NUMBER = 23, BOOL = 24, 
     NAMESPACE = 25, POLICYSET = 26, POLICY = 27, RULE = 28, PERMIT = 29, 
     DENY = 30, TARGET = 31, CLAUSE = 32, ADVICE = 33, OBLIGATION = 34, ONPERMIT = 35, 
     ONDENY = 36, CONDITION = 37, FUNCTION = 38, BAGFUNCTION = 39, COMMENT = 40, 

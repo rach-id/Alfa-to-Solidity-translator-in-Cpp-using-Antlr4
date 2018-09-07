@@ -74,6 +74,9 @@ public:
   virtual void enterAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) = 0;
   virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) = 0;
 
+  virtual void enterValue(ALFAParser::ValueContext *ctx) = 0;
+  virtual void exitValue(ALFAParser::ValueContext *ctx) = 0;
+
   virtual void enterLAND(ALFAParser::LANDContext *ctx) = 0;
   virtual void exitLAND(ALFAParser::LANDContext *ctx) = 0;
 

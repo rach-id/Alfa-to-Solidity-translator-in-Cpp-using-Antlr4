@@ -147,26 +147,6 @@ public interface ALFAListener extends ParseTreeListener {
 	 */
 	void exitCondition(ALFAParser.ConditionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ALFAParser#functionType}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionType(ALFAParser.FunctionTypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ALFAParser#functionType}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionType(ALFAParser.FunctionTypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ALFAParser#functionName}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionName(ALFAParser.FunctionNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ALFAParser#functionName}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionName(ALFAParser.FunctionNameContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link ALFAParser#importDefinition}.
 	 * @param ctx the parse tree
 	 */
@@ -226,4 +206,34 @@ public interface ALFAListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAttributeDefinition(ALFAParser.AttributeDefinitionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ALFAParser#value}.
+	 * @param ctx the parse tree
+	 */
+	void enterValue(ALFAParser.ValueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ALFAParser#value}.
+	 * @param ctx the parse tree
+	 */
+	void exitValue(ALFAParser.ValueContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ALFAParser#lAND}.
+	 * @param ctx the parse tree
+	 */
+	void enterLAND(ALFAParser.LANDContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ALFAParser#lAND}.
+	 * @param ctx the parse tree
+	 */
+	void exitLAND(ALFAParser.LANDContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ALFAParser#lOR}.
+	 * @param ctx the parse tree
+	 */
+	void enterLOR(ALFAParser.LORContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ALFAParser#lOR}.
+	 * @param ctx the parse tree
+	 */
+	void exitLOR(ALFAParser.LORContext ctx);
 }

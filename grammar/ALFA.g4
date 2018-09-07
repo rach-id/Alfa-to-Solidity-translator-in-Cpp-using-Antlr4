@@ -159,14 +159,14 @@ targetDefinition :
     ;
 
 clauseDefinition :
-        CLAUSE booleenExpression+ clauseDefinition*
+        CLAUSE booleenExpression+
     ;
 
 booleenExpression :
-        NOT* RIGHTPAREN* TARGETRESSOURCE COMPARE VALUE LEFTPAREN* NEWLINE*
+        NOT* RIGHTPAREN* TARGETRESSOURCE COMPARE value LEFTPAREN* NEWLINE*
         ( lAND booleenExpression | lOR booleenExpression )*
     |
-        NOT* RIGHTPAREN* BAGFUNCTION RIGHTPAREN TARGETRESSOURCE LEFTPAREN COMPARE VALUE LEFTPAREN* NEWLINE*
+        NOT* RIGHTPAREN* BAGFUNCTION RIGHTPAREN TARGETRESSOURCE LEFTPAREN COMPARE value LEFTPAREN* NEWLINE*
         ( lAND booleenExpression | lOR booleenExpression )*
     ;
 
@@ -175,7 +175,7 @@ conditionDefinition :
     ;
 
 condition :
-        NEWLINE* NOT* RIGHTPAREN*? FUNCTIONTYPE* RIGHTPAREN* FUNCTION '[' FUNCTIONNAME ']' ',' VALUE ','
+        NEWLINE* NOT* RIGHTPAREN*? FUNCTIONTYPE* RIGHTPAREN* FUNCTION '[' FUNCTIONNAME ']' ',' value ','
         TARGETRESSOURCE LEFTPAREN* ( ( AND | OR ) ( booleenExpression | condition ) )* LEFTPAREN*
         |
         NOT* RIGHTPAREN* booleenExpression ( ( AND | OR ) ( booleenExpression | condition )* )* LEFTPAREN*
@@ -241,9 +241,20 @@ obligationDefinition :
 attributeDefinition :
 	NEWLINE* ATTRIBUTE WORD
 	NEWLINE*
-	RIGHTCBRACKET NEWLINE* (IDENTIFIERS ASSIGN VALUE  NEWLINE* )* LEFTCBRACKET NEWLINE*
+	RIGHTCBRACKET NEWLINE* (IDENTIFIERS ASSIGN value  NEWLINE* )* LEFTCBRACKET NEWLINE*
 	;
 
+value :
+      NUMBER
+      |
+      STRING
+      |
+      BOOL
+      |
+      STRING ':' WORD  // ipAddress : "127.0.0.1":ipAddress
+      // category = " ... "
+      // type = " ... "
+      ;
 
 
 
@@ -265,21 +276,7 @@ LineComment
 
 /* General definitions */
 
-VALUE :
-      TYPES
-      ;
 
-TYPES :
-      NUMBER
-      |
-      STRING
-      |
-      BOOL
-      |
-      STRING ':' WORD  // ipAddress : "127.0.0.1":ipAddress
-      // category = " ... "
-      // type = " ... "
-      ;
 
 COMPARE :
         
@@ -318,7 +315,7 @@ fragment DIGIT :
 	 [0-9]
 	 ;
 	 
-fragment NUMBER :
+NUMBER :
 	 DIGIT+ ([.,] DIGIT+)?
 	 ;
 	 

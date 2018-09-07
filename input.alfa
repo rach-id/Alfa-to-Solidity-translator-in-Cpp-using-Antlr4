@@ -32,14 +32,16 @@ namespace policies{
      policy transfer{
         target clause actionId. == "transfer" and resourceType. =="bank account"
         apply firstApplicable
-        rule allow{
-            condition amount. <= "limit"
+        rule{
+            condition amount. <= 31
             permit
         }
         rule denyTransfer{
             deny
         }
      }
+     
+     
 }
 
 
