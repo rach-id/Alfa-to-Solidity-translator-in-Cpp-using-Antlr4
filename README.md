@@ -34,7 +34,7 @@ To build this project :
       $ cd build
       $ cmake -G "Unix Makefiles" ..
       $ make -j2 VERBOSE=1
-      $ ./test_antlr
+      $ ./output inputFilePath outputFilePath
 
 
 The project C++ files are in the 'grammar' directory.
