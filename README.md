@@ -1,4 +1,4 @@
-# Antlr_Cpp_RandomCoding
+# Alfa-to-Solidity-translator-in-Cpp-using-Antlr4
 
 
 This repository contains the majority of the files needed for this to be compiled on a linux os.
