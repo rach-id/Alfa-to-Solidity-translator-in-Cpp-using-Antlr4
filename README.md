@@ -47,6 +47,6 @@ The input file used during tests is "input.alfa" and the output solidity code is
 
 
 Ideas of improvements :
-	- Using unbuffered Character and Token streams
-	- Maximising parser speed 
+	- Using unbuffered Character and Token streams,
+	- Maximising parser speed.
 Check the antlr4 reference book : "The Definitive ANTLR4 Reference" second edition, page 243 - 246 .
