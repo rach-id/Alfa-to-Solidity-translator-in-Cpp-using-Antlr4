@@ -44,9 +44,3 @@ Project limitations are added to the 'Translator_Limitations.txt' file as soon a
 Most of the work, so far, is concentrated on the 'Listener.h' and 'Visitor.h' classes in the 'grammar/include' directories.
 
 The input file used during tests is "input.alfa" and the output solidity code is on "output.sol".
-
-
-Ideas of improvements :
-	- Using unbuffered Character and Token streams
-	- Maximising parser speed 
-Check the antlr4 reference book : "The Definitive ANTLR4 Reference" second edition, page 243 - 246 .

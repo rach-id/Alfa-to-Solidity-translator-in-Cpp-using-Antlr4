@@ -15,7 +15,7 @@ using namespace antlr4;
 
 int main(int argc, char* argv[]) {
 	
-	cout << "\n-----------> Start <-----------\n" << endl;
+	cout << "\n-----------> Start <-----------\n\n" << endl;
 	
 	
 /* ----------------------------------------------------------------------------------------------------------*/
@@ -44,8 +44,8 @@ int main(int argc, char* argv[]) {
 	
 	/// These strings contains the default pathes in my machines if no other files were introducted while calling the program. For testing purposes only.
 	
-	inputFile = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
-	outputFile = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/output.sol";
+	// inputFile = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/input.alfa";
+	// outputFile = "/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/output.sol";
 	
 	
 	
@@ -71,13 +71,13 @@ int main(int argc, char* argv[]) {
 		
 		/* To print the tokens of the lexer in a text format, uncomment the following code */
 		
-		 tokens.fill();
+		/* tokens.fill();
 		
-		 for (auto token : tokens.getTokens()) {
-			 std::cout << token->toString() <<  std::endl;
-		 }
+		* for (auto token : tokens.getTokens()) {
+			* std::cout << token->toString() <<  std::endl;
+		* }
 		
-		
+		*/
 		
 	/* ----------------------------------------------------------------------------------------------------------*/
 		
@@ -120,11 +120,11 @@ int main(int argc, char* argv[]) {
 	
 		File.close();
 		
-		cout << "-----------> Done <-----------" << endl;
+		cout << "\n\n-----------> Done <-----------\n" << endl;
 	
 	}
 	
-	else cout << "Could not open file" << endl;
+	else cout << "Could not open file\n" << endl;
 	
 	return 0;	
 }

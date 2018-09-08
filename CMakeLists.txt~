@@ -32,4 +32,4 @@ file(GLOB SOURCES ${SOURCES} "grammar/src/*")
 # add generated grammar to demo binary target
 add_executable(AlfaToSol main.cpp ${antlr4cpp_src_files_antlrcpptest} ${SOURCES})
 add_dependencies(AlfaToSol antlr4cpp antlr4cpp_generation_antlrcpptest)
-target_link_libraries(AlfaToSol antlr4-runtime)
+target_link_libraries(AlfaToSolt antlr4-runtime)

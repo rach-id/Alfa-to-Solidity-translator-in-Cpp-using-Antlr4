@@ -21,12 +21,12 @@ class Listener : public ALFABaseListener {
 	public:
 	
 	/* Constructor/Destructor */
-	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0), namespaceCount(0), translateAttribute(false), inModifier(false), ruleCount(0) {
+	Listener(ALFAParser* p, string f) : outputFile(f, ios::out), boolCount(0), oldContractsCount(0), newContractsCount(0), namespaceCount(0), translateAttribute(false), modifier(true), ruleCount(0) {
 	
 		parser = new ALFAParser(p->getTokenStream());
 		
-		if (outputFile.is_open()) cout << "# output file loaded successfuly" << endl;
-		else cout << "# Could not load output file\n# Creating a new one ..." << endl;
+		if (outputFile.is_open()) cout << "\n# output file loaded successfuly" << endl;
+		else cout << "\n# Could not load output file\n# Creating a new one ..." << endl;
 		
 		output = "" ;
 		contracts.push_back(output);
@@ -39,55 +39,34 @@ class Listener : public ALFABaseListener {
 	}
 	
 
-private:	
-	/* Private Members */
-	ALFAParser* parser;
-	ofstream outputFile;
-	vector<string> contracts;
-	vector<string> contractsNames;
-	OutputClasses Output;
-	string output;
-	int oldContractsCount;
-	int newContractsCount;
-	int namespaceCount;
-	string generalDeclarations;
-	bool translateAttribute;
-	bool inModifier;
-	int ruleCount;
-	
 public:	
 	/* BaseListener inherited functions */ 
   	virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) {
-  		cout << " enterTranslationUnit " << endl;
+  		
   	}
   	
   	virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) {
-  		cout << " exitTranslationUnit " << endl;
   	
-  		
 		for (string str : contracts) {
 			output += str;
-			cout << str << "\nend\n " <<  endl;}
-		
-		
+		}
 		
 		output += "\n\n\n // End of translation";	
 		
   		outputFile << output ;
   	
   		outputFile.close();
+  		
+  		cout << "\n\n# Translation successful, check your output file" << endl;
  	}
 
   	virtual void enterDeclarationseq(ALFAParser::DeclarationseqContext *ctx) {
-  			cout << " enterDeclarationSeq " << endl;
   	}
   	
   	virtual void exitDeclarationseq(ALFAParser::DeclarationseqContext *ctx) {
-  		cout << " exitDeclarationSeq " << endl;
   	}
 
   	virtual void enterNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) {
-  		cout << " enterNamespaceDefinition " << endl;
   		
   		if(namespaceCount == 0 ) Output.indentCount++;
   		namespaceCount++;
@@ -108,7 +87,6 @@ public:
   	}
   	
   	virtual void exitNamespaceDefinition(ALFAParser::NamespaceDefinitionContext *ctx) {
-  		cout << " exitNamespaceDefinition " << endl;
   		
   		namespaceCount -= 1;
   		
@@ -144,7 +122,6 @@ public:
 
   	virtual void enterPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
   	
-  		cout << " enterPolicysetDefinition " << endl;
   		oldContractsCount = newContractsCount;
   		Output.indentCount = 0;
   		output = "";
@@ -191,15 +168,12 @@ public:
   	}
   	
   	virtual void exitPolicysetDefinition(ALFAParser::PolicysetDefinitionContext *ctx) {
-  		cout << " exitPolicysetDefinition " << endl;
-
-		
+  	
 		contracts[newContractsCount] += "\n}\n";
   		newContractsCount = oldContractsCount ;
   	}
 
   	virtual void enterPolicyDefinition(ALFAParser::PolicyDefinitionContext *ctx) {
-  		cout << " enterPolicyDefinition " << endl;
   		  	
   		Output.indentCount = 0;
   		output = "";
@@ -246,18 +220,15 @@ public:
   	}
   	
   	virtual void exitPolicyDefinition(ALFAParser::PolicyDefinitionContext *ctx) {
-  		cout << " exitPolicyDefinition " << endl;
- 
- 
- 		
+
   		contracts[newContractsCount] +=  "\n}\n";
   		
   		newContractsCount = oldContractsCount ;
   	}
 
   	virtual void enterRuleDefinition(ALFAParser::RuleDefinitionContext *ctx) {
-  		cout << " enterRuleDefinition " << endl;
   		
+  		modifier = false;
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   
   		/* Collecting the rule name :
@@ -276,15 +247,80 @@ public:
   		if(ctx->WORD()) ruleName = (ctx->WORD())->toString();
   		else {
   			ruleCount++;
-  			ruleName = "rule" + to_string(ruleCount);
+  			ruleName = "func" + to_string(ruleCount);
   		}
   			
+  		
+  		/// Retrieving the variables used inside of the rule
+  		
+  		vector <vector<string> > varNames;
+  		
+  		if(!ctx->conditionDefinition().empty() ) {
+  			for (auto condition : ctx->conditionDefinition() ) {
+  				if(!condition->condition().empty()) {
+  					for(auto cond : condition->condition()) {
+   						if(!cond->booleenExpression().empty()) {
+  							auto booleen = cond->booleenExpression();
+  							while(!booleen.empty()) {
+							
+	  							vector <string> varName;
+	  							varName.push_back((booleen[0]->TARGETRESSOURCE())->toString());
+	  							if(varName[0][varName.size() -1] == '.') varName[0].pop_back();
+	  							
+	  							if((booleen[0]->value())->STRING()) varName.push_back("string");
+	  							else if((booleen[0]->value())->NUMBER()) varName.push_back("uint256");
+	  							else if((booleen[0]->value())->BOOL()) varName.push_back("bool");
+	  							
+	  							varNames.push_back(varName);			
+							
+  								booleen = booleen[0]->booleenExpression();
+  							}
+  						}
+ 						
+  					}
+  				}
+  			}
+  		}
+  		
+  		if(!ctx->targetDefinition().empty() ) {
+  			for (auto target : ctx->targetDefinition() ) {
+  				auto clause = target->clauseDefinition();
+  				if(clause) {
+  					if(!clause->booleenExpression().empty()) {
+  						auto booleen = clause->booleenExpression();
+  						while(!booleen.empty()) {
+							
+	  						vector <string> varName;
+	  						varName.push_back((booleen[0]->TARGETRESSOURCE())->toString());
+	  						if(varName[0][varName.size() - 1] == '.') varName[0].pop_back();
+	  							
+	  						if((booleen[0]->value())->STRING()) varName.push_back("string");
+	  						else if((booleen[0]->value())->NUMBER()) varName.push_back("uint256");
+	  						else if((booleen[0]->value())->BOOL()) varName.push_back("bool");
+	  							
+	  						varNames.push_back(varName);			
+							
+  							booleen = booleen[0]->booleenExpression();
+  						}
+  					}
+  				}
+  			}
+  		}
+  		
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
   	  	/* translating the code */
   	  	
-  	  	contracts[newContractsCount] += Output.indent() + "function " + ruleName + " () returns (bool)" + " {\n" ;
+  	  	contracts[newContractsCount] += Output.indent() + "function " + ruleName + " (";
+  	  	bool erase = false;
+  	  	for (auto vec : varNames) {
+  	  		erase = true;
+  	  		if(vec[0][vec[0].size() - 1] == '.' ) vec[0].pop_back();
+  	  		contracts[newContractsCount] += vec[1] + " " + vec[0] + ",";
+  	  	}
+  	  	if(erase) contracts[newContractsCount].pop_back();
+  	  	contracts[newContractsCount] += ") returns (bool) {" ;
   	  	Output.indentCount += 1;
   	  	contracts[newContractsCount] += "\n";
   	  	
@@ -292,41 +328,33 @@ public:
   	}
   	
   	virtual void exitRuleDefinition(ALFAParser::RuleDefinitionContext *ctx) {
-  		cout << " exitRuleDefinition " << endl;
-  		
+
   		Output.indentCount = Output.indentCount - 1 ;
   		contracts[newContractsCount] += "\n" + Output.indent() + "}\n\n";
-  		
+  		modifier = true;
   		
   	}
 
   	virtual void enterOnBlock(ALFAParser::OnBlockContext *ctx) {
-  		cout << " enterOnBlock " << endl;
   	}
   	
   	virtual void exitOnBlock(ALFAParser::OnBlockContext *ctx) {
-  		cout << " exitOnBlock " << endl;
   	}
 
   	virtual void enterOnPermitBlock(ALFAParser::OnPermitBlockContext *ctx) {
-  		cout << " enterOnPermitBlock " << endl;
  	}
  	
   	virtual void exitOnPermitBlock(ALFAParser::OnPermitBlockContext *ctx) {
-  		cout << " exitOnPermitBlock " << endl;
   	}
 
   	virtual void enterOnDenyBlock(ALFAParser::OnDenyBlockContext *ctx) {
-  		cout << " enterOnDenyBlock " << endl;
   	}
   	
   	virtual void exitOnDenyBlock(ALFAParser::OnDenyBlockContext *ctx) {
-  		cout << " exitOnDenyBlock " << endl;
   	}
 
   	virtual void enterTargetDefinition(ALFAParser::TargetDefinitionContext *ctx) {
-  		cout << " enterTargetDefinition " << endl;
-  		
+
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   
   		/* Collecting the target clause definition :
@@ -342,85 +370,72 @@ public:
 		*
 		*
 		* !!! PS : !!!
-		* 1- This translator doesnt make the difference between 'and' and 'or'
-		* 	blocks, it gathers them in a struct regardless of their type.
-		*
-		* 2- a target clause definition with multiple clause definitions will not be interpreted
+		* 1- a target clause definition with multiple clause definitions will not be interpreted
 		* 	for example : target clause test. == "read" and rest. != "write"
 		* 	only the first clause will be translated.
 		* 
-		* 3- a target clause like :  target clause qt > 13 , or anything 
-		*	of a kind wont be translated. Specified clauses should be made
-		*	in a condition ...
-		*	
-		* 4 - incomplete target clause definitions like : target clause , 
+		* 2 - incomplete target clause definitions like : target clause , 
 		*	will result in an empty 'require()' solidity block.
 		*
 		*/
 		
   		vector <string> targetRessource;
-
-		if(!((ctx->clauseDefinition())->booleenExpression()).empty()) {
-			for( auto booleen : (ctx->clauseDefinition())->booleenExpression() ) {
-				if (booleen->TARGETRESSOURCE()) {
-					string target = (booleen->TARGETRESSOURCE())->toString() ;
-					cout << "\n\n\n\n\n\n" << target << "\n\n\n\n\n" << endl;
+		
+		if(modifier) {
+			if(!((ctx->clauseDefinition())->booleenExpression()).empty()) {
+				auto booleen = ctx->clauseDefinition()->booleenExpression() ;
+				while(!booleen.empty()){
+					string target = booleen[0]->TARGETRESSOURCE()->toString();
+					
 				//remove the '.' added for targets to be parsed by antlr
-					target.pop_back(); 
+					if (target[target.size() -1 ] == '.') target.pop_back(); 
 				
 					targetRessource.push_back(target);
+					booleen = booleen[0]->booleenExpression();
 				}
-  			}
+  			} 
+  		}
   		
-  		} else ctx->exitRule(this);
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
   	  	/* translating the code */
-  	  	
-		contracts[newContractsCount] += "\n" + Output.indent() + "modifier f(";
+  	  	if(modifier) {
+			contracts[newContractsCount] += "\n" + Output.indent() + "modifier f(";
 		
-		for (auto str : targetRessource) {
-			contracts[newContractsCount] += "string " + str + " ,";
+			for (auto str : targetRessource) {
+				contracts[newContractsCount] += "string " + str + " ,";
+			}
+		
+			contracts[newContractsCount].pop_back();
+			contracts[newContractsCount] += ") {\n";
+			Output.indentCount++;
 		}
 		
-		contracts[newContractsCount].pop_back();
-		contracts[newContractsCount] += ") {\n";
-		Output.indentCount++;
 		
-		inModifier = true;
+
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	
   	virtual void exitTargetDefinition(ALFAParser::TargetDefinitionContext *ctx) {
-  		cout << " exitTargetDefinition " << endl;
   	
-  		contracts[newContractsCount] += Output.indent() + "_;\n";
-  		Output.indentCount -= 1;
-  		contracts[newContractsCount] += Output.indent() + "}\n\n";
-  		inModifier = false;
+  		if(modifier) {
+  			contracts[newContractsCount] += Output.indent() + "_;\n";
+  			Output.indentCount -= 1;
+  			contracts[newContractsCount] += Output.indent() + "}\n\n";
+  		}
   	}
 
   	virtual void enterClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
-  		if(inModifier) {
-  			std::vector<ALFAParser::BooleenExpressionContext *> booleen = ctx->booleenExpression();
-			do {
-					cout << "1" << endl;
-					booleen = booleen[0]->booleenExpression();
-			}
-			while(!(booleen[0]->booleenExpression()).empty());
-  		}
+  	
   		contracts[newContractsCount] += Output.indent() + "require (" ;
-  		cout << " enterClauseDefinition " << endl;
-  		
-  		
   	}
  	virtual void exitClauseDefinition(ALFAParser::ClauseDefinitionContext *ctx) {
-  		cout << " exitClauseDefinition " << endl;
+
   		contracts[newContractsCount] += " );\n"; 
   	}
 
   	virtual void enterBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
-  		cout << " enterBooleenExpression " << endl;
+
   		
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   
@@ -450,14 +465,15 @@ public:
 		string value;
 		
 		targetRessource = (ctx->TARGETRESSOURCE())->toString();
-		targetRessource.pop_back();
+		if(targetRessource[targetRessource.size() - 1] == '.' ) targetRessource.pop_back();
 		
 		compare = (ctx->COMPARE())->toString();
 		if((ctx->value())->STRING())
 			value = ((ctx->value())->STRING())->toString();
 		else if((ctx->value())->NUMBER())
 			value = ((ctx->value())->NUMBER())->toString();
-		
+		else if((ctx->value())->BOOL())
+			value = ((ctx->value())->BOOL())->toString();
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	  
   	  	/* translating the code */
@@ -480,31 +496,26 @@ public:
 		if(!((ctx->lOR()).empty()) && boolCount > 0) contracts[newContractsCount] += " || " ;
   		
 		
-  	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
   	}
   	virtual void exitBooleenExpression(ALFAParser::BooleenExpressionContext *ctx) {
-  		cout << " exitBooleenExpression " << endl;
+
   		if(!((ctx->LEFTPAREN()).empty())) contracts[newContractsCount] += " ) ";
   		boolCount = 0 ;
   	}
 
   	virtual void enterConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
-  		cout << " enterConditionDefinition " << endl;
-  		
-  		contracts[newContractsCount] += Output.indent() + "require (" ;
-  		
+
+  		contracts[newContractsCount] += Output.indent() + "require (" ;	
   	}
   	
   	virtual void exitConditionDefinition(ALFAParser::ConditionDefinitionContext *ctx) {
-  		cout << " exitConditionDefinition " << endl;
   		
   		contracts[newContractsCount] += " );\n"; 
   	}
 
   	virtual void enterCondition(ALFAParser::ConditionContext *ctx) {
-  		cout << " enterCondition " << endl;
-  		
+
   		/* the following loop is to balance the parenthesis */
   		for (auto paren : ctx->RIGHTPAREN()) {
   			contracts[newContractsCount] += paren->toString();
@@ -512,8 +523,7 @@ public:
   	}
   	
   	virtual void exitCondition(ALFAParser::ConditionContext *ctx) {
-  		cout << " exitCondition " << endl;
-  		
+
   		/* the following loop is to balance the parenthesis */
   		for (auto paren : ctx->LEFTPAREN()) {
   			contracts[newContractsCount] += ")";
@@ -523,54 +533,42 @@ public:
 
 
   	virtual void enterImportDefinition(ALFAParser::ImportDefinitionContext *ctx) {
-  		cout << " enterImportDefinition " << endl;
   	}
   	
   	virtual void exitImportDefinition(ALFAParser::ImportDefinitionContext *ctx) {
-  		cout << " exitImportDefinition " << endl;
   	}
 
   	virtual void enterPermitdeny(ALFAParser::PermitdenyContext *ctx) {
-  		cout << " enterPermitdeny " << endl;
-  		
+	
   		contracts[newContractsCount] += Output.indent() + "return ";
   		if (ctx->PERMIT()) contracts[newContractsCount] += "true;";
   		else contracts[newContractsCount] += "false;";
-		
-  		
+
   	}
   	
   	virtual void exitPermitdeny(ALFAParser::PermitdenyContext *ctx) {
-  		cout << " exitPermitdeny " << endl;
   	}
 
   	virtual void enterCombiningAlgorithm(ALFAParser::CombiningAlgorithmContext *ctx) {
-  		cout << " enterCombiningAlgorithm " << endl;
   	}
   	
   	virtual void exitCombiningAlgorithm(ALFAParser::CombiningAlgorithmContext *ctx) {
-  		cout << " exitCombiningAlgorithm " << endl;
   	}
 
   	virtual void enterAdviceDefinition(ALFAParser::AdviceDefinitionContext *ctx) {
-  		cout << " enterAdviceDefinition " << endl;
   	}
   	
   	virtual void exitAdviceDefinition(ALFAParser::AdviceDefinitionContext *ctx) {
-  		cout << " exitAdviceDefinition " << endl;
   	}
 
   	virtual void enterObligationDefinition(ALFAParser::ObligationDefinitionContext *ctx) {
-  		cout << " enterObligationDefinition " << endl;
   	}
   	
   	virtual void exitObligationDefinition(ALFAParser::ObligationDefinitionContext *ctx) {
-  		cout << " exitObligationDefinition " << endl;
   	}
 
   	virtual void enterAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
-		cout << " enterAttributeDefinition " << endl;
-	
+
   	if(translateAttribute) {	
   		
   	/* ---------------------------------------------------------------------------------------------------------------------------*/
@@ -593,7 +591,6 @@ public:
 	  	vector<string> values;
 	  	string attributeName;
 	  	
-	  	
 	  	attributeName = (ctx->WORD())->toString();
 	  	
 	  	if (ctx->getRuleIndex() != 0) {
@@ -611,7 +608,6 @@ public:
 	
 		generalDeclarations += "\n" + Output.getAttributeStruct() + "\n";
 		
-		
 		contracts[newContractsCount] += Output.indent() + "\tattribute " + attributeName + " ;\n" ;
 	
 		for (int i=0; i< 3; i++) {
@@ -625,15 +621,34 @@ public:
 	  	contracts[newContractsCount] += "\n";
 	  	
 	/* ---------------------------------------------------------------------------------------------------------------------------*/
-	}
+		}
 	}
 	  
 	  virtual void exitAttributeDefinition(ALFAParser::AttributeDefinitionContext *ctx) {
-	  	cout << " exitAttributeDefinition " << endl;
 	  }
 
 private :
+		
+	ALFAParser* parser;
+	OutputClasses Output;
+	ofstream outputFile;
+	
+	vector<string> contracts;
+	vector<string> contractsNames;
+	
+	string output;
+	string generalDeclarations;
+	
+	int oldContractsCount;
+	int newContractsCount;
+	int namespaceCount;
 	int boolCount;
+	int ruleCount;
+	
+	bool translateAttribute;
+	bool modifier;
+
+	
 };
 
 

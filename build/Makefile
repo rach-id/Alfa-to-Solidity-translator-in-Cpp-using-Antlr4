@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named output
+# Target rules for targets named AlfaToSol
 
 # Build rule for target.
-output: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 output
-.PHONY : output
+AlfaToSol: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AlfaToSol
+.PHONY : AlfaToSol
 
 # fast build rule for target.
-output/fast:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/build
-.PHONY : output/fast
+AlfaToSol/fast:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/build
+.PHONY : AlfaToSol/fast
 
 #=============================================================================
 # Target rules for targets named antlr4cpp
@@ -149,13 +149,175 @@ antlr4cpp_generation_antlrcpptest/fast:
 	$(MAKE) -f CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/build.make CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/build
 .PHONY : antlr4cpp_generation_antlrcpptest/fast
 
+antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.o
+
+# target to build an object file
+antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.o
+
+antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.i: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.i
+
+antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.s: antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.cpp.s
+
+antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.o: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.o
+
+# target to build an object file
+antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.o
+
+antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.i: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.i
+
+antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.s: antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.cpp.s
+
+antlr4cpp_generated_src/antlrcpptest/ALFALexer.o: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.o
+
+# target to build an object file
+antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.o
+
+antlr4cpp_generated_src/antlrcpptest/ALFALexer.i: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.i
+
+antlr4cpp_generated_src/antlrcpptest/ALFALexer.s: antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFALexer.cpp.s
+
+antlr4cpp_generated_src/antlrcpptest/ALFAListener.o: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.o
+
+# target to build an object file
+antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.o
+
+antlr4cpp_generated_src/antlrcpptest/ALFAListener.i: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.i
+
+antlr4cpp_generated_src/antlrcpptest/ALFAListener.s: antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAListener.cpp.s
+
+antlr4cpp_generated_src/antlrcpptest/ALFAParser.o: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.o
+
+# target to build an object file
+antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.o
+
+antlr4cpp_generated_src/antlrcpptest/ALFAParser.i: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.i
+
+antlr4cpp_generated_src/antlrcpptest/ALFAParser.s: antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAParser.cpp.s
+
+antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o
+
+# target to build an object file
+antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.o
+
+antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.i
+
+antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s: antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
+
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
+.PHONY : antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.cpp.s
+
 grammar/src/ALFABaseListener.o: grammar/src/ALFABaseListener.cpp.o
 
 .PHONY : grammar/src/ALFABaseListener.o
 
 # target to build an object file
 grammar/src/ALFABaseListener.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFABaseListener.cpp.o
 .PHONY : grammar/src/ALFABaseListener.cpp.o
 
 grammar/src/ALFABaseListener.i: grammar/src/ALFABaseListener.cpp.i
@@ -164,7 +326,7 @@ grammar/src/ALFABaseListener.i: grammar/src/ALFABaseListener.cpp.i
 
 # target to preprocess a source file
 grammar/src/ALFABaseListener.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFABaseListener.cpp.i
 .PHONY : grammar/src/ALFABaseListener.cpp.i
 
 grammar/src/ALFABaseListener.s: grammar/src/ALFABaseListener.cpp.s
@@ -173,7 +335,7 @@ grammar/src/ALFABaseListener.s: grammar/src/ALFABaseListener.cpp.s
 
 # target to generate assembly for a file
 grammar/src/ALFABaseListener.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseListener.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFABaseListener.cpp.s
 .PHONY : grammar/src/ALFABaseListener.cpp.s
 
 grammar/src/ALFABaseVisitor.o: grammar/src/ALFABaseVisitor.cpp.o
@@ -182,7 +344,7 @@ grammar/src/ALFABaseVisitor.o: grammar/src/ALFABaseVisitor.cpp.o
 
 # target to build an object file
 grammar/src/ALFABaseVisitor.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFABaseVisitor.cpp.o
 .PHONY : grammar/src/ALFABaseVisitor.cpp.o
 
 grammar/src/ALFABaseVisitor.i: grammar/src/ALFABaseVisitor.cpp.i
@@ -191,7 +353,7 @@ grammar/src/ALFABaseVisitor.i: grammar/src/ALFABaseVisitor.cpp.i
 
 # target to preprocess a source file
 grammar/src/ALFABaseVisitor.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFABaseVisitor.cpp.i
 .PHONY : grammar/src/ALFABaseVisitor.cpp.i
 
 grammar/src/ALFABaseVisitor.s: grammar/src/ALFABaseVisitor.cpp.s
@@ -200,7 +362,7 @@ grammar/src/ALFABaseVisitor.s: grammar/src/ALFABaseVisitor.cpp.s
 
 # target to generate assembly for a file
 grammar/src/ALFABaseVisitor.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFABaseVisitor.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFABaseVisitor.cpp.s
 .PHONY : grammar/src/ALFABaseVisitor.cpp.s
 
 grammar/src/ALFALexer.o: grammar/src/ALFALexer.cpp.o
@@ -209,7 +371,7 @@ grammar/src/ALFALexer.o: grammar/src/ALFALexer.cpp.o
 
 # target to build an object file
 grammar/src/ALFALexer.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFALexer.cpp.o
 .PHONY : grammar/src/ALFALexer.cpp.o
 
 grammar/src/ALFALexer.i: grammar/src/ALFALexer.cpp.i
@@ -218,7 +380,7 @@ grammar/src/ALFALexer.i: grammar/src/ALFALexer.cpp.i
 
 # target to preprocess a source file
 grammar/src/ALFALexer.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFALexer.cpp.i
 .PHONY : grammar/src/ALFALexer.cpp.i
 
 grammar/src/ALFALexer.s: grammar/src/ALFALexer.cpp.s
@@ -227,7 +389,7 @@ grammar/src/ALFALexer.s: grammar/src/ALFALexer.cpp.s
 
 # target to generate assembly for a file
 grammar/src/ALFALexer.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFALexer.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFALexer.cpp.s
 .PHONY : grammar/src/ALFALexer.cpp.s
 
 grammar/src/ALFAListener.o: grammar/src/ALFAListener.cpp.o
@@ -236,7 +398,7 @@ grammar/src/ALFAListener.o: grammar/src/ALFAListener.cpp.o
 
 # target to build an object file
 grammar/src/ALFAListener.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAListener.cpp.o
 .PHONY : grammar/src/ALFAListener.cpp.o
 
 grammar/src/ALFAListener.i: grammar/src/ALFAListener.cpp.i
@@ -245,7 +407,7 @@ grammar/src/ALFAListener.i: grammar/src/ALFAListener.cpp.i
 
 # target to preprocess a source file
 grammar/src/ALFAListener.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAListener.cpp.i
 .PHONY : grammar/src/ALFAListener.cpp.i
 
 grammar/src/ALFAListener.s: grammar/src/ALFAListener.cpp.s
@@ -254,7 +416,7 @@ grammar/src/ALFAListener.s: grammar/src/ALFAListener.cpp.s
 
 # target to generate assembly for a file
 grammar/src/ALFAListener.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAListener.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAListener.cpp.s
 .PHONY : grammar/src/ALFAListener.cpp.s
 
 grammar/src/ALFAParser.o: grammar/src/ALFAParser.cpp.o
@@ -263,7 +425,7 @@ grammar/src/ALFAParser.o: grammar/src/ALFAParser.cpp.o
 
 # target to build an object file
 grammar/src/ALFAParser.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAParser.cpp.o
 .PHONY : grammar/src/ALFAParser.cpp.o
 
 grammar/src/ALFAParser.i: grammar/src/ALFAParser.cpp.i
@@ -272,7 +434,7 @@ grammar/src/ALFAParser.i: grammar/src/ALFAParser.cpp.i
 
 # target to preprocess a source file
 grammar/src/ALFAParser.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAParser.cpp.i
 .PHONY : grammar/src/ALFAParser.cpp.i
 
 grammar/src/ALFAParser.s: grammar/src/ALFAParser.cpp.s
@@ -281,7 +443,7 @@ grammar/src/ALFAParser.s: grammar/src/ALFAParser.cpp.s
 
 # target to generate assembly for a file
 grammar/src/ALFAParser.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAParser.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAParser.cpp.s
 .PHONY : grammar/src/ALFAParser.cpp.s
 
 grammar/src/ALFAVisitor.o: grammar/src/ALFAVisitor.cpp.o
@@ -290,7 +452,7 @@ grammar/src/ALFAVisitor.o: grammar/src/ALFAVisitor.cpp.o
 
 # target to build an object file
 grammar/src/ALFAVisitor.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAVisitor.cpp.o
 .PHONY : grammar/src/ALFAVisitor.cpp.o
 
 grammar/src/ALFAVisitor.i: grammar/src/ALFAVisitor.cpp.i
@@ -299,7 +461,7 @@ grammar/src/ALFAVisitor.i: grammar/src/ALFAVisitor.cpp.i
 
 # target to preprocess a source file
 grammar/src/ALFAVisitor.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAVisitor.cpp.i
 .PHONY : grammar/src/ALFAVisitor.cpp.i
 
 grammar/src/ALFAVisitor.s: grammar/src/ALFAVisitor.cpp.s
@@ -308,8 +470,35 @@ grammar/src/ALFAVisitor.s: grammar/src/ALFAVisitor.cpp.s
 
 # target to generate assembly for a file
 grammar/src/ALFAVisitor.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/grammar/src/ALFAVisitor.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/ALFAVisitor.cpp.s
 .PHONY : grammar/src/ALFAVisitor.cpp.s
+
+grammar/src/EnvironmentFunctions.o: grammar/src/EnvironmentFunctions.cpp.o
+
+.PHONY : grammar/src/EnvironmentFunctions.o
+
+# target to build an object file
+grammar/src/EnvironmentFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/EnvironmentFunctions.cpp.o
+.PHONY : grammar/src/EnvironmentFunctions.cpp.o
+
+grammar/src/EnvironmentFunctions.i: grammar/src/EnvironmentFunctions.cpp.i
+
+.PHONY : grammar/src/EnvironmentFunctions.i
+
+# target to preprocess a source file
+grammar/src/EnvironmentFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/EnvironmentFunctions.cpp.i
+.PHONY : grammar/src/EnvironmentFunctions.cpp.i
+
+grammar/src/EnvironmentFunctions.s: grammar/src/EnvironmentFunctions.cpp.s
+
+.PHONY : grammar/src/EnvironmentFunctions.s
+
+# target to generate assembly for a file
+grammar/src/EnvironmentFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/grammar/src/EnvironmentFunctions.cpp.s
+.PHONY : grammar/src/EnvironmentFunctions.cpp.s
 
 main.o: main.cpp.o
 
@@ -317,7 +506,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -326,7 +515,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -335,7 +524,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -345,10 +534,28 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... output"
+	@echo "... AlfaToSol"
 	@echo "... antlr4cpp"
 	@echo "... edit_cache"
 	@echo "... antlr4cpp_generation_antlrcpptest"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.o"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.i"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseListener.s"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.o"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.i"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFABaseVisitor.s"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFALexer.o"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFALexer.i"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFALexer.s"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAListener.o"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAListener.i"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAListener.s"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAParser.o"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAParser.i"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAParser.s"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.o"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.i"
+	@echo "... antlr4cpp_generated_src/antlrcpptest/ALFAVisitor.s"
 	@echo "... grammar/src/ALFABaseListener.o"
 	@echo "... grammar/src/ALFABaseListener.i"
 	@echo "... grammar/src/ALFABaseListener.s"
@@ -367,6 +574,9 @@ help:
 	@echo "... grammar/src/ALFAVisitor.o"
 	@echo "... grammar/src/ALFAVisitor.i"
 	@echo "... grammar/src/ALFAVisitor.s"
+	@echo "... grammar/src/EnvironmentFunctions.o"
+	@echo "... grammar/src/EnvironmentFunctions.i"
+	@echo "... grammar/src/EnvironmentFunctions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

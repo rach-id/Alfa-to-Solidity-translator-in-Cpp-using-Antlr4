@@ -60,40 +60,40 @@ CMAKE_SOURCE_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/
 CMAKE_BINARY_DIR = /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/output.dir
+# Target rules for target CMakeFiles/AlfaToSol.dir
 
 # All Build rule for target.
-CMakeFiles/output.dir/all: CMakeFiles/antlr4cpp.dir/all
-CMakeFiles/output.dir/all: CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/all
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/depend
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16 "Built target output"
-.PHONY : CMakeFiles/output.dir/all
+CMakeFiles/AlfaToSol.dir/all: CMakeFiles/antlr4cpp.dir/all
+CMakeFiles/AlfaToSol.dir/all: CMakeFiles/antlr4cpp_generation_antlrcpptest.dir/all
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/depend
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target AlfaToSol"
+.PHONY : CMakeFiles/AlfaToSol.dir/all
 
 # Include target in all.
-all: CMakeFiles/output.dir/all
+all: CMakeFiles/AlfaToSol.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/output.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles 16
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/output.dir/all
+CMakeFiles/AlfaToSol.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles 23
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AlfaToSol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles 0
-.PHONY : CMakeFiles/output.dir/rule
+.PHONY : CMakeFiles/AlfaToSol.dir/rule
 
 # Convenience name for target.
-output: CMakeFiles/output.dir/rule
+AlfaToSol: CMakeFiles/AlfaToSol.dir/rule
 
-.PHONY : output
-
-# clean rule for target.
-CMakeFiles/output.dir/clean:
-	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/clean
-.PHONY : CMakeFiles/output.dir/clean
+.PHONY : AlfaToSol
 
 # clean rule for target.
-clean: CMakeFiles/output.dir/clean
+CMakeFiles/AlfaToSol.dir/clean:
+	$(MAKE) -f CMakeFiles/AlfaToSol.dir/build.make CMakeFiles/AlfaToSol.dir/clean
+.PHONY : CMakeFiles/AlfaToSol.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/AlfaToSol.dir/clean
 
 .PHONY : clean
 
@@ -104,7 +104,7 @@ clean: CMakeFiles/output.dir/clean
 CMakeFiles/antlr4cpp.dir/all:
 	$(MAKE) -f CMakeFiles/antlr4cpp.dir/build.make CMakeFiles/antlr4cpp.dir/depend
 	$(MAKE) -f CMakeFiles/antlr4cpp.dir/build.make CMakeFiles/antlr4cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target antlr4cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweexordious/Desktop/taaatata/Internship2018/Antlr_API/GitCommits/Antlr_Cpp_RandomCoding/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23 "Built target antlr4cpp"
 .PHONY : CMakeFiles/antlr4cpp.dir/all
 
 # Include target in all.
