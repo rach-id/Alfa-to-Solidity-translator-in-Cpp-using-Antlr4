@@ -1,0 +1,894 @@
+
+/*########################## Generated Classes Details ##############################*/
+	
+	
+	
+	/*##### ALFA Lexer */
+		
+		// Inheritance
+			
+			public antlr4::Lexer
+		
+		// Constructor
+			
+			ALFALexer(antlr4::CharStream *input);
+		
+		// Methods
+			
+			virtual std::string getGrammarFileName() const override;
+			virtual const std::vector<std::string>& getRuleNames() const override;
+			
+			virtual const std::vector<std::string>& getChannelNames() const override;
+			virtual const std::vector<std::string>& getModeNames() const override;
+			virtual const std::vector<std::string>& getTokenNames() const override; // deprecated, use vocabulary instead
+			virtual antlr4::dfa::Vocabulary& getVocabulary() const override;
+			
+			virtual const std::vector<uint16_t> getSerializedATN() const override;
+			virtual const antlr4::atn::ATN& getATN() const override;
+			
+	
+	/*##### ALFA Parer */
+	
+		// Inheritance
+			
+			public antlr4::Parser 
+		
+		// Constructor
+			
+			ALFAParser(antlr4::TokenStream *input);
+		
+		// Methods
+			
+		  virtual std::string getGrammarFileName() const override;
+		  virtual const antlr4::atn::ATN& getATN() const override { return _atn; };
+		  virtual const std::vector<std::string>& getTokenNames() const override { return _tokenNames; }; // deprecated: use vocabulary instead.
+		  virtual const std::vector<std::string>& getRuleNames() const override;
+		  virtual antlr4::dfa::Vocabulary& getVocabulary() const override;
+		  
+		  // For each rule, a class declaration and a function
+		  
+		  	TranslationunitContext* translationunit();
+		  	
+		  	class  TranslationunitContext : public antlr4::ParserRuleContext {
+			  public:
+				TranslationunitContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+				virtual size_t getRuleIndex() const override;
+				antlr4::tree::TerminalNode *EOF();
+				std::vector<DeclarationseqContext *> declarationseq();
+				DeclarationseqContext* declarationseq(size_t i);
+
+				virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+				virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+			   
+			  };
+			
+	/*##### ALFA Listener */
+	
+		// Inheritance 
+			
+			public antlr4::tree::ParseTreeListener
+		
+		// Description
+			- This interface defines an abstract listener for a parse tree produced by ALFAPARSER.
+	
+		// Methods
+			
+			// For each rule 
+				
+				virtual void enterTranslationunit(ALFAParser::TranslationunitContext *ctx) = 0;
+  				virtual void exitTranslationunit(ALFAParser::TranslationunitContext *ctx) = 0;
+	
+	
+	/*##### ALFA Base Listener */
+		
+		// Inheritance
+			
+			public ALFAListener
+		
+		// Description
+			- This class provides an empty implementation of ALFAListener, which can be extended to create a listener which only needs to handle a subset of the available methods
+			
+		// Methods
+			
+			// For each rule :	
+				
+				virtual void enterTranslationunit(ALFAParser::TranslationunitContext * /*ctx*/) override { }
+  				virtual void exitTranslationunit(ALFAParser::TranslationunitContext * /*ctx*/) override { }
+  				
+  			// General methods
+  				
+  				virtual void enterEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }
+  				virtual void exitEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }
+  				virtual void visitTerminal(antlr4::tree::TerminalNode * /*node*/) override { }
+  				virtual void visitErrorNode(antlr4::tree::ErrorNode * /*node*/) override { }
+
+	
+	/*##### ALFA Visitor */
+		
+		// Description
+			- This class defiens an abstract visitor for a parse tree produced by ALFAParser.
+		
+		// Inheritance 
+			
+			public antlr4::tree::AbstractParseTreeVisitor
+		
+		// Methods 
+			
+			// For each rule, visit parse trees produced by ALFAParser
+				
+				virtual antlrcpp::Any visitTranslationunit(ALFAParser::TranslationunitContext *context) = 0;		
+			
+	
+	/*##### ALFA Base Visitor */
+	
+		// Description
+			- This class provides an empty implementation of ALFAVisitor, which can be exteneded to create a visitor which only needs to handle a subset of the available methods
+		
+		// Inheritance 
+			
+			public ALFAVisitor
+		
+		// Methods
+			
+			// For each rule
+				
+				  virtual antlrcpp::Any visitTranslationunit(ALFAParser::TranslationunitContext *ctx) override {
+    return visitChildren(ctx);
+  }
+			
+
+
+
+
+
+
+
+/*########################## Antlr Classes Details ##############################*/
+
+	/*##### Antlr File Stream : */
+	
+		// Inheritance
+			
+			public ANTLRInputStream
+		
+		// Constructor
+			
+			ANTLRFileStream(const std::string &fileName);
+		
+		// Methods
+			
+			virtual void loadFromFile(const std::string &fileName); // assigns _fileName and refers to ANTLRInputStream to load the content of the file "ANTLRInputStream::load(stream);"
+			virtual std::string getSourceName() const override; // returns _fileName
+			
+		// Members 
+			
+			protected :
+				
+				std::string _fileName;
+		
+		// Description 
+			
+			- To be used when loading a file that contains the data to be parsed.
+		
+	
+	
+	/*##### Antlr Input Stream */
+	
+		// Inheritance
+			
+			public CharStream
+		
+		// Constructors
+			
+			ANTLRInputStream(const std::string &input = "");
+    		ANTLRInputStream(const char data_[], size_t numberOfActualCharsInArray);
+  		    ANTLRInputStream(std::istream &stream);
+  		
+  		// Methods 
+  			
+  			// Loading the content
+  			
+  				virtual void load(const std::string &input);
+   		    	virtual void load(std::istream &stream);
+   		  
+   		   // 
+   		
+   	   // Members
+   	   	
+   	   	/// The data being scanned.
+    	// UTF-32
+  		  	UTF32String _data;
+
+   	    /// 0..n-1 index into string of next char </summary>
+  		  	size_t p;
+  		  
+  	    /// What is name or source of this char stream?
+  	   	  	std::string name;
+  	   	  
+  	    // Description 
+  	 	
+  	 		- Contains many functions that work on the background. What's important to remember is that we can use it to load a string to be parsed using this object.
+  	 
+  	 
+  	 
+	/*##### Buffered Token Stream */
+  	 	
+  	 	// Inheretance 
+  	 		
+  	 		public TokenStream
+  	 	
+  	 	// Constructor 
+  	 		
+  	 		BufferedTokenStream(TokenSource *tokenSource);
+  		  	BufferedTokenStream(const BufferedTokenStream& other) = delete;
+
+		// Description
+			
+			- This implementation loads tokens from a "Token Source" on demand, and places the tokens in a buffer to provide access to any previous token by index.
+			
+			- Only 'useful' methods are listed here.
+		
+		// Methods 
+			
+			virtual TokenSource* getTokenSource() const override;
+			virtual size_t size() override;
+			virtual std::vector<Token *> get(size_t start, size_t stop); // Get all tokens from start to end
+			// Resetting this token stream by setting its token source
+				
+				virtual void setTokenSource(TokenSource *tokenSource);
+    			virtual std::vector<Token *> getTokens();
+    			virtual std::vector<Token *> getTokens(size_t start, size_t stop);
+    		
+    		// Returning only a specific vector of tokens
+				virtual std::vector<Token *> getTokens(size_t start, size_t stop, const std::vector<size_t> &types);
+    			virtual std::vector<Token *> getTokens(size_t start, size_t stop, size_t ttype);
+    		
+    		// Collect all tokens, even the hidden ones 
+    			virtual std::vector<Token *> getHiddenTokensToRight(size_t tokenIndex);
+    		
+    		// Other useful methods to be explored
+    	
+
+
+	/*##### Char Stream : */
+		
+		// Inheretance
+			
+			public IntStream
+			
+		// Description 
+			
+			- A source of characters for an ANTLR lexer.
+			- is virtual pure, can't get instanciated.
+			
+		// Methods 
+			
+			virtual std::string getText(const misc::Interval &interval) = 0; // returns the text for a range of characters within this input stream
+			virtual std::string toString() const = 0; // returns the string of characters
+		
+	
+	
+	/*##### Common Token : */
+		
+		// Inheretance 
+			
+			public WritableToken
+			
+		// Description 
+			
+			- Does something to tokens that do not have a source. IDK what that means too.
+		
+	
+	
+	/*##### Int Stream : */
+		
+		// Inheretance 
+			
+			None
+			
+		// Descritpion 
+			
+			- Abstract class that holds the implementation of almost all input classes.
+		
+		
+	
+	/*##### Interpreter Rule Context : */
+		
+		// Inheretance 
+			
+			public ParserRuleContext
+			
+		// Description
+			- an extension to the 'Parser Rule Context' Class that allows the value of 'GetRuleIndex' to be expllicityly sset for the context.
+		
+	
+	
+	/*##### Lexer : */
+		
+		// Inheretance
+			
+			public Recognizer, public TokenSource
+		
+		// Description 
+			- A lexer is recognizer that draws input symbols from a character stream.
+			- Lexer grammars result in a subclass of this object. 
+			- A Lexer object uses simplified 'match()' and error recovery mechanisms in the interest of speed
+			- The goal of all lexer methods is to create a token object
+			- The classes generated by antrl, GrammarNameLexer.h for exemple, inherit from this class. Check your grammarLexer generated file for more methods and correct implementations
+		
+		// Constructor
+			
+			Lexer(); // initializes with a null ptr.
+    		Lexer(CharStream *input);
+    	
+    	// Methods 
+    		
+    		virtual std::unique_ptr<Token> nextToken() override; 
+    		virtual void skip();
+    		virtual void more();
+    		virtual void setMode(size_t m);
+    		virtual void pushMode(size_t m);
+    		virtual size_t popMode();
+    		
+	
+	/*##### List Token Source : */
+		
+		// Description 
+			
+			- Takes a vector of any tokens and constructs a new source of tokens for them
+		
+		// Constructor
+			
+			ListTokenSource(std::vector<std::unique_ptr<Token>> tokens);
+    		ListTokenSource(const ListTokenSource& other) = delete;
+    	
+    	// Methods 
+    		
+    		virtual size_t getCharPositionInLine() override;
+    		virtual std::unique_ptr<Token> nextToken() override;
+    		virtual size_t getLine() const override;
+    		virtual CharStream* getInputStream() override;
+    		virtual std::string getSourceName() override;
+    	
+    
+    
+    
+    /*##### Parser : */
+    	
+    	// Description 
+    		- 'GrammarNameParser' inherets from this class.
+    		- 
+    	
+    	// Nested Classes
+    		
+    		/* TraceListener */
+    			
+    			// Inheritance 
+    				
+    				public tree::ParseTreeListener
+    			
+    			// Constructor 
+    				
+    				TraceListener(Parser *outerInstance);
+    			
+    			// Methods
+    				
+    				virtual void enterEveryRule(ParserRuleContext *ctx) override;
+      				virtual void visitTerminal(tree::TerminalNode *node) override;
+      				virtual void visitErrorNode(tree::ErrorNode *node) override;
+      				virtual void exitEveryRule(ParserRuleContext *ctx) override;
+      			
+      		
+      		/* TrimToSizeListener */
+      			
+      			// Inheritance 
+      				
+      				public tree::ParseTreeListener
+      			
+      			// Methods 
+      				
+      				virtual void enterEveryRule(ParserRuleContext *ctx) override;
+      				virtual void visitTerminal(tree::TerminalNode *node) override;
+      				virtual void visitErrorNode(tree::ErrorNode *node) override;
+      				virtual void exitEveryRule(ParserRuleContext *ctx) override;	
+      			
+      			// End of Class
+      		// End of nested classes
+      	
+      	// Constructor 
+      		
+      		Parser(TokenStream *input);
+      	
+      	// Methods 
+      		
+      		// Reset the parser's state
+      			 virtual void reset();
+      		
+      		// Match current input symbol against 'ttype'
+      			
+      			virtual Token* match(size_t ttype);
+      		
+      		// Match current input symbol as a wildcard
+      			
+      			virtual Token* matchWildcard();
+      		
+      		// Track the 'ParserRuleContext' objects duting the parse and hook them up using the 'ParserRuleContext' list so that it forms a parse tree
+      			
+      			virtual void setBuildParseTree(bool buildParseTrees);
+      		
+      		// Gets whether or not a complete parse tree will be constructed while parsing. It is true for a newly constructed parser
+      			
+      			virtual bool getBuildParseTree();
+      		
+      		// Register 'listener' to receive events during the parsing process
+      		
+      			virtual void addParseListener(tree::ParseTreeListener *listener);
+      		
+      		// Remove the listener from the list of parse listeners
+      			
+      			virtual void removeParseListener(tree::ParseTreeListener *listener);
+      		
+      		// Remove all parse listeners
+      		
+      			virtual void removeParseListeners();
+      		
+      		// Gets the number of syntax errors reported during parsing
+      			
+      			virtual size_t getNumberOfSyntaxErrors();
+      		
+      		// Example of getting a tree pattern 
+      			
+      			ParseTree t = parser.expr();
+    		 	ParseTreePattern p = parser.compileParseTreePattern("<ID>+0", MyParser.RULE_expr);
+    			ParseTreeMatch m = p.match(t);
+    			String id = m.get("ID");
+    		
+    		// Inputs manipulation
+    			
+    			virtual IntStream* getInputStream() override;
+    			void setInputStream(IntStream *input) override;
+    			virtual TokenStream* getTokenStream();
+    			virtual void setTokenStream(TokenStream *input);
+    		
+    		// Getting current token
+    			
+    			virtual Token* getCurrentToken();
+    		
+    		// Errors/Exceptions handling are not covered in here
+    		
+    		// Other more specific functions can be found on the Parser file generated from a certain grammar
+    		
+
+
+
+	/*##### Parser Interpreter : */
+		
+		// Inheritance 
+			
+			public Parser
+		
+		// Description
+			- A parser simulator that mimics what ANTLR's generated parser code does. 
+			- A ParserATNSimulator is used to make predictions via 'adaptivePredict' but this class moves a pointer through the ATN to simulate parsing.
+		
+		// Constructors
+			
+			ParserInterpreter(const std::string &grammarFileName, const std::vector<std::string>& tokenNames,
+      		const std::vector<std::string>& ruleNames, const atn::ATN &atn, TokenStream *input);
+    ParserInterpreter(const std::string &grammarFileName, const dfa::Vocabulary &vocabulary,
+                      const std::vector<std::string> &ruleNames, const atn::ATN &atn, TokenStream *input);
+                     
+		// Methods 
+			
+			// Begin parsing at StartRuleIndex
+				virtual ParserRuleContext* parse(size_t startRuleIndex);
+			
+				virtual void enterRecursionRule(ParserRuleContext *localctx, size_t state, size_t ruleIndex, int precedence) override;
+			
+			// Returns the root of the parse
+				
+				InterpreterRuleContext* getRootContext();
+			
+	
+	
+	/*##### Parser Rule Context */
+		
+		// Inheritance 
+			
+			public RuleContext
+			
+		// Description
+			- A rule invocation for parsing.
+			- Contains all of the information about the current rule not stored in the 'RuleContext'.
+			- It handles parse tree children list, any ATN state tracing, and the default values available for rule invocatons : 'start, stop, rule index, current alt number'.
+			- subClasses made for each rule and grammar track the parameters, return values, locals and labels specific to that rule. These are the objects that are returned from rules.
+		
+		// Members
+			
+			// important tokens
+				
+				Token *start;
+    			Token *stop;
+    		
+    	// Constructors
+    		
+    		ParserRuleContext();
+    		ParserRuleContext(ParserRuleContext *parent, size_t invokingStateNumber);
+    	
+    	// Methods 
+    		
+    		// Double dispatch methods for listeners
+    			
+				virtual void enterRule(tree::ParseTreeListener *listener);
+    			virtual void exitRule(tree::ParseTreeListener *listener);
+    		
+    		// Add a token leaf node child and force its parent to be this node
+    			
+    			tree::TerminalNode* addChild(tree::TerminalNode *t);
+   	 			RuleContext* addChild(RuleContext *ruleInvocation);
+   	 		
+   	 		// Removes something
+   	 			
+   	 			virtual void removeLastChild();
+   	 		
+   	 		virtual tree::TerminalNode* getToken(size_t ttype, std::size_t i);
+    		virtual std::vector<tree::TerminalNode *> getTokens(size_t ttype);
+    		
+    		// Templates that returns some rule
+    			T* getRuleContext(size_t i);
+    			std::vector<T *> getRuleContexts();
+    		
+    		// Get the initial token in this context
+    			
+    			virtual Token *getStart();
+    		
+    		// Get the final token in this context
+    			
+    			virtual Token *getStop();
+    		
+    		// To info 	
+    			
+    			virtual std::string toInfoString(Parser *recognizer);
+    		
+    		
+    		
+	/* Recognizer */
+		
+		// Constructor 
+			
+			Recognizer();
+    		Recognizer(Recognizer const&) = delete;
+    	
+    	// Methods 
+    		
+    		// Used to print out token names like ID, the generated parsers overrides these.
+    			
+    			virtual std::vector<std::string> const& getTokenNames() const = 0;
+    			virtual std::vector<std::string> const& getRuleNames() const = 0;
+    		
+    		// Get the vocabulary used by the recognizer
+    			
+    			virtual dfa::Vocabulary const& getVocabulary() const;
+    		
+    		// Get a map from token names to token types
+    			
+    			virtual std::map<std::string, size_t> getTokenTypeMap();
+    		
+    		// Get a map from rule names to rule idnexes
+    			
+    			virtual std::map<std::string, size_t> getRuleIndexMap();
+    			virtual size_t getTokenType(const std::string &tokenName);
+    		
+    		// Get the grammar name
+    		
+    			virtual std::string getGrammarFileName() const = 0;
+    			
+    		// Get the ATN interpreter used by the recognizer for prediction
+    			
+    			T* getInterpreter() const; //Its a template 
+    		
+    		// Set the ATN interpreter used by the recognizer for prediction
+    			
+    			 void setInterpreter(atn::ATNSimulator *interpreter);
+    			
+    		// Get information about an error in a token
+    				
+    			virtual std::string getTokenErrorDisplay(Token *t);
+    		
+    		// Check the generated lexer/parser files for detailed implementation
+    	
+
+
+
+	/*##### Rule Context */
+		
+		// Description 
+				/** A rule context is a record of a single rule invocation.
+		   *
+		   *  We form a stack of these context objects using the parent
+		   *  pointer. A parent pointer of null indicates that the current
+		   *  context is the bottom of the stack. The ParserRuleContext subclass
+		   *  as a children list so that we can turn this data structure into a
+		   *  tree.
+		   *
+		   *  The root node always has a null pointer and invokingState of -1.
+		   *
+		   *  Upon entry to parsing, the first invoked rule function creates a
+		   *  context object (asubclass specialized for that rule such as
+		   *  SContext) and makes it the root of a parse tree, recorded by field
+		   *  Parser._ctx.
+		   *
+		   *  public final SContext s() throws RecognitionException {
+		   *      SContext _localctx = new SContext(_ctx, getState()); <-- create new node
+		   *      enterRule(_localctx, 0, RULE_s);                     <-- push it
+		   *      ...
+		   *      exitRule();                                          <-- pop back to _localctx
+		   *      return _localctx;
+		   *  }
+		   *
+		   *  A subsequent rule invocation of r from the start rule s pushes a
+		   *  new context object for r whose parent points at s and use invoking
+		   *  state is the state with r emanating as edge label.
+		   *
+		   *  The invokingState fields from a context object to the root
+		   *  together form a stack of rule indication states where the root
+		   *  (bottom of the stack) has a -1 sentinel value. If we invoke start
+		   *  symbol s then call r1, which calls r2, the  would look like
+		   *  this:
+		   *
+		   *     SContext[-1]   <- root node (bottom of the stack)
+		   *     R1Context[p]   <- p in rule s called r1
+		   *     R2Context[q]   <- q in rule r1 called r2
+		   *
+		   *  So the top of the stack, _ctx, represents a call to the current
+		   *  rule and it holds the return address from another rule that invoke
+		   *  to this rule. To invoke a rule, we must always have a current context.
+		   *
+		   *  The parent contexts are useful for computing lookahead sets and
+		   *  getting error information.
+		   *
+		   *  These objects are used during parsing and prediction.
+		   *  For the special case of parsers, we use the subclass
+		   *  ParserRuleContext.
+		   *
+		   *  @see ParserRuleContext
+		 **/
+		 
+		 
+		 // Inheritance
+		 	
+		 	public tree::ParseTree
+		 	
+		 // Constructor
+		 	
+		 	RuleContext();
+    		RuleContext(RuleContext *parent, size_t invokingState);
+
+		// Methods
+			
+			virtual int depth();
+			virtual bool isEmpty();
+			virtual misc::Interval getSourceInterval() override;
+			virtual std::string getText() override;
+			virtual size_t getRuleIndex() const;
+			
+			// Print out a whole tree, in LISP format. 
+				
+				virtual std::string toStringTree(Parser *recog) override;
+				virtual std::string toStringTree(std::vector<std::string> &ruleNames);
+				virtual std::string toStringTree() override;
+				virtual std::string toString() override;
+				std::string toString(Recognizer *recog);
+				std::string toString(const std::vector<std::string> &ruleNames);
+				std::string toString(Recognizer *recog, RuleContext *stop);
+				virtual std::string toString(const std::vector<std::string> &ruleNames, RuleContext *stop);
+				
+				
+	
+	/* Token */
+	
+		// Description
+			- A token has properties : text, type, line, character position in the line (so we can ignore tabs), token channel, index, and source from which we obtained this token.
+			- Abstract class, not to be instanciated.
+			
+		// Methods 
+			
+			// Get the text of the token
+				
+				virtual std::string getText() const = 0;
+			
+			// Get the token type of the token
+				
+				virtual size_t getType() const = 0;
+			
+			// The line number on which the 1st character of this token was matched,  line=1..n
+				
+				virtual size_t getLine() const = 0;
+				
+			// The index of the first character of this token relative to the beginning of the line at which it occurs, 0..n-1
+				
+				virtual size_t getCharPositionInLine() const = 0;
+			
+			// Get the channel of this token 
+				
+				virtual size_t getChannel() const = 0;
+			
+			// An index from 0..n-1 of the token object in the input stream
+				
+				virtual size_t getTokenIndex() const = 0;
+			
+			// The starting/ending character index of the token
+				
+				virtual size_t getStartIndex() const = 0;
+				virtual size_t getStopIndex() const = 0;
+			
+			// Gets the TokenSource which created this token
+				
+				virtual TokenSource *getTokenSource() const = 0;
+			
+			// Gets the CharStream from which this token was derived 
+				
+				virtual CharStream *getInputStream() const = 0;
+			
+			// To string token 
+				
+				virtual std::string toString() const = 0;
+		
+
+	/*##### Token Factory */
+		
+		// Description
+			- The default mechanism for creating tokens. Its used by default in lexer and the rror ahndling strategy (To create missing tokens).
+			
+		// Methods
+			
+			virtual std::unique_ptr<Symbol> create(std::pair<TokenSource *, CharStream *> source, size_t type, const std::string &text,
+      size_t channel, size_t start, size_t stop, size_t line, size_t charPositionInLine) = 0;
+     
+    
+    
+    
+    /*##### Token Source */
+    	
+    	// Description
+    		
+    		- A source of tokens must provide a sequence of tokens via 'nextToken()' and also must reveal it's srouce of characters.
+    		- 'CommonToken' 's text is computed from a 'CharStream', it only store indices into the char stream.
+    		- Errors from the lexer are never passed to the parser. 
+    		- Its an abstract class, not to be instanciated.
+    
+    	// Methods
+    		
+    		// return a 'Token' object from your input stream (usually a CharStream). 
+    			
+    			virtual std::unique_ptr<Token> nextToken() = 0;
+    		
+    		// Get the line number for the current position in the input stream. The first line = 1
+    			
+    			virtual size_t getLine() const = 0;
+    		
+    		// Get the index into the current line for the current position in the input stream. first character = 0
+    			
+    			virtual size_t getCharPositionInLine() = 0;
+    		
+    		// Get the 'CharStream' from which this token source is currently providing tokens
+    			
+    			virtual CharStream* getInputStream() = 0;
+    		
+    		// Get the name of the underlying input source
+    			
+    			virtual std::string getSourceName() = 0;
+
+			// Set the 'TokenFactory' this token source should be used for creating 'Token' objects from the input
+				
+				 void setTokenFactory(TokenFactory<T1> * /*factory*/); // Its a Template T1
+			
+			// Ge the 'TokenFactory' this token source is currently used for creating 'Token' objects from the input
+				
+				virtual Ref<TokenFactory<CommonToken>> getTokenFactory() = 0;
+	
+	
+	/*##### Token Stream */
+		
+		// Inheritance
+			
+			public IntStream
+			
+		// Description	
+			- An 'IntStream' whose symbols are 'Token' instances.
+			- Abstract Class.
+		
+		// ******************************************************************* To be reviewed *********************************
+	
+	
+	
+	
+	/*##### Token stream Rewriter */
+	
+	
+	/*##### Vocabulary */
+		
+
+
+
+/*########################## ATN Classes Details ##############################*/
+
+	/*##### ATN */
+		
+		// Description
+			- ATN : Augmented Transition Networks
+			- 
+			
+		// Constructor, used for runtime deserialization of ATNs from strings
+			
+		 	ATN();
+    		ATN(ATN &&other);
+    		ATN(ATNType grammarType, size_t maxTokenType);
+    	
+    	// Members
+    		
+    		// Each subrule/rule is a decision point and we must track them so we can go back later and build DFA predictors for them. This includes all of the rules, subrules, optional blocks
+    			
+    			std::vector<DecisionState *> decisionToState;
+    			
+    		// Maps from rule index to starting state number
+    			
+    			std::vector<RuleStartState *> ruleToStartState;
+    		
+    		// Maps from rule index to stop state number 
+    			
+    			std::vector<RuleStopState *> ruleToStopState;
+    		
+    		// The type of the ATN
+    			
+    			ATNType grammarType;
+    		
+    		// For lexer ATNs, this maps the rule index to the resulting token type. For parser ATNs, this maps the rule index to the generated bypass token type if the ATNDeserializationOptions#isGenerateRuleBypassTransitions deserialization option was specified, otherwise, this is null
+    			
+    			std::vector<size_t> ruleToTokenType;
+    		
+    		// Bunch of other stuff
+    	
+    	
+    	
+/*########################## Tree Classes Details ##############################*/   
+
+    /*##### Abstract Parse Tree Visitor */
+    	
+    	// Description
+    		- The default implementation initializes the aggregate result to 'defaultResult()'.
+    		- Before visiting each child, it calls 'shouldVisitNextChild', if the result is 'false' no more children are visited and the current aggregate result is returned.
+    		- After visiting a child, the aggregate result is updated by calling 'aggregateResult' with previous aggregate result and the result of visiting the child.
+    		- The default implementation is not safe for use in visitors that modify the tree structure. Visitors that modify the tree should override this method to behave properly in respect to the specific algorithm in use.
+    		- The generated class 'GrammarVisitor' contains additional specific methods with possiblity of editing.
+    		
+    	// Inheritance
+    		
+    		public ParseTreeVisitor
+    			
+    	// Methods	
+    	
+    		virtual antlrcpp::Any visit(ParseTree *tree) override;
+    		virtual antlrcpp::Any visitChildren(ParseTree *node) override; // The returned result was in a loop where 'result = aggregateResult(result, childResult);'
+    		
+    		
+    
+    /*##### Parse Tree */
+    	
+    	// Description
+    		- An interface to access the tree of 'RuleContext' objects created during a parse that makes the data structure look like a simple parse tree.
+    		- The payload is either a 'Token' or a 'RuleContext' object.
+    	
+    	// Constructor
+    		
+    		ParseTree();
+    		ParseTree(ParseTree const&) = delete;
+    	
+    	// Methods 
+    		
+    		virtual std::string toStringTree() = 0;
+    		virtual std::string toString() = 0;
+    		virtual std::string toStringTree(Parser *parser) = 0; // to print more information
+    		virtual std::string getText() = 0; // Return the combined text of al leaf node
+    
+    		

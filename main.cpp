@@ -88,9 +88,9 @@ int main(int argc, char* argv[]) {
 		
 		/* to print the parse tree in a text format, uncomment the following code */
 		
-		/*
-		* std::cout << tree->toStringTree(&parser) << std::endl;
-		*/
+		
+		 std::cout << tree->toStringTree(&parser) << std::endl;
+		
 		
 		
 	/* ----------------------------------------------------------------------------------------------------------*/
