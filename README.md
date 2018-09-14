@@ -1,4 +1,4 @@
-# Antlr_Cpp_RandomCoding
+# Alfa-to-Solidity-translator-in-Cpp-using-Antlr4
 
 
 This repository contains the majority of the files needed for this to be compiled on a linux os.
@@ -41,12 +41,12 @@ The project C++ files are in the 'grammar' directory.
 
 Project limitations are added to the 'Translator_Limitations.txt' file as soon as they occur.
 
-Most of the work, so far, is concentrated on the 'Listener.h' and 'Visitor.h' classes in the 'grammar/include' directories.
+Most of the work, so far, is concentrated on the 'Listener.h' classe in the 'grammar/include' directorie.
 
 The input file used during tests is "input.alfa" and the output solidity code is on "output.sol".
 
 
 Ideas of improvements :
-	- Using unbuffered Character and Token streams
-	- Maximising parser speed 
+	- Using unbuffered Character and Token streams,
+	- Maximising parser speed.
 Check the antlr4 reference book : "The Definitive ANTLR4 Reference" second edition, page 243 - 246 .
